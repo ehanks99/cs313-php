@@ -7,9 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
-    <?php
-        echo "<h1>hello</h1>";
-    ?>
+    <input type = "button" value = "Log in as Administrator">
+    <input type = "button" value = "Log in as Tester">
 </body>
 </html>
