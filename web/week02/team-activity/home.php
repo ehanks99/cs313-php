@@ -27,19 +27,21 @@
     <script>
         function setUser()
         {
-            alert("hi");
+            <?php
+            $userWelcome = document.getElementById("userWelcome");
             if ($_SESSION["user"] != NULL && $_SESSION["user"] == "Administrator")
             {
-                document.getElementById("userWelcome").innerHTML = "You are signed in as an Administrator.";
+                userWelcome.innerHTML = "You are signed in as an Administrator.";
             }
             else if ($_SESSION["user"] != NULL && $_SESSION["user"] == "Tester")
             {
-                document.getElementById("userWelcome").innerHTML = "You are signed in as a Tester.";
+                userWelcome.innerHTML = "You are signed in as a Tester.";
             }
             else
             {
-                document.getElementById("userWelcome").innerHTML = "You are currently not signed in.";
+                userWelcome.innerHTML = "You are currently not signed in.";
             }
+            ?>
         }
     </script>
 </body>
