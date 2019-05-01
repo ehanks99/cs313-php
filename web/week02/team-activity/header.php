@@ -50,6 +50,7 @@
 <body>
     <header>
         <nav>
+            Welcome to the Balloon Sales Website
             <ul>
                 <li class = "home"><a href = "home.php">Home</a></li>
                 <li class = "aboutUs"><a href = "about-us.php">About Us</a></li>
