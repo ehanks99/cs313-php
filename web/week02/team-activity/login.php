@@ -20,13 +20,7 @@
             background-color: sienna; /* light brown */
         }
     </style>
-</head>
-<body>
-    <br><br>
-    <input type = "button" value = "Log in as Administrator" onclick = "adminClick()"><br>
-    <input type = "button" value = "Log in as Tester" onclick = "testerClick()">
-    <input type = "button" value = "Lr" onclick = "click()">
-
+    
     <script>
         function adminClick()
         {
@@ -56,5 +50,12 @@
             ?>
         }
     </script>
+</head>
+<body>
+    <br><br>
+    <input type = "button" value = "Log in as Administrator" onclick = "adminClick()"><br>
+    <input type = "button" value = "Log in as Tester" onclick = "testerClick()">
+    <input type = "button" value = "Lr" onclick = "click()">
+
 </body>
 </html>
