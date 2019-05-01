@@ -8,6 +8,8 @@
 
     <?php
         include 'header.php';
+
+        session_start();
     ?>
 
     <style>
@@ -17,9 +19,27 @@
         }
     </style>
 </head>
-<body>
+<body onload = "setUser()">
     <h1 style = "text-align: center">Welcome to the Balloon Sales website!</h1>
 
-    <br><p style = "text-align: center">You are currently not signed in.</p>
+    <br><p style = "text-align: center" id = "userWelcome"></p>
+
+    <script>
+        function setUser()
+        {
+            if ($_SESSION["user"] != NULL && $_SESSION == "Administrator")
+            {
+                document.getElementById("userWelcome").innerHTML = "You are signed in as an Administrator.";
+            }
+            else if ($_SESSION["user"] != NULL && $_SESSION == "Tester")
+            {
+                document.getElementById("userWelcome").innerHTML = "You are signed in as a Tester.";
+            }
+            else
+            {
+                document.getElementById("userWelcome").innerHTML = "You are currently not signed in.";
+            }
+        }
+    </script>
 </body>
 </html>

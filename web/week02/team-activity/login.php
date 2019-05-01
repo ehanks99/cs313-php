@@ -8,6 +8,8 @@
 
     <?php
         include 'header.php';
+
+        session_start();
     ?>
 
     <style>
@@ -19,7 +21,21 @@
 </head>
 <body>
     <br><br>
-    <input type = "button" value = "Log in as Administrator"><br>
-    <input type = "button" value = "Log in as Tester">
+    <input type = "button" value = "Log in as Administrator" onclick = "adminClick()"><br>
+    <input type = "button" value = "Log in as Tester" onclick = "testerClick()">
+
+    <script>
+        function adminClick()
+        {
+            $_SESSION["user"] = "Administrator";
+            window.location.href = "home.php";
+        }
+
+        function testerClick()
+        {
+            $_SESSION["user"] = "Tester";
+            window.location.href = "home.php";
+        }
+    </script>
 </body>
 </html>
