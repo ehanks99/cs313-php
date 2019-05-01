@@ -33,7 +33,7 @@
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
                     echo "window.location.href = 'login.php'";
                 }
-                else if (strcmp($user, "Administrator") !== 0)
+                else if (isset($_SESSION['user']) && $_SESSION["user"] == "Tester")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                 }
