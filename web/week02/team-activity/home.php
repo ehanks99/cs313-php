@@ -29,13 +29,13 @@
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
                 }
-                else if ($user == "Administrator")
-                {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a(n) admin'";
-                }
-                else if ($user == "Tester")
+                else if (strcmp($user, "Administrator") !== 0)
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester'";
+                }
+                else
+                {
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.'";
                 }
             ?>
         }
