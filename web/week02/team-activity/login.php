@@ -1,5 +1,6 @@
 <?php
     session_start();
+    echo session_id();
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +56,7 @@
     <br><br>
     <input type = "button" value = "Log in as Administrator" onclick = "adminClick()"><br>
     <input type = "button" value = "Log in as Tester" onclick = "testerClick()">
-    <input type = "button" value = "Lr" onclick = "click()">
+    <!--<input type = "button" value = "Lr" onclick = "click()">-->
 
 </body>
 </html>

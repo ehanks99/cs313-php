@@ -1,5 +1,6 @@
 <?php
     session_start();
+    echo session_id();
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@
         {
             <?php
             
-            echo "session " . $_SESSION['user'] . " .";
+            echo "session " . $_SESSION['user'] . ". ";
                 if ($_SESSION['user'] == "Administrator")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
