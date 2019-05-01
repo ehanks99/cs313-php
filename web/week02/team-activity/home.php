@@ -28,20 +28,6 @@
         function setUser()
         {
             <?php
-            /*
-                if (!isset($_SESSION['user']))
-                {
-                    echo $_SESSION['user'];
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
-                    //echo "window.location.href = 'login.php';";
-                }
-                else
-                {
-                    
-                echo $_SESSION['user'];
-                }
-                */
-                
                 if ($_SESSION['user'] == "Administrator")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
