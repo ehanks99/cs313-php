@@ -28,11 +28,11 @@
         function setUser()
         {
             alert($_SESSION["user"]);
-            if ($_SESSION["user"] != NULL && $_SESSION == "Administrator")
+            if ($_SESSION["user"] != NULL && $_SESSION["user"] == "Administrator")
             {
                 document.getElementById("userWelcome").innerHTML = "You are signed in as an Administrator.";
             }
-            else if ($_SESSION["user"] != NULL && $_SESSION == "Tester")
+            else if ($_SESSION["user"] != NULL && $_SESSION["user"] == "Tester")
             {
                 document.getElementById("userWelcome").innerHTML = "You are signed in as a Tester.";
             }
