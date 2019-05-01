@@ -20,17 +20,17 @@
     </style>
 
     
-<script>
+    <script>
         function setUser()
         {
             <?php
                 if ($_SESSION["user"] == null)
                 {
-                    echo "<h1>You are currently not signed in.</h1>";
+                    echo "document.findElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
                 }
                 else
                 {
-                    echo "<h1>You are signed in right now.</h1>";
+                    echo "document.findElementById('userWelcome').innerHTML = 'You are signed in.'";
                 }
             ?>
         }
