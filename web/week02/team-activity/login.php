@@ -31,7 +31,7 @@
         function adminClick()
         {
             <?php
-                $_SESSION['user'] = "Administrator";
+                $_SESSION['user'] = 'Administrator';
                 //echo "alert($_SESSION['user']);";
                 echo $_SESSION['user'];
             ?>
@@ -42,7 +42,7 @@
         function testerClick()
         {
             <?php
-                $_SESSION['user'] = "Tester";
+                $_SESSION['user'] = 'Tester';
                 //echo "alert($_SESSION['user']);";
                 echo $_SESSION['user'];
             ?>
