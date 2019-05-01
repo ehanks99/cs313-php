@@ -10,12 +10,6 @@
         {
             background-color: #330d00; /* dark brown */
             color: BlanchedAlmond; /* light brown*/
-   
-            /* to make the navigation bar span the screen horizontally (no margins) */
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
         }
 
         nav ul 
