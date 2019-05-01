@@ -38,7 +38,6 @@
             display: block;
             color: BlanchedAlmond; /* light brown*/
             text-align: center;
-            padding: 14px 16px;
             text-decoration: none;
         }
 
