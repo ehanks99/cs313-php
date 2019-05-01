@@ -32,16 +32,19 @@
         {
             <?php
                 $_SESSION["user"] = "Administrator";
+                echo "alert($_SESSION['user']);";
             ?>
-            window.location.href = "home.php";
+            
+            //window.location.href = "home.php";
         }
 
         function testerClick()
         {
             <?php
                 $_SESSION["user"] = "Tester";
+                echo "alert($_SESSION['user']);";
             ?>
-            window.location.href = "home.php";
+            //window.location.href = "home.php";
         }
     </script>
 </body>
