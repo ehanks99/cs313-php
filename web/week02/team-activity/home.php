@@ -28,7 +28,7 @@
         {
             <?php
             
-            echo "session " . $_SESSION['user'] . ". ";
+            echo "<h2>session variable = " . $_SESSION['user'] . ".</h2>";
                 if ($_SESSION['user'] == "Administrator")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
