@@ -20,6 +20,6 @@
 <body>
     <h1 style = "text-align: center">Welcome to the Balloon Sales website!</h1>
 
-    <br style = "text-align: center"><p>You are currently not signed in.</p>
+    <br><p style = "text-align: center">You are currently not signed in.</p>
 </body>
 </html>
