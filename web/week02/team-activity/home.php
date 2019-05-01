@@ -18,26 +18,28 @@
             background-color: sienna; /* light brown */
         }
     </style>
+
+    
+<script>
+        function setUser()
+        {
+            <?php
+                if ($_SESSION["user"] == null)
+                {
+                    echo "<h1>You are currently not signed in.</h1>";
+                }
+                else
+                {
+                    echo "<h1>You are signed in right now.</h1>";
+                }
+            ?>
+        }
+    </script>
 </head>
 <body onload = "setUser()">
     <h1 style = "text-align: center">Welcome to the Balloon Sales website!</h1>
 
     <br><p style = "text-align: center" id = "userWelcome"></p>
 
-    <script>
-        function setUser()
-        {
-            <?php
-                if ($_SESSION["user"] == null)
-                {
-                    echo "You are currently not signed in.";
-                }
-                else
-                {
-                    echo "You are signed in right now.";
-                }
-            ?>
-        }
-    </script>
 </body>
 </html>
