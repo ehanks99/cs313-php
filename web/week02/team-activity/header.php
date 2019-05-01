@@ -51,9 +51,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href = "home.php">Home</a></li>
-                <li><a href = "about-us.php">About Us</a></li>
-                <li><a href = "login.php">Login</a></li>
+                <li class = "home"><a href = "home.php">Home</a></li>
+                <li class = "aboutUs"><a href = "about-us.php">About Us</a></li>
+                <li class = "login"><a href = "login.php">Login</a></li>
             </ul>
         </nav>
     </header>

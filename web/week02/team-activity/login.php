@@ -9,7 +9,13 @@
     <?php
         include 'header.php';
     ?>
-    
+
+    <style>
+        .login
+        {
+            background-color: sienna; /* light brown */
+        }
+    </style>
 </head>
 <body>
     <input type = "button" value = "Log in as Administrator">

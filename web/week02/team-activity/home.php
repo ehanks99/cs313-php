@@ -9,7 +9,13 @@
     <?php
         include 'header.php';
     ?>
-    
+
+    <style>
+        .home
+        {
+            background-color: sienna; /* light brown */
+        }
+    </style>
 </head>
 <body>
     
