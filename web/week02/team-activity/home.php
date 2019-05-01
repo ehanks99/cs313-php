@@ -24,13 +24,14 @@
         function setUser()
         {
             <?php
+                $user = $_SESSION;
                 if ($_SESSION["user"] == null)
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
                 }
                 else
                 {
-                    echo 'document.getElementById("userWelcome").innerHTML = "You are signed in as a(n) $_SESSION[\'user\']."';
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a(n) $_SESSION[\'user\'].'";
                 }
             ?>
         }
