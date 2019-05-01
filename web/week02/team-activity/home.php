@@ -18,6 +18,8 @@
     </style>
 </head>
 <body>
-    
+    <h1>Welcome to the Balloon Sales website!</h1>
+
+    <br><p>You are currently not signed in.</p>
 </body>
 </html>

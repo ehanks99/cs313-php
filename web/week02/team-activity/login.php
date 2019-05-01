@@ -18,7 +18,8 @@
     </style>
 </head>
 <body>
-    <input type = "button" value = "Log in as Administrator">
+    <br><br>
+    <input type = "button" value = "Log in as Administrator"><br>
     <input type = "button" value = "Log in as Tester">
 </body>
 </html>
