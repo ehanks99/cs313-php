@@ -38,7 +38,9 @@
                 }
                 else
                 {
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                 }
             ?>
         }
