@@ -27,13 +27,17 @@
     <script>
         function adminClick()
         {
-            $_SESSION["user"] = "Administrator";
+            <?php
+                $_SESSION["user"] = "Administrator";
+            ?>
             window.location.href = "home.php";
         }
 
         function testerClick()
         {
-            $_SESSION["user"] = "Tester";
+            <?php
+                $_SESSION["user"] = "Tester";
+            ?>
             window.location.href = "home.php";
         }
     </script>
