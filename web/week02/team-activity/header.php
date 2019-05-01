@@ -61,6 +61,7 @@
                 session_destroy(); 
             ?>
             window.location.href = "home.php";
+            alert("logged out");
         }
     </script>
 </body>
