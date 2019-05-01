@@ -32,7 +32,7 @@
         {
             <?php
                 $_SESSION["user"] = "Administrator";
-                echo "alert($_SESSION['user']);";
+                //echo "alert($_SESSION['user']);";
             ?>
             
             //window.location.href = "home.php";
@@ -42,7 +42,7 @@
         {
             <?php
                 $_SESSION["user"] = "Tester";
-                echo "alert($_SESSION['user']);";
+                //echo "alert($_SESSION['user']);";
             ?>
             //window.location.href = "home.php";
         }
