@@ -24,7 +24,6 @@
         function setUser()
         {
             <?php
-                $user = $_SESSION;
                 if ($_SESSION["user"] == null)
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
