@@ -27,7 +27,7 @@
         function setUser()
         {
             <?php
-                $user = $_SESSION["user"];
+                echo "$_SESSION['user']";
                 if (!isset($_SESSION['user']) && empty($_SESSION['user']))
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
