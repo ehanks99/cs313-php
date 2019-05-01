@@ -32,13 +32,13 @@
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
                     echo "window.location.href = 'login.php';";
                 }
+                else if ($_SESSION['user'] == "Administrator")
+                {
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
+                }
                 else if ($_SESSION['user'] == "Tester")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
-                }
-                else
-                {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
                 }
             ?>
         }
