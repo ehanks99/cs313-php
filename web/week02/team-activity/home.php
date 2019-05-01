@@ -1,5 +1,5 @@
 <?php
-    session_start();echo session_id();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +26,7 @@
         function setUser()
         {
             <?php
+            /*
                 if (!isset($_SESSION['user']))
                 {
                     echo $_SESSION['user'];
@@ -37,15 +38,20 @@
                     
                 echo $_SESSION['user'];
                 }
-                /*
-                else if ($_SESSION['user'] == "Administrator")
+                */
+                
+                if ($_SESSION['user'] == "Administrator")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
                 }
                 else if ($_SESSION['user'] == "Tester")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
-                }*/
+                }
+                else
+                {
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
+                }
             ?>
         }
     </script>
