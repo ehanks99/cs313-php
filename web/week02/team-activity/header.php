@@ -30,7 +30,6 @@
         {
             float: left;
             text-align: center;
-            padding: 20px 24px;
         }
 
         nav li a 
@@ -38,6 +37,7 @@
             display: block;
             color: BlanchedAlmond; /* light brown*/
             text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
         }
 
