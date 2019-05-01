@@ -28,9 +28,13 @@
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
                 }
-                else
+                else if ($_SESSION["user"] == "Administrator")
                 {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in.'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.'";
+                }
+                else if ($_SESSION["user"] == "Tester")
+                {
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester.'";
                 }
             ?>
         }
