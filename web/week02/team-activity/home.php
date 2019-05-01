@@ -1,7 +1,5 @@
 <?php
-    session_start([
-        'cookie_lifetime' => 86400,
-    ]);
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +36,7 @@
                 }
                 else
                 {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                 }
             ?>
         }
