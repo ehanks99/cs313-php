@@ -28,26 +28,14 @@
         function setUser()
         {
             <?php
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
-            print_r($_SESSION);
+                if ($_SESSION["user"] == null)
+                {
+                    echo "You are currently not signed in.";
+                }
+                else
+                {
+                    echo "You are signed in right now.";
+                }
             ?>
         }
     </script>
