@@ -27,6 +27,7 @@
     <script>
         function setUser()
         {
+            alert($_SESSION["user"]);
             if ($_SESSION["user"] != NULL && $_SESSION == "Administrator")
             {
                 document.getElementById("userWelcome").innerHTML = "You are signed in as an Administrator.";
