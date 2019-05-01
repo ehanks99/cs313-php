@@ -25,6 +25,7 @@
     <br><br>
     <input type = "button" value = "Log in as Administrator" onclick = "adminClick()"><br>
     <input type = "button" value = "Log in as Tester" onclick = "testerClick()">
+    <input type = "button" value = "Lr" onclick = "click()">
 
     <script>
         function adminClick()
@@ -46,6 +47,13 @@
                 echo $_SESSION['user'];
             ?>
             //window.location.href = "home.php";
+        }
+
+        function click()
+        {
+            <?php
+                echo $_SESSION['user'];
+            ?>
         }
     </script>
 </body>
