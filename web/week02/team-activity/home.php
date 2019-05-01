@@ -30,7 +30,7 @@
                 {
                     echo $_SESSION['user'];
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
-                    echo "window.location.href = 'login.php';";
+                    //echo "window.location.href = 'login.php';";
                 }
                 else
                 {
