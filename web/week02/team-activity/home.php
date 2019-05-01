@@ -26,11 +26,11 @@
             <?php
                 if ($_SESSION["user"] == null)
                 {
-                    echo "document.findElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
                 }
                 else
                 {
-                    echo "document.findElementById('userWelcome').innerHTML = 'You are signed in.'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in.'";
                 }
             ?>
         }
