@@ -28,12 +28,17 @@
         {
             <?php
                 echo $_SESSION['user'];
+                echo $_SESSION['user'];
+                echo $_SESSION['user'];
+                echo $_SESSION['user'];
+                echo $_SESSION['user'];
+                echo $_SESSION['user'];
                 if (!isset($_SESSION['user']) && empty($_SESSION['user']))
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
                     echo "window.location.href = 'login.php'";
                 }
-                else if (isset($_SESSION['user']) && $_SESSION['user'] == "Tester")
+                else if ($_SESSION['user'] == "Tester")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                 }
