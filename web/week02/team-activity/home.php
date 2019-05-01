@@ -28,6 +28,7 @@
                 if (user == null)
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
+                    echo "window.location.href = 'login.php'";
                 }
                 else if (strcmp($user, "Administrator") !== 0)
                 {

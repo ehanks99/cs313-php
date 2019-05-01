@@ -48,8 +48,18 @@
                 <li class = "home"><a href = "home.php">Home</a></li>
                 <li class = "aboutUs"><a href = "about-us.php">About Us</a></li>
                 <li class = "login"><a href = "login.php">Login</a></li>
+                <li class = "logout" onclick = "logout()">Logout</li>
             </ul>
         </nav>
     </header>
+
+    <script>
+        function logout()
+        {
+            <?php
+                session_unset();
+            ?>
+            window.location.href = "home.php";
+        }
 </body>
 </html>
