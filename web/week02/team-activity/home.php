@@ -24,13 +24,18 @@
         function setUser()
         {
             <?php
-                if ($_SESSION["user"] == null)
+                $user = $_SESSION["user"];
+                if (user == null)
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
                 }
-                else
+                else if ($user == "Administrator")
                 {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a(n) $_SESSION[\'user\'].'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a(n) admin'";
+                }
+                else if ($user == "Tester")
+                {
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester'";
                 }
             ?>
         }
