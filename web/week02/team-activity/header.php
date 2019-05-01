@@ -6,31 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <style>
-        ul 
+        nav
+        {
+            background-color: #330d00; /* dark brown */
+            color: BlanchedAlmond; /* light brown*/
+   
+            /* to make the navigation bar span the screen horizontally (no margins) */
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        nav ul 
         {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #00004d; /* dark blue */
-        }
-        li 
-        {
-            float: left;
         }
 
-        li a 
+        nav li 
+        {
+            float: left;
+            text-align: center;
+            padding: 20px 24px;
+        }
+
+        nav li a 
         {
             display: block;
-            color: white;
+            color: BlanchedAlmond; /* light brown*/
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
 
-        li a:hover 
+        nav li a:hover 
         {
-            background-color: #005580; /* light-ish blue */
+            background-color: sienna; /* light brown */
         }
     </style>
 </head>
