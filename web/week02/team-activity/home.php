@@ -30,16 +30,16 @@
                 $user = $_SESSION["user"];
                 if ($user == null)
                 {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
                     echo "window.location.href = 'login.php'";
                 }
                 else if (strcmp($user, "Administrator") !== 0)
                 {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                 }
                 else
                 {
-                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.'";
+                    echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
                 }
             ?>
         }
