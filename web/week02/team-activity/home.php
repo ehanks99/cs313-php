@@ -28,19 +28,7 @@
         function setUser()
         {
             <?php
-            $userWelcome = document.getElementById("userWelcome");
-            if ($_SESSION["user"] != NULL && $_SESSION["user"] == "Administrator")
-            {
-                userWelcome.innerHTML = "You are signed in as an Administrator.";
-            }
-            else if ($_SESSION["user"] != NULL && $_SESSION["user"] == "Tester")
-            {
-                userWelcome.innerHTML = "You are signed in as a Tester.";
-            }
-            else
-            {
-                userWelcome.innerHTML = "You are currently not signed in.";
-            }
+            print_r($_SESSION);
             ?>
         }
     </script>
