@@ -27,7 +27,7 @@
         <h2 style = "text-align: center">Our prices are sure to inflate your party!<br>
         We offer a large selection of balloons in many <br>
         different sizes, colors & material. Buy today & save, <br>
-        plus get free shipping offers on all party decorations!</h2>
+        plus get free shipping offers on all party decorations!</h2><br>
     </div>
 </body>
 </html>
