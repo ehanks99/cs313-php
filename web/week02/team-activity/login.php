@@ -41,7 +41,8 @@
                 //echo $_SESSION['user'];
             ?>
             
-            window.location.href = "home.php";
+            header("Location: home.php");
+            //window.location.href = "home.php";
         }
     </script>
 </head>

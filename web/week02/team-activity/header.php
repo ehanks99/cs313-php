@@ -61,7 +61,7 @@
         function logout()
         {
             <?php
-                session_unset();
+                session_unset($_SESSION["user"]);
             ?>
             //window.location.href = "home.php";
         }
