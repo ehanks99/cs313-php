@@ -30,17 +30,18 @@
             <?php
             
             //echo "session variable = " . $_SESSION['user'] . ".\n";
-                if ($_SESSION['user'] == "Administrator")
+                if ((string)$_SESSION['user'] == "Administrator")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as an Administrator.';";
                 }
-                else if ($_SESSION['user'] == "Tester")
+                else if ((string)$_SESSION['user'] == "Tester")
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are signed in as a Tester';";
                 }
                 else
                 {
                     echo "document.getElementById('userWelcome').innerHTML = 'You are currently not signed in.';";
+                    window.location.href = "login.php";
                 }
             ?>
         }
