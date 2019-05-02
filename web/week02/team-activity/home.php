@@ -49,6 +49,5 @@
     <h1 style = "text-align: center">Welcome to the Balloon Sales website!</h1>
 
     <br><p style = "text-align: center" id = "userWelcome"></p>
-
 </body>
 </html>

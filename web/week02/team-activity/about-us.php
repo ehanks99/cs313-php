@@ -23,6 +23,7 @@
 </head>
 <body>
     <div style = "background-color: pink">
+        <h1 style = "text-align: center">Balloon Sales</h1>
         <h2 style = "text-align: center">Our prices are sure to inflate your party!<br>
         We offer a large selection of balloons in many <br>
         different sizes, colors & material. Buy today & save, <br>
