@@ -43,7 +43,7 @@
             //window.location.href = "home.php";
             <?php
                 //echo "alert($_SESSION['user']);";
-                echo $_SESSION['user'];
+                echo "." . $_SESSION['user'] . ".";
             ?>
         }
     </script>
