@@ -1,7 +1,7 @@
 <?php
     session_start();
     echo session_id();
-    echo "\n<br>session: " . print_r($_SESSION) . ".<br>\n";
+    //echo "\n<br>session: " . print_r($_SESSION) . ".<br>\n";
 ?>
 
 <!DOCTYPE html>
