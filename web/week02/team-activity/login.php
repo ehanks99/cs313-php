@@ -41,7 +41,6 @@
                 //echo $_SESSION['user'];
             ?>
             window.location.href = "home.php";
-            echo $_SESSION['user'];
         }
     </script>
 </head>
