@@ -28,9 +28,10 @@
                 $_SESSION['user'] = 'Administrator';
                 //echo "alert($_SESSION['user']);";
                 //echo $_SESSION['user'];
+                header("Location: home.php");
             ?>
             
-            window.location.href = "home.php";
+            //window.location.href = "home.php";
         }
 
         function testerClick()
@@ -39,9 +40,10 @@
                 $_SESSION['user'] = 'Tester';
                 //echo "alert($_SESSION['user']);";
                 //echo $_SESSION['user'];
+                header("Location: home.php");
             ?>
             
-            window.location.href = "home.php";
+            //window.location.href = "home.php";
         }
     </script>
 </head>
