@@ -42,12 +42,12 @@ li a
 
 li a:hover 
 {
-    background-color: #8B9DC3;/* #005580; /* light-ish blue */
+    background-color: #8B9DC3; /* light-ish blue */
 }
 
 .active
 {
-    background-color: #8B9DC3;/* #005580; /* light-ish blue */
+    background-color: #8B9DC3; /* light-ish blue */
 }
       
 .center
