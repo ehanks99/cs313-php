@@ -2,6 +2,9 @@
 <!-- Emily Hanks -->
 <html lang = "en">
 <head>
+    <meta charset = "utf-8"/>
+    <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
+    <title> Emily's Home Page </title>
    <style>
       ul 
       {
@@ -98,15 +101,11 @@
       }*/
          
    </style>
-      
-   <meta charset = "utf-8"/>
-   <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
-   <title> Emily's Home Page </title>
 </head>
-<body style = "background-color:LightGray;">
+<body style = "background-color: LightGray;">
    <header id = "top">
       <ul>
-         <li><a href = "../index.html">CS 213</a></li>
+         <li><a href = "assignments.php">Assignments</a></li>
          <li><a href = "https://byui.brightspace.com/d2l/home">I-Learn</a></li>
          <li><a href="#bottom" style = "text-align: right">Go to bottom of page</a></li>    
       </ul>
@@ -133,158 +132,6 @@
       </blockquote>
    </blockquote></blockquote>
    <br/>
-   
-   <h1 style = "margin-left: 415px">Class Schedule</h1>
-   <table style = "width:75%;">
-      <tr>
-         <th>Course #</th>
-         <th>Course Description</th>
-         <th>Section #</th>
-         <th>Class Time</th>
-         <th>Location</th>
-     </tr>
-     <tr>
-         <td>GPHS-121</td>
-         <td>Gun Physics</td>
-         <td>3</td>
-         <td>MWF 10:15am-11:15am</td>
-         <td>STC471</td>
-     </tr>
-     <tr>
-         <td>SD-521</td>
-         <td>Intro to Sky-Diving</td>
-         <td>1</td>
-         <td>T 3:15pm-6:30pm</td>
-         <td>BEN243</td>
-     </tr>
-     <tr>
-         <td>CC-250</td>
-         <td>Car Construction</td>
-         <td>10</td>
-         <td>MWF 11:30am-12:30pm</td>
-         <td>ROM127</td>
-     </tr>
-     <tr>
-         <td>PAR-151</td>
-         <td>Plant Architecture</td>
-         <td>2</td>
-         <td>TR 9:45am-11:15am</td>
-         <td>BEN165</td>
-     </tr>
-     <tr>
-         <td>LD-261</td>
-         <td>Landscape Design</td>
-         <td>2</td>
-         <td>TR 3:00pm-4:00pm</td>
-         <td>STC421</td>
-     </tr>
-     <tr>
-         <td>SUB-235</td>
-         <td>Intro to Biology</td>
-         <td>1</td>
-         <td>MWF 2:00pm-3:00pm</td>
-         <td>KIM128</td>
-     </tr>
-   </table><br/><br/>
-      
-   </div>
-      
-   <hr>
-      
-   <div>
-      <h1 class = "center"> Favorite Mythical Creatures </h1>
-      <table style = "margin: auto"> <!--style = "width: 75%;"--> 
-         <tr>
-            <th>Name</th>
-            <th>Creature Type</th>
-            <th style = "width: 400px">Brief Description</th>
-            <th>Color</th>
-            <th>Age</th>
-            <th>Picture</th>
-         </tr>
-         <tr>
-             <td>Shiva</td>
-             <td>Ice Phoenix</td>
-             <td>Ice Phoenixes are icy in color and are incredibly cold. When a phoenix dies it is 
-             consumed in freezing flames, and a new phoenix egg is left in the ashes.</td>
-             <td>Blue, Silver</td>
-             <td>Adult</td>
-             <td><a href = "http://magistream.wikia.com/wiki/Ice_Phoenix">
-                 <img src = "ice_phoenix.jpg" alt = "Ice Phoenix" style = "width: 50px; height: 80px"></a>
-             </td>
-         </tr>      
-      </table>
-   </div>
-   
-   <br/>
-
-   <div class = "center">
-      <button style = "padding: 16px;" onclick = "myFunction()">Add your own creature!</button> <br/><br/>
-   </div>
-   
-   
-   
-   <div style = "background-color: lightblue">
-      <form id = "myForm" style = "margin-left:40px; display:none" action = ""> <!--"/action_page.php"-->
-         <hr style = "margin-right: 40px">
-         
-         <br/><br/>
-         Enter a name for your creature: 
-         <input type = "text" name = "name" style = "background-color: beige">
-         <br/><br/>
-         What kind of creature is it?
-         <input type = "text" name = "creature" style = "background-color: beige">
-         <br/><br/>
-         
-         Give a brief description about your mythical creature: <br/>
-         <textarea name = "message" rows = "5" cols = "50"
-             style = "background-color: beige">Enter text here...</textarea><br/><br/>
-         
-         What colors does it have?<br/>
-         <input type = "checkbox" name = "color" value = "red">Red
-         <input type = "checkbox" name = "color" value = "orange" style = "margin-left: 74px">Orange<br/>
-         <input type = "checkbox" name = "color" value = "yellow">Yellow
-         <input type = "checkbox" name = "color" value = "green" style = "margin-left: 54px">Green<br/>
-         <input type = "checkbox" name = "color" value = "blue">Blue
-         <input type = "checkbox" name = "color" value = "purple" style = "margin-left: 70px">Purple<br/>
-         <input type = "checkbox" name = "color" value = "black">Black
-         <input type = "checkbox" name = "color" value = "silver" style = "margin-left: 63px">Silver<br/>
-         <input type = "checkbox" name = "color" value = "white">White
-         <input type = "checkbox" name = "color" value = "gold" style = "margin-left: 61px">Gold<br/>
-         <input type = "checkbox" name = "color" value = "bronze">Bronze<br/><br/>
-         
-         
-         What age is it?<br/>
-         <input type = "radio" name = "age" value = "infant" checked>Infant<br/>
-         <input type = "radio" name = "age" value = "youth">Youth<br/>
-         <input type = "radio" name = "age" value = "adult">Adult<br/><br/>
-         
-         Do you have a picture?<br/>
-         <select>
-            <option value = "yes">Yes, I have a picture</option>
-            <option value = "no">No, I don't have a picture</option>
-            <option value = "na" selected>N/A</option>
-         </select><br/><br/>
-         
-         <input type = "reset" value = "Reset" style = "padding: 5px 20px">
-         <input type = "submit" value = "Submit" style = "padding: 5px 20px">
-         
-         <br/><br/>
-         
-      </form>
-   </div>
-   
-   
-   <script>
-      function myFunction() {
-         var x = document.getElementById("myForm");
-         if (x.style.display === "none") {
-            x.style.display = "block";
-         } else {
-            x.style.display = "none";
-         }
-      }
-   </script>
       
    <footer id = "bottom"> 
       <p> Posted by: Emily Hanks <br/> 
