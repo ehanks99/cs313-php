@@ -9,14 +9,23 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <?php
-        include "navbar.html";
-    ?>
+    <div id = "page-container">
+        <?php
+            include "navbar.html";
+        ?>
 
-    <h1 class = "center big">Assignments</h1> 
-    <hr>
+        <div id = "content-wrap">
 
-    <h2 class = "center"> Coming Soon </h2>
+            <h1 class = "center big">Assignments</h1> 
+            <hr>
+
+            <h2 class = "center"> Coming Soon </h2>
+        </div>
+        
+        <footer id = "bottom"> 
+            <p> Posted by: Emily Hanks <br/>
+        </footer>
+    </div>
 
 </body>
 </html>
