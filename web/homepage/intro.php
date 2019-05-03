@@ -31,6 +31,8 @@
       </blockquote>
    </blockquote></blockquote>
    <br/>
+
+   <p class = "center quote">"So this is how liberty dies ... with thunderous applause." - Padme Amidala</p>
       
    <footer id = "bottom"> 
       <p> Posted by: Emily Hanks <br/>
