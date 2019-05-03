@@ -77,9 +77,3 @@ footer
     color: white;
     padding: 2px;
 }
-         
-/* changing the footer link colors */
-footer a:link { color: white; }
-footer a:visited { color: #99dfff; } /* super light blue */
-footer a:hover { color: #0077b3; }   /* kind of light blue */
-footer a { text-decoration: none; }

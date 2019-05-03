@@ -18,8 +18,6 @@
    </header>
       
    <hr>
-      
-   <div>
          
       <a href = "me.jpg">
          <img src = "me.jpg" alt = "Smiling Girl" class = "picture"><br/><br/>
@@ -38,8 +36,7 @@
    <br/>
       
    <footer id = "bottom"> 
-      <p> Posted by: Emily Hanks <br/> 
-      <a href="#top">Go to top</a></p>
+      <p> Posted by: Emily Hanks <br/>
    </footer>
       
 </body>
