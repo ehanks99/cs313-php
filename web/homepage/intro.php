@@ -13,24 +13,28 @@
         include "navbar.html";
     ?>
 
-    <h1 class = "center big">Welcome to Emily's Home Page</h1> 
-    <hr>
+    <div id = "page-container">
+        <div id = "content-wrap">
+            <h1 class = "center big">Welcome to Emily's Home Page</h1> 
+            <hr>
          
-    <a href = "me.jpg">
-        <img src = "me.jpg" alt = "Smiling Girl" class = "picture"><br/><br/>
-    </a>
-    <p class = "special">
-        Emily is a Computer Science major at BYU-Idaho with a planned graduation date in 2020. Once she   
-        graduates, Emily will return to Oklahoma where she lives and get her second degree in Forensic 
-        Science at the University of Central Oklahoma.<br/><br/>
-    </p>
+            <a href = "me.jpg">
+                <img src = "me.jpg" alt = "Smiling Girl" class = "picture"><br/><br/>
+            </a>
+            <p class = "special">
+                Emily is a Computer Science major at BYU-Idaho with a planned graduation date in 2020. Once she   
+                graduates, Emily will return to Oklahoma where she lives and get her second degree in Forensic 
+                Science at the University of Central Oklahoma.<br/><br/>
+            </p>
 
-    <br>
-    <p class = "center quote">"So this is how liberty dies ... with thunderous applause." - Padme Amidala</p>
-      
+            <br>
+            <p class = "center quote">"So this is how liberty dies ... with thunderous applause." - Padme Amidala</p>
+        </div>
+        
     <footer id = "bottom"> 
         <p> Posted by: Emily Hanks <br/>
     </footer>
+    </div>
       
 </body>
 </html>

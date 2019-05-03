@@ -69,6 +69,17 @@ p.special
     color: white;
     margin: 0px 300px 25px 25px;
 }
+
+#page-container 
+{
+    position: relative;
+    min-height: 100vh;
+}
+  
+#content-wrap 
+{
+    padding-bottom: 3.0rem;    /* Footer height */
+}
          
 footer
 {
