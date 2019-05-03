@@ -12,9 +12,9 @@
     <?php
         include "navbar.html";
     ?>
-    <h1 class = "center big">Welcome to Emily's Home Page</h1>
-      
-   <hr>
+
+    <h1 class = "center big">Welcome to Emily's Home Page</h1> 
+    <hr>
          
     <a href = "me.jpg">
         <img src = "me.jpg" alt = "Smiling Girl" class = "picture"><br/><br/>

@@ -13,5 +13,10 @@
         include "navbar.html";
     ?>
 
+    <h1 class = "center big">Assignments</h1> 
+    <hr>
+
+    <h2 class = "center"> Coming Soon </h2>
+
 </body>
 </html>
