@@ -25,11 +25,12 @@
         Science at the University of Central Oklahoma.<br/><br/>
     </p>
 
-   <p class = "center quote">"So this is how liberty dies ... with thunderous applause." - Padme Amidala</p>
+    <br>
+    <p class = "center quote">"So this is how liberty dies ... with thunderous applause." - Padme Amidala</p>
       
-   <footer id = "bottom"> 
-      <p> Posted by: Emily Hanks <br/>
-   </footer>
+    <footer id = "bottom"> 
+        <p> Posted by: Emily Hanks <br/>
+    </footer>
       
 </body>
 </html>
