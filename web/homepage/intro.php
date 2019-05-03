@@ -4,18 +4,14 @@
 <head>
     <meta charset = "utf-8"/>
     <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
-    <title> Emily's Home Page </title>
+    <title> Home Page </title>
 
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-   <header id = "top">
-      <ul>
-         <li><a href = "assignments.php">Assignments</a></li>
-         <li><a href = "https://byui.brightspace.com/d2l/home">I-Learn</a></li> 
-      </ul>
-      <h1 class = "center big">Welcome to Emily's Home Page</h1>
-   </header>
+    <?php
+        include "navbar.html";
+    ?>
       
    <hr>
          
