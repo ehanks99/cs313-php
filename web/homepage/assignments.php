@@ -11,7 +11,7 @@
 <body>
     <div id = "page-container">
         <?php
-            include "navbar.html";
+            include "navbar.php";
         ?>
 
         <div id = "content-wrap">
