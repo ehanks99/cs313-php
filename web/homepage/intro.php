@@ -9,11 +9,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <?php
-        include "navbar.html";
-    ?>
-
     <div id = "page-container">
+        <?php
+            include "navbar.html";
+        ?>
+
         <div id = "content-wrap">
             <h1 class = "center big">Welcome to Emily's Home Page</h1> 
             <hr>
@@ -31,10 +31,9 @@
             <p class = "center quote">"So this is how liberty dies ... with thunderous applause." - Padme Amidala</p>
         </div>
         
-    <footer id = "bottom"> 
-        <p> Posted by: Emily Hanks <br/>
-    </footer>
+        <footer id = "bottom"> 
+            <p> Posted by: Emily Hanks <br/>
+        </footer>
     </div>
-      
 </body>
 </html>
