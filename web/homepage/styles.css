@@ -1,6 +1,6 @@
 body
 {
-    background-color: LightGray;
+    background-color: #F7F7F7; /* off-white */
 }
 
 .quote
@@ -23,7 +23,7 @@ ul
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #00004d; /* dark blue */
+    background-color:#8B9DC3; /*light blue #00004d; /* dark blue */
 }
 
 li 
