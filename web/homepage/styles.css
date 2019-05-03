@@ -42,7 +42,7 @@ li a
 
 li a:hover 
 {
-    background-color: #005580; /* light-ish blue */
+    background-color: #8B9DC3;/* #005580; /* light-ish blue */
 }
       
 .center
@@ -80,6 +80,6 @@ footer
     
     position: absolute;
     bottom: 0;
-    width: 95%;
+    width: 99%;
     height: 3.0rem;            /* Footer height */
 }
