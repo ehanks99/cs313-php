@@ -18,7 +18,7 @@
          
     <a href = "me.jpg">
         <img src = "me.jpg" alt = "Smiling Girl" class = "picture"><br/><br/>
-    </a><br><br>
+    </a>
     <p class = "special">
         Emily is a Computer Science major at BYU-Idaho with a planned graduation date in 2020. Once she   
         graduates, Emily will return to Oklahoma where she lives and get her second degree in Forensic 
