@@ -12,6 +12,7 @@
     <?php
         include "navbar.html";
     ?>
+    <h1 class = "center big">Welcome to Emily's Home Page</h1>
       
    <hr>
          
