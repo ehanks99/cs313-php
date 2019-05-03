@@ -2,10 +2,6 @@
 <!-- Emily Hanks -->
 <html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Emily's Home Page </title>
    <style>
       ul 
       {
@@ -94,9 +90,18 @@
       footer a:visited { color: #99dfff; } /* super light blue */
       footer a:hover { color: #0077b3; }   /* kind of light blue */
       footer a { text-decoration: none; }
-    
+         
+ /*     #myForm
+      {
+         width: 100%;
+         background-color: lightblue;
+      }*/
          
    </style>
+      
+   <meta charset = "utf-8"/>
+   <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
+   <title> Emily's Home Page </title>
 </head>
 <body style = "background-color:LightGray;">
    <header id = "top">
@@ -130,6 +135,58 @@
    <br/>
    
    <h1 style = "margin-left: 415px">Class Schedule</h1>
+   <table style = "width:75%;">
+      <tr>
+         <th>Course #</th>
+         <th>Course Description</th>
+         <th>Section #</th>
+         <th>Class Time</th>
+         <th>Location</th>
+     </tr>
+     <tr>
+         <td>GPHS-121</td>
+         <td>Gun Physics</td>
+         <td>3</td>
+         <td>MWF 10:15am-11:15am</td>
+         <td>STC471</td>
+     </tr>
+     <tr>
+         <td>SD-521</td>
+         <td>Intro to Sky-Diving</td>
+         <td>1</td>
+         <td>T 3:15pm-6:30pm</td>
+         <td>BEN243</td>
+     </tr>
+     <tr>
+         <td>CC-250</td>
+         <td>Car Construction</td>
+         <td>10</td>
+         <td>MWF 11:30am-12:30pm</td>
+         <td>ROM127</td>
+     </tr>
+     <tr>
+         <td>PAR-151</td>
+         <td>Plant Architecture</td>
+         <td>2</td>
+         <td>TR 9:45am-11:15am</td>
+         <td>BEN165</td>
+     </tr>
+     <tr>
+         <td>LD-261</td>
+         <td>Landscape Design</td>
+         <td>2</td>
+         <td>TR 3:00pm-4:00pm</td>
+         <td>STC421</td>
+     </tr>
+     <tr>
+         <td>SUB-235</td>
+         <td>Intro to Biology</td>
+         <td>1</td>
+         <td>MWF 2:00pm-3:00pm</td>
+         <td>KIM128</td>
+     </tr>
+   </table><br/><br/>
+      
    </div>
       
    <hr>
