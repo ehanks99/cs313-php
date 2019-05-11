@@ -69,7 +69,6 @@
       </div>
          
          <h3>Total: $<span id = "total"></span></h3>
-      </div>
 
 </body>
 </html>
