@@ -8,7 +8,7 @@
 <header>
     <ul>
         <li><a href="#" class="btn btn-default btn-lg">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart <span id = "inCart"> "(0)" </span>
+          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart <span id = "inCart"> (0) </span>
         </a></li>
     </ul>
 </header>
