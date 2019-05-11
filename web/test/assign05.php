@@ -1,6 +1,4 @@
-<?php
-   start_session();
-?>
+
 
 <!DOCTYPE html>
 <!-- Emily Hanks -->
