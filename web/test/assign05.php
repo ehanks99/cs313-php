@@ -197,9 +197,10 @@
       <div><img src = "adoption.jpg" alt = "different animals" style = "height:200%"></div>
    </div>   
    <hr>
-   <nav class = "navbar navbar-dark bg-dark">
-      <p>here</p>
-   </nav>
+   <?php
+      include "navbar.php";
+   ?>
+
    
    <h2 class = "center"> Just fill out a little bit of information, and we can get your
                          new comrade to you. </h2>

@@ -38,3 +38,37 @@ th
 }
          
 tr:nth-child(even) { background-color: #f2f2f2; } /* light grey */
+
+
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00004d; /* dark blue */
+}
+
+li 
+{
+    float: left;
+}
+
+li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover 
+{
+    background-color: #8B9DC3; /* light-ish blue */
+}
+
+.active
+{
+    background-color: #8B9DC3; /* light-ish blue */
+}
