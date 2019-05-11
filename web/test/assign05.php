@@ -192,11 +192,11 @@
 <body onload = "document.getElementById('firstName').focus()" onsubmit = "return validate()"
       onreset = "document.getElementById('firstName').focus()">
    <div class = "heading">
-      <div style = "float:left"><img src = "adoption_right.jpg" alt = "different animals" style = "height:200%"></div>
+      <div style = "float:left"><img src = "adoption_right.jpg" alt = "different animals" class = "twoHundredHeight"></div>
       <div><h1 class = "center" style = "float:left"> Adopt A Friend Today! </h1></div>
-      <div><img src = "adoption.jpg" alt = "different animals" style = "height:200%"></div>
-   </div>   
-   <hr>
+      <div><img src = "adoption.jpg" alt = "different animals" class = "twoHundredHeight"></div>  
+      <hr>
+   </div> 
    <?php
       include "navbar.php";
    ?>
