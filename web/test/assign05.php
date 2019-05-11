@@ -189,30 +189,12 @@
    <meta name = "viewport" content = "width = device - width, initial - scale = 1"/>
    <title>Adoption Form</title>
 </head>
-<body onload = "document.getElementById('firstName').focus()" onsubmit = "return validate()"
-      onreset = "document.getElementById('firstName').focus()">
+<body>
 
    <?php
       include "navbar.php";
    ?>
    
-   <h2 class = "center"> Just fill out a little bit of information, and we can get your
-                         new comrade to you. </h2>
-   <form action = "">
-      <pre class = "arial">First Name:  <input text = "text" id = "firstName" placeholder = "John" onblur = "checkFull('firstName',
-           'firstNameError')"><p class = "error" id = "firstNameError">  **This field cannot be left blank**</p></pre>
-
-      <pre class = "arial">Last Name:  <input text = "text" id = "lastName" placeholder = "Smith" onblur = "checkFull('lastName', 
-           'lastNameError')"><p class = "error" id = "lastNameError">  **This field cannot be left blank**</p></pre>
-           
-      <pre class = "arial">Address:      <textarea id = "address" onblur= "checkFull('address', 'addressError')"></textarea><p 
-           class = "error" id = "addressError">  **This field cannot be left blank**</p></pre>
-           
-      Phone Number: <input text = "text" id = "phoneNumber" placeholder = "xxx-xxx-xxxx" onblur = "checkPhone()">
-      <p class = "error" id = "phoneNumberError1">**This field cannot be left blank**</p>
-      <p class = "error" id = "phoneNumberError2">**This is not a valid phone number**</p>
-      
-      
       <div>
          <table>
             <tr>
@@ -256,28 +238,7 @@
          
          <h3>Total: $<span id = "total"></span></h3>
       </div>
-      
-      
-      Choose your credit card type<br/>
-      <input type="radio" name="card" value="masterCard" checked>Master Card</input><br/>
-      <input type="radio" name="card" value="visa">Visa</input><br/>
-      <input type="radio" name="card" value="americanExpress">American Express</input><br/><br/>
-      
-      Credit Card #
-      <input text = "text" id = "cardNumber" placeholder = "xxxx-xxxx-xxxx-xxxx" onblur = "checkCard()">
-      <p class = "error" id = "cardNumberError1">**This field cannot be left blank**</p>
-      <p class = "error" id = "cardNumberError2">**This is not a valid credit card number. Must be 16 digits**</p><br/><br/>
-      
-      Credit Card Expiration Date
-      <input text = "text" id = "expiration" placeholder = "xx-xxxx" onblur = "checkDate()">
-      <p class = "error" id = "expirationError1">**This field cannot be left blank**</p>
-      <p class = "error" id = "expirationError2">**This is not a valid date. Must be in the form xx-xxxx**</p><br/><br/>
-      
-      
-      <input type = "reset" value = "Clear Form" onclick = "calculate()">
-      <input type = "submit" value = "Submit" onClick = "validate()">
-      
-   </form>
+
 
 </body>
 </html>
