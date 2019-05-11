@@ -50,5 +50,6 @@ ul
 
 li 
 {
-    float: right;
+   padding: 10;
+   float: right;
 }
