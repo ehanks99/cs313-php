@@ -54,6 +54,8 @@
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
+                        ' . $pictureNames[$i] . '<br/>
+                        ' . $prices[$i] . '<br/>
                         <button type="button" class="btn btn-secondary">Add to Cart</button>
                      </div>
                   </div>
@@ -62,6 +64,8 @@
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
+                        ' . $pictureNames[$i + 1] . '<br/>
+                        ' . $prices[$i + 1] . '<br/>
                         <button type="button" class="btn btn-secondary">Add to Cart</button>
                         <button type="button" class="btn btn-info">Info</button>
                      </div>
@@ -71,6 +75,8 @@
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
+                        ' . $pictureNames[$i + 2] . '<br/>
+                        ' . $prices[$i + 2] . '<br/>
                         <button type="button" class="btn btn-dark">Add to Cart</button>
                      </div>
                   </div>
