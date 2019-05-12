@@ -65,17 +65,17 @@
    ?>
    <br/><br/>
    <div class="container-fluid"> <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
-            <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <a href="#">About</a>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <img src="image.png" />
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <a href="#myModal1" data-toggle="modal">SHARE</a>
-                </div>
-            </div>
+               <div class="row">
+                  <div class="col">
+                     One of three columns
+                  </div>
+                  <div class="col">
+                     One of three columns
+                  </div>
+                  <div class="col">
+                     One of three columns
+                  </div>
+               </div>
         </div>
 </body>
 </html>
