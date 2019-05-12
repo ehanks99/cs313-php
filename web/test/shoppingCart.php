@@ -19,8 +19,18 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+
+    <script type = "text/javaScript">
+        $numInCart = <?php if ($_SESSION["inCart"] == null) echo 0;
+                           else echo $_SESSION["inCart"]; ?>;
+
+        function setInCartNumber()
+        {
+            document.getElementById("inCart").innerHTML = "(" + $numInCart + ")";
+        }
+    </script>
 </head>
-<body>
+<body onload = "setInCartNumber()">
    <?php
       include "navbar.php";
 
