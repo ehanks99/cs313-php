@@ -84,5 +84,7 @@
       echo '</div>';
    ?>
    <br/><br/>
+
+   <button type="button" class="btn btn-success pull-right">Continue to Cart</button>
 </body>
 </html>
