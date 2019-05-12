@@ -79,7 +79,8 @@
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
-               </div>';
+               </div>
+               <br/><hr><br/>';
             
             $i += 2;
       }
