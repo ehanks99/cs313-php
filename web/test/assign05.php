@@ -51,13 +51,13 @@
       {
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
-                     <div class = "pull-right">
+                     <div class = "pull-left">
                         <p>' . $pictureNames[$i] . '</p><br/>
                         <p>$' . $prices[$i] . '</p><br/>
                         <button type="button" class="btn btn-success float-left">Add to Cart</button>
                      </div>
 
-                     <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive align-top">
+                     <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                   </div>
                   <div class="col-md-4">
                      <div class = "pull-right">
