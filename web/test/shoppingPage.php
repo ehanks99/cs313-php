@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    $_SESSION["inCart"] = 5;
+   session_start();
+   $_SESSION["inCart"] = 5;
 ?>
 
 <!DOCTYPE html>
