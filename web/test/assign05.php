@@ -49,24 +49,24 @@
          echo '
             <div class="container"> 
                <div class="row row-eq-height">
-                  <div class="col-sm-4">
+                  <div class="col-md-4">
                      <a href = "animal_pics/' . $pictures[$i] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
-                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-secondary">Add to Cart</button>
                      </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-md-4">
                      <a href = "animal_pics/' . $pictures[$i + 1] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
-                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-secondary">Add to Cart</button>
                         <button type="button" class="btn btn-info">Info</button>
                      </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-md-4">
                      <a href = "animal_pics/' . $pictures[$i + 2] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
