@@ -38,9 +38,9 @@
    <?php
       include "navbar.php";
 
-      $pictures = array("cat.jpg", "cheetaAndCub.jpg", "chinchilla.jpg", "cuteAnimals.jpg",
+      $pictures = array("cat.jpg", "cheetaAndCub.jpg", "penguin.jpg", "cuteAnimals.jpg",
                         "dog.jpg", "dragon.jpg", "dragon2.jpg", "elephant.jpg", "narwhal.jpg");
-      $pictureNames = array("Kitten", "Cheeta and Cub", "Chinchilla", "Keychain Animals",
+      $pictureNames = array("Kitten", "Cheeta and Cub", "Pink Penguin", "Keychain Animals",
                             "Dog", "Blue Dragon", "White Dragon", "ElephanT", "Narwhal");
       $prices = array("2.00", "10.00", "2.25", "4.00", "4.00", "7.50", "8.00", "12.25", "7.00");
 
