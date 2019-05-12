@@ -1,18 +1,13 @@
 <?php
-   
-   //session_save_path('sessions');
-   //ini_set('session.save_path', 'sessions');
-   session_name("shopping");
-      if (!is_writable(session_save_path())) {
+   /*if (!is_writable(session_save_path())) {
          echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
-     }
+   }*/
 
    session_start();
-   session_unset();
    $_SESSION["inCart"] = 5;
    print_r($_SESSION);
 ?>
-
+<?php print_r($_SESSION); ?>
 <!DOCTYPE html>
 <html lang = "en">
 <head>
