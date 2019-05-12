@@ -31,7 +31,7 @@
       {
          $numInCart++;
          document.getElementById("inCart").innerHTML = "(" + $numInCart + ")";
-         $picsInCart.push($picture);
+         picsInCart.push(picture);
          
          <?php $_SESSION["inCart"] = $numInCart; ?>
       }
