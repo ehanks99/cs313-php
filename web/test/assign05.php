@@ -41,50 +41,49 @@
       $pictures = array("cat.jpg", "cheetaAndCub.jpg", "penguin.jpg", "cuteAnimals.jpg",
                         "dog.jpg", "dragon.jpg", "dragon2.jpg", "elephant.jpg", "narwhal.jpg");
       $pictureNames = array("Kitten", "Cheeta and Cub", "Pink Penguin", "Keychain Animals",
-                            "Dog", "Blue Dragon", "White Dragon", "ElephanT", "Narwhal");
+                            "Dog", "Blue Dragon", "White Dragon", "Elephant", "Narwhal");
       $prices = array("2.00", "10.00", "2.25", "4.00", "4.00", "7.50", "8.00", "12.25", "7.00");
 
-      echo '<div class="container">\n';
+      echo '<div class="container">';
 
       for ($i = 0; $i < sizeof($pictures); $i++)
       {
-         echo '
-               <div class="row row-eq-height">
-                  <div class="col-md-4">
+         echo '<div class="row row-eq-height">
+                  <div class="col-md-4" style = "background-color: blue">
                      <a href = "animal_pics/' . $pictures[$i] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
                         ' . $pictureNames[$i] . '<br/>
-                        ' . $prices[$i] . '<br/>
+                        $' . $prices[$i] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4" style = "background-color: pink">
                      <a href = "animal_pics/' . $pictures[$i + 1] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
                         ' . $pictureNames[$i + 1] . '<br/>
-                        ' . $prices[$i + 1] . '<br/>
+                        $' . $prices[$i + 1] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4" style = "background-color: blue">
                      <a href = "animal_pics/' . $pictures[$i + 2] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
                      <div class = "float-right">
                         ' . $pictureNames[$i + 2] . '<br/>
-                        ' . $prices[$i + 2] . '<br/>
+                        $' . $prices[$i + 2] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
-               </div> 
-            ';
+               </div>';
+            
             $i += 2;
       }
-      echo '</div>\n';
+      echo '</div>';
    ?>
    <br/><br/>
 </body>
