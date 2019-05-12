@@ -29,7 +29,7 @@
          //location.href = "addToCart.php";
          //$inCartNumber = <?php //echo $_SESSION["inCart"]; ?>;
          $numInCart++;
-         document.getElementById("inCart").innerHTML = "(" . $numInCart . ")";
+         document.getElementById("inCart").innerHTML = "($numInCart)";
          $_SESSION["inCart"] = $numInCart;
       }
 
