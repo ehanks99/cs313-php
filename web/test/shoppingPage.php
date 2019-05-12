@@ -26,11 +26,20 @@
          //location.href = "addToCart.php";
          //$inCartNumber = <?php //echo $_SESSION["inCart"]; ?>;
 
-         document.getElementById("inCart").innerHTML = "(1)";
+         document.getElementById("inCart").innerHTML = "(\"" . $inCartNumber . "\")";
+      }
+
+      function loadPage()
+      {
+         <?php if ($_SESSION["inCart"] == null)
+               document.getElementById("inCart").innerHTML = "(0)";
+            else
+               document.getElementById("inCart").innerHTML = "(\"" . $_SESSION["inCart"] . "\")";
+         ?>
       }
    </script>
 </head>
-<body>
+<body onload = "loadPage()">
    <?php
       include "navbar.php";
 
