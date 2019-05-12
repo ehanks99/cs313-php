@@ -56,7 +56,7 @@
                         <button type="button" class="btn btn-success float-left">Add to Cart</button>
                      </div>
 
-                        <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
+                     <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                   </div>
                   <div class="col-md-4">
                      <div class = "pull-right">
@@ -65,9 +65,7 @@
                         <button type="button" class="btn btn-success float-left">Add to Cart</button>
                      </div>
 
-                     <a href = "animal_pics/' . $pictures[$i + 1] . '">
-                        <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
-                     </a>
+                     <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                   </div>
                   <div class="col-md-4">
                      <div class = "pull-right">
@@ -76,9 +74,7 @@
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
 
-                     <a href = "animal_pics/' . $pictures[$i + 2] . '">
-                        <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
-                     </a>
+                     <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                   </div>
                </div>
                <br/><hr><br/>';
