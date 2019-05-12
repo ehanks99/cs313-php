@@ -47,50 +47,16 @@
       for ($i = 0; $i < 1; $i++)
       {
          echo '
-            <div class="container">
+            <div class="container"> 
                <div class="row">
-                  <div class="col">
-                     One of three columns
-                  </div>
-                  <div class="col">
-                     One of three columns
-                  </div>
-                  <div class="col">
-                     One of three columns
-                  </div>
-               </div>
+                  <div class="col-sm-4">.col-sm-4</div>
+                  <div class="col-sm-4">.col-sm-4</div>
+                  <div class="col-sm-4">.col-sm-4</div>
+               </div> 
             </div>
             ';
       }
    ?>
    <br/><br/>
-   <div class="container-fluid"> <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
-            <div class="row">
-                <div class="col-xs-1">
-                One of three columns
-                </div>
-                <div class="col-xs-1">
-                One of three columns
-                </div>
-                <div class="col-xs-1">
-                One of three columns
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="container">
-               <div class="row">
-                  <div class="col-md-4">
-                     One of three columns
-                  </div>
-                  <div class="col-md-4">
-                     One of three columns
-                  </div>
-                  <div class="col-md-4">
-                     One of three columns
-                  </div>
-               </div>
-            </div>
 </body>
 </html>
