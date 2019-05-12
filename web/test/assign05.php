@@ -56,7 +56,7 @@
                      <div class = "float-right">
                         ' . $pictureNames[$i] . '<br/>
                         ' . $prices[$i] . '<br/>
-                        <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
                   <div class="col-md-4">
@@ -66,8 +66,7 @@
                      <div class = "float-right">
                         ' . $pictureNames[$i + 1] . '<br/>
                         ' . $prices[$i + 1] . '<br/>
-                        <button type="button" class="btn btn-secondary">Add to Cart</button>
-                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
                   <div class="col-md-4">
@@ -77,7 +76,7 @@
                      <div class = "float-right">
                         ' . $pictureNames[$i + 2] . '<br/>
                         ' . $prices[$i + 2] . '<br/>
-                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
                   </div>
                </div> 
