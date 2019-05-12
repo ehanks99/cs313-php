@@ -58,3 +58,8 @@ li
 {
    height: 200%;
 }
+
+.img-responsive {
+   width: auto;
+   height: 100px;
+}
