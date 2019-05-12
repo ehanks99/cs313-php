@@ -23,7 +23,7 @@
    <script type = "text/javaScript">
       function addToCart(picture, pictureName, price)
       {
-         //location.href = "addToCart.php";
+         location.href = "addToCart.php";
          //$inCartNumber = <?php //echo $_SESSION["inCart"]; ?>;
 
          //document.getElementById("inCart").innerHTML = "(\"" . $inCartNumber . "\")";
