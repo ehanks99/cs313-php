@@ -2,9 +2,7 @@
    session_start();
    session_unset();
    $_SESSION["inCart"] = 5;
-   if (!is_writable(session_save_path())) {
-      echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
-  }
+   echo 'Session path '.session_save_path();
    print_r($_SESSION);
 ?>
 
