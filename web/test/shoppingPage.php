@@ -32,6 +32,7 @@
          $numInCart++;
          document.getElementById("inCart").innerHTML = "(" + $numInCart + ")";
          picsInCart.push(picture);
+         alert(picsInCart[0]);
          
          <?php $_SESSION["inCart"] = $numInCart; ?>
       }
