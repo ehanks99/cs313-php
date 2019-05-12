@@ -1,13 +1,13 @@
 <?php
+   
+   session_save_path('sessions');
+   ini_set('session.gc_probability', 1);
+      if (!is_writable(session_save_path())) {
+         echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
+     }
    session_start();
    session_unset();
    $_SESSION["inCart"] = 5;
-   
-session_save_path('sessions');
-ini_set('session.gc_probability', 1);
-   if (!is_writable(session_save_path())) {
-      echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
-  }
    print_r($_SESSION);
 ?>
 
