@@ -50,19 +50,19 @@
       {
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
-                     ' . $pictureNames[$i] . '<br/>
+                     <p>' . $pictureNames[$i] . '</p><br/>
 
-                     <p>$' . $prices[$i] . '</p>
                      <button type="button" class="btn btn-success float-right">Add to Cart</button>
+                     <p>$' . $prices[$i] . '</p>
 
                      <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                   </div>
                   <div class="col-md-4">
-                     ' . $pictureNames[$i + 1] . '<br/>
+                     <p>' . $pictureNames[$i + 1] . '</p><br/>
 
-                     $' . $prices[$i + 1] . '<br/>
+                     <p>$' . $prices[$i + 1] . '</p><br/>
                      <button type="button" class="btn btn-success float-left">Add to Cart</button>
 
                      <a href = "animal_pics/' . $pictures[$i + 1] . '">
@@ -70,10 +70,10 @@
                      </a>
                   </div>
                   <div class="col-md-4">
-                     ' . $pictureNames[$i + 2] . '<br/>
+                     <p>' . $pictureNames[$i + 2] . '</p><br/>
 
                      <button type="button" class="btn btn-success float-left">Add to Cart</button>
-                     $' . $prices[$i + 2] . '<br/>
+                     <p>$' . $prices[$i + 2] . '</p><br/>
 
                      <a href = "animal_pics/' . $pictures[$i + 2] . '">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
