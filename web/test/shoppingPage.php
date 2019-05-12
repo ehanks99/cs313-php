@@ -3,6 +3,7 @@
    session_unset();
    $_SESSION["inCart"] = 5;
    print_r($_SESSION);
+   header("Location: shoppingCart.php");
 ?>
 
 <!DOCTYPE html>
