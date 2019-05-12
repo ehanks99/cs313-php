@@ -35,7 +35,7 @@
          picNamesInCart.push(pictureName);
          pricesInCart.push(price);
          
-         <?php $_SESSION["inCart"] = $numInCart; ?>
+         <?php $_SESSION["inCart"] = "$numInCart"; ?>
       }
 
       function goToCart()
