@@ -58,12 +58,3 @@ li
 {
    height: 200%;
 }
-
-.myContainer {
-   display: table; /* Make the container element behave like a table */
-   width: 100%; /* Set full-width to expand the whole page */
-}
-
-.myColumn {
-   display: table-cell; /* Make elements inside the container behave like table cells */
-}

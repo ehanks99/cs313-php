@@ -47,19 +47,19 @@
       for ($i = 0; $i < 1; $i++)
       {
          echo '
-            <div class="container myContainer"> 
-               <div class="row">
-                  <div class="col-sm-4 myColumn" style="background-color:lavender;">
+            <div class="container"> 
+               <div class="row row-eq-height">
+                  <div class="col-sm-4" style="background-color:lavender;">
                      <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '">
                      </a>
                   </div>
-                  <div class="col-sm-4 myColumn" style="background-color:lavenderblush;">
+                  <div class="col-sm-4" style="background-color:lavenderblush;">
                      <a href = "animal_pics/' . $pictures[$i + 1] . '">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '">
                      </a>
                   </div>
-                  <div class="col-sm-4 myColumn" style="background-color:lavender;">
+                  <div class="col-sm-4" style="background-color:lavender;">
                      <a href = "animal_pics/' . $pictures[$i + 2] . '">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '">
                      </a>
