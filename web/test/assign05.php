@@ -51,9 +51,8 @@
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
                      <p>' . $pictureNames[$i] . '</p><br/>
-
+                     <p class = "float-left">$' . $prices[$i] . '</p>
                      <button type="button" class="btn btn-success float-right">Add to Cart</button>
-                     <p>$' . $prices[$i] . '</p>
 
                      <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
