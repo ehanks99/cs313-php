@@ -50,22 +50,29 @@
             <div class="container"> 
                <div class="row row-eq-height">
                   <div class="col-sm-4">
-                     <a href = "animal_pics/' . $pictures[$i] . '">
+                     <a href = "animal_pics/' . $pictures[$i] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
-                     <button type="button" class="btn btn-dark">Dark</button>
+                     <div class = "float-right">
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                     </div>
                   </div>
                   <div class="col-sm-4">
-                     <a href = "animal_pics/' . $pictures[$i + 1] . '">
+                     <a href = "animal_pics/' . $pictures[$i + 1] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
-                     <button type="button" class="btn btn-dark">Dark</button>
+                     <div class = "float-right">
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                     </div>
                   </div>
                   <div class="col-sm-4">
-                     <a href = "animal_pics/' . $pictures[$i + 2] . '">
+                     <a href = "animal_pics/' . $pictures[$i + 2] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
-                     <button type="button" class="btn btn-dark">Dark</button>
+                     <div class = "float-right">
+                        <button type="button" class="btn btn-dark">Add to Cart</button>
+                     </div>
                   </div>
                </div> 
             </div>
