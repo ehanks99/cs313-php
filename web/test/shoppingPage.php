@@ -21,25 +21,29 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
    <script type = "text/javaScript">
+      $numInCart = <?php if ($_SESSION["inCart"] == null) echo 0;
+                         else echo $_SESSION["inCart"];
+
       function addToCart(picture, pictureName, price)
       {
-         location.href = "addToCart.php";
+         //location.href = "addToCart.php";
          //$inCartNumber = <?php //echo $_SESSION["inCart"]; ?>;
-
-         //document.getElementById("inCart").innerHTML = "(\"" . $inCartNumber . "\")";
+         $numInCart++;
+         document.getElementById("inCart").innerHTML = "(" . $numInCart . ")";
+         $_SESSION["inCart"] = $numInCart;
       }
 
-      function loadPage()
+      /*function loadPage()
       {
-         <?php if ($_SESSION["inCart"] == null)
+         <?php/* if ($_SESSION["inCart"] == null)
                echo 'document.getElementById("inCart").innerHTML = "(0)";';
             else
-               echo 'document.getElementById("inCart").innerHTML = "(' . $_SESSION["inCart"] . ')";';
+               echo 'document.getElementById("inCart").innerHTML = "(' . $_SESSION["inCart"] . ')";';*/
          ?>
-      }
+      }*/
    </script>
 </head>
-<body onload = "loadPage()">
+<body> <!--onload = "loadPage()">-->
    <?php
       include "navbar.php";
 
