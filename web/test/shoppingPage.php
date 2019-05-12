@@ -1,7 +1,8 @@
 <?php
    
-   session_save_path('sessions');
-   ini_set('session.save_path', 'sessions');
+   //session_save_path('sessions');
+   //ini_set('session.save_path', 'sessions');
+   session_name("shopping");
       if (!is_writable(session_save_path())) {
          echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
      }
