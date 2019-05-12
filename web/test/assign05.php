@@ -57,7 +57,7 @@
                         <button type="button" class="btn btn-success float-left">Add to Cart</button>
                      </div>
 
-                     <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
+                     <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive pull-up">
                   </div>
                   <div class="col-md-4">
                      <div class = "pull-right">
