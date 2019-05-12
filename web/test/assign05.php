@@ -49,35 +49,35 @@
       for ($i = 0; $i < sizeof($pictures); $i++)
       {
          echo '<div class="row row-eq-height">
-                  <div class="col-md-4" style = "background-color: blue">
+                  <div class="col-md-4">
                      <div class = "float-right">
                         ' . $pictureNames[$i] . '<br/>
                         $' . $prices[$i] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
-                     <div class = "float-left"><a href = "animal_pics/' . $pictures[$i] . '">
+                     <a href = "animal_pics/' . $pictures[$i] . '" class = "float-left">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
-                     </a></div>
-                  </div>
-                  <div class="col-md-4" style = "background-color: pink">
-                     <a href = "animal_pics/' . $pictures[$i + 1] . '" class = "float-left">
-                        <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
+                  </div>
+                  <div class="col-md-4">
                      <div class = "float-right">
                         ' . $pictureNames[$i + 1] . '<br/>
                         $' . $prices[$i + 1] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
-                  </div>
-                  <div class="col-md-4" style = "background-color: blue">
-                     <a href = "animal_pics/' . $pictures[$i + 2] . '" class = "float-left">
-                        <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
+                     <a href = "animal_pics/' . $pictures[$i + 1] . '" class = "float-left">
+                        <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
+                  </div>
+                  <div class="col-md-4">
                      <div class = "float-right">
                         ' . $pictureNames[$i + 2] . '<br/>
                         $' . $prices[$i + 2] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
+                     <a href = "animal_pics/' . $pictures[$i + 2] . '" class = "float-left">
+                        <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
+                     </a>
                   </div>
                </div>
                <br/><hr><br/>';
