@@ -43,10 +43,6 @@
 
       function goToCart()
       {
-         <?php $_SESSION["pictures"] = picsInCart;
-               $_SESSION["picNames"] = picNamesInCart;
-               $_SESSION["pricesInCart"] = pricesInCart;
-         ?>
          document.location.href = "shoppingCart.php";
       }
    </script>
