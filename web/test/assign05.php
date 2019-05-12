@@ -65,13 +65,13 @@
    ?>
    <div class="container">
                <div class="row">
-                  <div class="col">
+                  <div class="col col-sm">
                      One of three columns
                   </div>
-                  <div class="col">
+                  <div class="col col-sm">
                      One of three columns
                   </div>
-                  <div class="col">
+                  <div class="col col-sm">
                      One of three columns
                   </div>
                </div>
