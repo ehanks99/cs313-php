@@ -2,8 +2,8 @@
         <div style = "float:left"><img src = "adoption_right.jpg" alt = "different animals" class = "twoHundredHeight"></div>
         <div><h1 class = "center" style = "float:left"> Adopt A Friend Today! </h1></div>
         <div><img src = "adoption.jpg" alt = "different animals" class = "twoHundredHeight"></div>  
-        <hr>
     </div>
+    <hr>
 
     <header>
         <ul>
