@@ -50,11 +50,9 @@
       {
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
-                     <div class = "float-left">
                         ' . $pictureNames[$i] . '<br/>
                         $' . $prices[$i] . '<br/>
-                     </div>
-                     <button type="button" class="btn btn-success">Add to Cart</button>
+                     <button type="button" class="btn btn-success float-right">Add to Cart</button>
 
                      <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
@@ -77,7 +75,7 @@
                         $' . $prices[$i + 2] . '<br/>
                      </div>
                      <button type="button" class="btn btn-success">Add to Cart</button>
-                     
+
                      <a href = "animal_pics/' . $pictures[$i + 2] . '">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
