@@ -78,10 +78,11 @@
             
             $i += 2;
       }
+      echo '<div class="row"><button type="button" class="btn btn-success pull-right">Continue to Cart</button></div>';
       echo '</div>';
    ?>
 
-   <button type="button" class="btn btn-success pull-right">Continue to Cart</button>
+   
    <br/><br/>
 </body>
 </html>
