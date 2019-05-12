@@ -55,7 +55,7 @@
                         $' . $prices[$i] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
-                     <a href = "animal_pics/' . $pictures[$i] . '" class = "float-left">
+                     <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                   </div>
@@ -65,7 +65,7 @@
                         $' . $prices[$i + 1] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
-                     <a href = "animal_pics/' . $pictures[$i + 1] . '" class = "float-left">
+                     <a href = "animal_pics/' . $pictures[$i + 1] . '">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
                   </div>
@@ -75,7 +75,7 @@
                         $' . $prices[$i + 2] . '<br/>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
-                     <a href = "animal_pics/' . $pictures[$i + 2] . '" class = "float-left">
+                     <a href = "animal_pics/' . $pictures[$i + 2] . '">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
                   </div>
