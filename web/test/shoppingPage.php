@@ -22,7 +22,7 @@
 
    <script type = "text/javaScript">
       $numInCart = <?php if ($_SESSION["inCart"] == null) echo 0;
-                         else echo $_SESSION["inCart"]; ?>
+                         else echo $_SESSION["inCart"]; ?>;
       $picsInCart = array();
       $picNamesInCart = array();
       $pricesInCart = array();
