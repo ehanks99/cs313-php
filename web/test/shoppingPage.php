@@ -30,7 +30,7 @@
          //$inCartNumber = <?php //echo $_SESSION["inCart"]; ?>;
          $numInCart++;
          document.getElementById("inCart").innerHTML = "($numInCart)";
-         $_SESSION["inCart"] = $numInCart;
+         <?php $_SESSION["inCart"] = $numInCart; ?>
       }
 
       /*function loadPage()
