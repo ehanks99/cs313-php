@@ -21,19 +21,19 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
    <script type = "text/javaScript">
-      var numInCart = <?php if ($_SESSION["inCart"] == null) echo 0;
+      $numInCart = <?php if ($_SESSION["inCart"] == null) echo 0;
                          else echo $_SESSION["inCart"]; ?>
-      var picsInCart = array();
-      var picNamesInCart = array();
-      var pricesInCart = array();
+      $picsInCart = array();
+      $picNamesInCart = array();
+      $pricesInCart = array();
 
       function addToCart(picture, pictureName, price)
       {
-         var numInCart++;
-         document.getElementById("inCart").innerHTML = "(" + numInCart + ")";
-
-
-         <?php $_SESSION["inCart"] = numInCart; ?>
+         $numInCart++;
+         document.getElementById("inCart").innerHTML = "(" + $numInCart + ")";
+         $picsInCart.push($picture);
+         
+         <?php $_SESSION["inCart"] = $numInCart; ?>
       }
    </script>
 </head>
