@@ -44,7 +44,7 @@
                             "Dog", "Blue Dragon", "White Dragon", "Elephant", "Narwhal");
       $prices = array("2.00", "10.00", "2.25", "4.00", "4.00", "7.50", "8.00", "12.25", "7.00");
 
-      echo '<div class="container">';
+      echo '<br/><div class="container">';
 
       for ($i = 0; $i < sizeof($pictures); $i++)
       {
