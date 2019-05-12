@@ -23,7 +23,10 @@
    <script type = "text/javaScript">
       function addToCart(picture, pictureName, price)
       {
-         
+         location.href = "addToCart.php";
+         $inCartNumber = <?php echo $_SESSION["inCart"]; ?>;
+
+         document.getElementById("inCart").innerHTML = "(" . $inCartNumber . ")";
       }
    </script>
 </head>
@@ -78,7 +81,9 @@
             
             $i += 2;
       }
-      echo '<div class="row"><button type="button" class="btn btn-primary pull-right">Continue to Cart</button></div>';
+      echo '<div class="row">
+               <button type="button" class="btn btn-primary pull-right">Continue to Cart</button>
+            </div>';
       echo '</div>';
    ?>
 
