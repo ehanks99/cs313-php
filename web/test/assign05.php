@@ -46,21 +46,21 @@
 
       for ($i = 0; $i < 1; $i++)
       {
-         echo "
-            <div class='container'>
-               <div class='row'>
-                  <div class='col-sm'>
+         echo '
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm">
                      One of three columns
                   </div>
-                  <div class='col-sm'>
+                  <div class="col-sm">
                      One of three columns
                   </div>
-                  <div class='col-sm'>
+                  <div class="col-sm">
                      One of three columns
                   </div>
                </div>
             </div>
-            ";
+            ';
       }
    ?>
 </body>
