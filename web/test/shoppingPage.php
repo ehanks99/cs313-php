@@ -34,7 +34,7 @@
          <?php if ($_SESSION["inCart"] == null)
                echo 'document.getElementById("inCart").innerHTML = "(0)";';
             else
-               echo 'document.getElementById("inCart").innerHTML = "(\"' . $_SESSION["inCart"] . '\")";';
+               echo 'document.getElementById("inCart").innerHTML = "(' . $_SESSION["inCart"] . ')";';
          ?>
       }
    </script>
