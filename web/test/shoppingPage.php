@@ -32,9 +32,9 @@
       function loadPage()
       {
          <?php if ($_SESSION["inCart"] == null)
-               document.getElementById("inCart").innerHTML = "(0)";
+               echo 'document.getElementById("inCart").innerHTML = "(0)";';
             else
-               document.getElementById("inCart").innerHTML = "(\"" . $_SESSION["inCart"] . "\")";
+               echo 'document.getElementById("inCart").innerHTML = "(\"" . $_SESSION["inCart"] . "\")";';
          ?>
       }
    </script>
