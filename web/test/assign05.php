@@ -46,8 +46,7 @@
 
       for ($i = 0; $i < $pictures.count(); $i++)
       {
-         echo "
-            <div class='container'>
+         echo "<div class='container'>
                <div class='row'>
                   <div class='col-sm'>
                      One of three columns
