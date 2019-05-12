@@ -62,5 +62,5 @@ li
 .img-responsive {
    width: auto;
    height: 100px;
-   min-height: 100px;
+   object-fit: cover;
 }
