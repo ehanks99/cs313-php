@@ -26,7 +26,7 @@
          //location.href = "addToCart.php";
          //$inCartNumber = <?php //echo $_SESSION["inCart"]; ?>;
 
-         document.getElementById("inCart").innerHTML = "(" . 1 . ")";
+         document.getElementById("inCart").innerHTML = "(1)";
       }
    </script>
 </head>
