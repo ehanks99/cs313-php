@@ -49,19 +49,19 @@
          echo '
             <div class="container"> 
                <div class="row row-eq-height">
-                  <div class="col-sm-4" style="background-color:lavender;">
+                  <div class="col-sm-4">
                      <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                      <button type="button" class="btn btn-dark">Dark</button>
                   </div>
-                  <div class="col-sm-4" style="background-color:lavenderblush;">
+                  <div class="col-sm-4">
                      <a href = "animal_pics/' . $pictures[$i + 1] . '">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
                      <button type="button" class="btn btn-dark">Dark</button>
                   </div>
-                  <div class="col-sm-4" style="background-color:lavender;">
+                  <div class="col-sm-4">
                      <a href = "animal_pics/' . $pictures[$i + 2] . '">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
