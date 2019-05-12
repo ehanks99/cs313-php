@@ -51,17 +51,17 @@
                <div class="row">
                   <div class="col-sm-4" style="background-color:lavender;">
                      <a href = "animal_pics/' . $pictures[$i] . '">
-                        <img src = "animal_pics/' . $pictures[$i] . '" alt = "cat" style = "width:30%">
+                        <img src = "animal_pics/' . $pictures[$i] . '">
                      </a>
                   </div>
                   <div class="col-sm-4" style="background-color:lavenderblush;">
                      <a href = "animal_pics/' . $pictures[$i + 1] . '">
-                        <img src = "animal_pics/' . $pictures[$i + 1] . '" alt = "cat" style = "width:30%">
+                        <img src = "animal_pics/' . $pictures[$i + 1] . '">
                      </a>
                   </div>
                   <div class="col-sm-4" style="background-color:lavender;">
                      <a href = "animal_pics/' . $pictures[$i + 2] . '">
-                        <img src = "animal_pics/' . $pictures[$i + 2] . '" alt = "cat" style = "width:30%">
+                        <img src = "animal_pics/' . $pictures[$i + 2] . '">
                      </a>
                   </div>
                </div> 
