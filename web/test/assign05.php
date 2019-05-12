@@ -51,7 +51,7 @@
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
                         ' . $pictureNames[$i] . '<br/>
-                        <button type="button" class="btn btn-success float-right">Add to Cart</button>
+                        <button type="button" class="btn btn-success float-left">Add to Cart</button>
                         $' . $prices[$i] . '<br/>
 
                      <a href = "animal_pics/' . $pictures[$i] . '">
