@@ -50,21 +50,23 @@
       {
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
-                     <div class = "float-right">
+                     <div class = "float-left">
                         ' . $pictureNames[$i] . '<br/>
                         $' . $prices[$i] . '<br/>
-                        <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
+                     <button type="button" class="btn btn-success">Add to Cart</button>
+
                      <a href = "animal_pics/' . $pictures[$i] . '">
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
                      </a>
                   </div>
                   <div class="col-md-4">
-                     <div class = "float-right">
+                     <div class = "float-left">
                         ' . $pictureNames[$i + 1] . '<br/>
                         $' . $prices[$i + 1] . '<br/>
-                        <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
+                     <button type="button" class="btn btn-success">Add to Cart</button>
+
                      <a href = "animal_pics/' . $pictures[$i + 1] . '">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
                      </a>
@@ -73,8 +75,9 @@
                      <div class = "float-right">
                         ' . $pictureNames[$i + 2] . '<br/>
                         $' . $prices[$i + 2] . '<br/>
-                        <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
+                     <button type="button" class="btn btn-success">Add to Cart</button>
+                     
                      <a href = "animal_pics/' . $pictures[$i + 2] . '">
                         <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
                      </a>
