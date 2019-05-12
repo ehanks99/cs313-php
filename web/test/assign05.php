@@ -52,7 +52,7 @@
                   <div class="col-md-4">
                      ' . $pictureNames[$i] . '<br/>
 
-                     <p>$' . $prices[$i] . '</p><br/>
+                     <p>$' . $prices[$i] . '</p>
                      <button type="button" class="btn btn-success float-right">Add to Cart</button>
 
                      <a href = "animal_pics/' . $pictures[$i] . '">
