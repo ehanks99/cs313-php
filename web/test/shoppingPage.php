@@ -57,7 +57,7 @@
                      <div class = "pull-right">
                         <p>' . $pictureNames[$i + 1] . '</p><br/>
                         <p>$' . $prices[$i + 1] . '</p><br/>
-                        <button type="button" class="btn btn-success"onclick = 
+                        <button type="button" class="btn btn-success" onclick = 
                         "addToCart(\'' . $pictures[$i + 1] . '\', \'' . $pictureNames[$i + 1] . '\', \'' . $prices[$i + 1] . '\')">Add to Cart</button>
                      </div>
 
@@ -67,7 +67,7 @@
                      <div class = "pull-right">
                         <p>' . $pictureNames[$i + 2] . '</p><br/>
                         <p>$' . $prices[$i + 2] . '</p><br/>
-                        <button type="button" class="btn btn-success"onclick = 
+                        <button type="button" class="btn btn-success" onclick = 
                         "addToCart(\'' . $pictures[$i + 2] . '\', \'' . $pictureNames[$i + 2] . '\', \'' . $prices[$i + 2] . '\')">Add to Cart</button>
                      </div>
 
