@@ -47,7 +47,7 @@
                      <div class = "pull-right">
                         <p>' . $pictureNames[$i] . '</p><br/>
                         <p>$' . $prices[$i] . '</p><br/>
-                        <button type="button" class="btn btn-success">Add to Cart</button>
+                        <button type="button" class="btn btn-success" onclick = "addToCart(' . $pictures[$i] ', ' . $pictureNames[$i] . ', ' . $prices[$i] . ')">Add to Cart</button>
                      </div>
 
                      <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
