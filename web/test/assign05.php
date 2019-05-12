@@ -50,8 +50,8 @@
             <div class="container"> 
                <div class="row">
                   <div class="col-sm-4" style="background-color:lavender;">
-                     <a href = "animal_pics' . $pictures[$i] . '">
-                        <img src = "animal_pics' . $pictures[$i] . '" alt = "cat" style = "width:30%">
+                     <a href = "animal_pics/' . $pictures[$i] . '">
+                        <img src = "animal_pics/' . $pictures[$i] . '" alt = "cat" style = "width:30%">
                      </a>
                   </div>
                   <div class="col-sm-4" style="background-color:lavenderblush;">
