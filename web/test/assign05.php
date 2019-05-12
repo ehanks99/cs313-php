@@ -66,13 +66,13 @@
    <br/><br/>
    <div class="container-fluid"> <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
             <div class="row">
-                <div class="col-xs-4">
+                <div class="col-xs">
                 One of three columns
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs">
                 One of three columns
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs">
                 One of three columns
                 </div>
             </div>
