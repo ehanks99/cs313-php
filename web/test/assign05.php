@@ -59,10 +59,11 @@
                      </a>
                   </div>
                   <div class="col-md-4">
-                     <p>' . $pictureNames[$i + 1] . '</p><br/>
-
-                     <p>$' . $prices[$i + 1] . '</p><br/>
-                     <button type="button" class="btn btn-success float-left">Add to Cart</button>
+                     <div class = "pull-right">
+                        <p>' . $pictureNames[$i + 1] . '</p><br/>
+                        <p>$' . $prices[$i + 1] . '</p><br/>
+                        <button type="button" class="btn btn-success float-left">Add to Cart</button>
+                     </div>
 
                      <a href = "animal_pics/' . $pictures[$i + 1] . '">
                         <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
