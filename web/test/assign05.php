@@ -51,7 +51,7 @@
       {
          echo '<div class="row row-eq-height">
                   <div class="col-md-4">
-                     <div class = "pull-left">
+                     <div class = "pull-right">
                         <p>' . $pictureNames[$i] . '</p><br/>
                         <p>$' . $prices[$i] . '</p><br/>
                         <button type="button" class="btn btn-success float-left">Add to Cart</button>
