@@ -44,10 +44,11 @@
                             "Dog", "Blue Dragon", "White Dragon", "ElephanT", "Narwhal");
       $prices = array("2.00", "10.00", "2.25", "4.00", "4.00", "7.50", "8.00", "12.25", "7.00");
 
+      echo '<div class="container">\n';
+
       for ($i = 0; $i < sizeof($pictures); $i++)
       {
          echo '
-            <div class="container"> 
                <div class="row row-eq-height">
                   <div class="col-md-4">
                      <a href = "animal_pics/' . $pictures[$i] . '" class = "float-left">
@@ -80,10 +81,10 @@
                      </div>
                   </div>
                </div> 
-            </div>
             ';
             $i += 2;
       }
+      echo '</div>\n';
    ?>
    <br/><br/>
 </body>
