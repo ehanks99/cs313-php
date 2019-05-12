@@ -2,8 +2,8 @@
    session_start();
    session_unset();
    $_SESSION["inCart"] = 5;
-   echo 'Session path '.session_save_path();
    print_r($_SESSION);
+   echo 'Session path '.session_save_path();
 ?>
 
 <!DOCTYPE html>
