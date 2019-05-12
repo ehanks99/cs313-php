@@ -10,7 +10,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Adopt an Animal</title>
 
-   <link rel = "stylesheet" type = "text/css" href = "assign05.css">
+   <link rel = "stylesheet" type = "text/css" href = "styles.css">
    <!-- Latest compiled and minified CSS -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -21,16 +21,9 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
    <script type = "text/javaScript">
-      function calculate()
+      function addToCart(picture, pictureName, price)
       {
-         var total = 0;
-         var x = document.querySelectorAll('[name = "animal"]');
          
-         for (var i = 0; i < x.length; i++)
-         {
-            if (x[i].checked) total = total + x[i].value * 1;
-         }
-         document.getElementById("total").innerHTML = total.toFixed(2);
       }
    </script>
 </head>
@@ -54,7 +47,7 @@
                      <div class = "pull-right">
                         <p>' . $pictureNames[$i] . '</p><br/>
                         <p>$' . $prices[$i] . '</p><br/>
-                        <button type="button" class="btn btn-success float-left">Add to Cart</button>
+                        <button type="button" class="btn btn-success" onclick = "addToCart(' . $pictures[$i] ', ' . $pictureNames[$i] . ', ' . $prices[$i] . ')">Add to Cart</button>
                      </div>
 
                      <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
@@ -63,7 +56,7 @@
                      <div class = "pull-right">
                         <p>' . $pictureNames[$i + 1] . '</p><br/>
                         <p>$' . $prices[$i + 1] . '</p><br/>
-                        <button type="button" class="btn btn-success float-left">Add to Cart</button>
+                        <button type="button" class="btn btn-success" onclick = "addToCart(' . $pictures[$i + 1] ', ' . $pictureNames[$i + 1] . ', ' . $prices[$i + 1] . '>Add to Cart</button>
                      </div>
 
                      <img src = "animal_pics/' . $pictures[$i + 1] . '" class = "img-responsive">
@@ -72,7 +65,7 @@
                      <div class = "pull-right">
                         <p>' . $pictureNames[$i + 2] . '</p><br/>
                         <p>$' . $prices[$i + 2] . '</p><br/>
-                        <button type="button" class="btn btn-success">Add to Cart</button>
+                        <button type="button" class="btn btn-success" onclick = "addToCart(' . $pictures[$i + 2] ', ' . $pictureNames[$i + 2] . ', ' . $prices[$i + 2] . '>Add to Cart</button>
                      </div>
 
                      <img src = "animal_pics/' . $pictures[$i + 2] . '" class = "img-responsive">
@@ -84,8 +77,8 @@
       }
       echo '</div>';
    ?>
-   <br/><br/>
 
    <button type="button" class="btn btn-success pull-right">Continue to Cart</button>
+   <br/><br/>
 </body>
 </html>
