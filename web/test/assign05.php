@@ -52,7 +52,7 @@
                   <div class="col-md-4">
                      <div class = "pull-right"
                         <p>' . $pictureNames[$i] . '</p><br/>
-                        <p class = "float-left">$' . $prices[$i] . '</p>
+                        <p>$' . $prices[$i] . '</p>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                      </div>
 
