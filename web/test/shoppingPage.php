@@ -23,9 +23,9 @@
    <script type = "text/javaScript">
       $numInCart = <?php if ($_SESSION["inCart"] == null) echo 0;
                          else echo $_SESSION["inCart"]; ?>;
-      var picsInCart = array();
-      var picNamesInCart = array();
-      var pricesInCart = array();
+      var picsInCart = []; 
+      var picNamesInCart = [];
+      var pricesInCart = [];
 
       function addToCart(picture, pictureName, price)
       {
