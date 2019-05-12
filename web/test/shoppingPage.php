@@ -32,9 +32,18 @@
          $numInCart++;
          document.getElementById("inCart").innerHTML = "(" + $numInCart + ")";
          picsInCart.push(picture);
-         alert(picsInCart[0]);
+         picNamesInCart.push(pictureName);
+         pricesInCart.push(price);
          
          <?php $_SESSION["inCart"] = $numInCart; ?>
+      }
+
+      function goToCart()
+      {
+         <?php $_SESSION["pictures"] = picsInCart;
+               $_SESSION["picNames"] = picNamesInCart;
+               $_SESSION["pricesInCart"] = pricesInCart;
+         ?>
       }
    </script>
 </head>
@@ -90,7 +99,7 @@
             $i += 2;
       }
       echo '<div class="row">
-               <button type="button" class="btn btn-primary pull-right">Continue to Cart</button>
+               <button type="button" class="btn btn-primary pull-right" onclick = "goToCart()">Continue to Cart</button>
             </div>';
       echo '</div>';
    ?>

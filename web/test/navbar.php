@@ -7,7 +7,7 @@
 
     <header>
         <ul>
-            <li><a href="#" class="btn btn-default btn-lg">
+            <li><a href="#" class="btn btn-default btn-lg" onclick = "goToCart()">
                 <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart <span id = "inCart"> (0) </span>
             </a></li>
         </ul>
