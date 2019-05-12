@@ -44,7 +44,7 @@
                $_SESSION["picNames"] = picNamesInCart;
                $_SESSION["pricesInCart"] = pricesInCart;
          ?>
-         window.href = "shoppingCar.php";
+         document.location.href = "shoppingCar.php";
       }
    </script>
 </head>
