@@ -43,7 +43,7 @@
       $pictureNames = array("Kitten", "Cheeta and Cub", "Chinchilla", "Keychain Animals",
                             "Dog", "Blue Dragon", "White Dragon", "ElephanT", "Narwhal");
       $prices = array("2.00", "10.00", "2.25", "4.00", "4.00", "7.50", "8.00", "12.25", "7.00");
-
+echo $pictures.sizeof();
       for ($i = 0; $i < $pictures.sizeof(); $i++)
       {
          echo '
