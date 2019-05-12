@@ -55,10 +55,8 @@
                         <p>$' . $prices[$i] . '</p><br/>
                         <button type="button" class="btn btn-success float-left">Add to Cart</button>
                      </div>
-                     
-                     <a href = "animal_pics/' . $pictures[$i] . '">
+
                         <img src = "animal_pics/' . $pictures[$i] . '" class = "img-responsive">
-                     </a>
                   </div>
                   <div class="col-md-4">
                      <div class = "pull-right">
