@@ -19,7 +19,9 @@
             <h1 class = "center big">Assignments</h1> 
             <hr>
 
-            <h2 class = "center"> Coming Soon </h2>
+            <!--<h2 class = "center"> Coming Soon </h2>-->
+            <h2 class = "center"><a href = "./week02/team-activity/home.php">Team Activity 02</a></h2>
+            <h2 class = "center"><a href = "./week03/prove03/shoppingPage.php">Prove 03</a></h2>
         </div>
         
         <footer id = "bottom"> 
