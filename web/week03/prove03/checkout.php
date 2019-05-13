@@ -33,37 +33,57 @@
         {
             document.location.href = "shoppingCart.php";
         }
+
+        function checkFull()
+        {
+            var good = true;
+            if (document.getElementById("name").value == "")
+                good = false;
+            if (document.getElementById("email").value == "")
+                good = false;
+            if (document.getElementById("address1").value == "")
+                good = false;
+            
+            if (good == true)
+                return true;
+            else
+            {
+                alert("All fields must be filled out");
+                return false;
+            }
+        }
     </script>
 </head>
-<body onload = "setInCartNumber()">
+<body onload = "setInCartNumber()" onsubmit = "return checkFull()">
    <?php
       include "navbar.php";
     ?>
 
-    <form class="form-horizontal" action="confirmationPage.php">
+    <h2 class = "bigTab">Enter your information.</h2><br/>
+    <form class="form-horizontal" action="emptyCart.php" method = "post">
         <div class="form-group">
             <label class="control-label col-sm-2" for="name">Name:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" id="name" placeholder="John Smith">
+                <input type="text" class="form-control" id="name" placeholder="John Smith" name = "name">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
             <div class="col-sm-4">
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name = "email">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="address">Address:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" id="address" placeholder="FairView Hill 2135">
-                <input type="text" class="form-control" id="address" placeholder="Austin, TX 71056">
+                <input type="text" class="form-control" id="address1" placeholder="FairView Hill 2135" name = "address1">
+                <input type="text" class="form-control" id="address2" placeholder="Austin, TX 71056" name = "address2">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-            <button type="button" class="btn btn-danger" onclick = "returnToCart()">Return to Cart</button>
-            <button type="submit" class="btn btn-success">Confirm Purchase</button>
+                <button type="button" class="btn btn-danger" onclick = "returnToCart()">Return to Cart</button>
+                <button type="submit" class="btn btn-success">Confirm Purchase</button>
             </div>
         </div>
     </form> 

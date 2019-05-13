@@ -33,26 +33,14 @@
             document.location.href = "checkout.php";
         }
 
+        function goToCart()
+        {
+            document.location.href = "shoppingCart.php";
+        }
+
         function goToShoppingPage()
         {
             document.location.href = "shoppingPage.php";
-        }
-
-        function removeItem(index)
-        {
-            $picNames.splice(index, 1);
-            $pictures.splice(index, 1);
-            $prices.splice(index, 1);
-
-            var url = "goToCart.php?inCart=" + $numInCart;
-            for (var i = 0; i < picsInCart.length; i++)
-            {
-                url += "&pictureNames[]=" + $picNames[i] +
-                       "&pictureFiles[]=" + $pictures[i] + 
-                       "&prices[]=" + $prices[i];
-            }
-            
-            document.location.href = url;
         }
     </script>
 </head>
@@ -60,38 +48,54 @@
     <?php
         include "navbar.php";
 
-        $picNames = $_SESSION["pictureNames"];
-        $pictures = $_SESSION["pictureFiles"];
-        $prices = $_SESSION["prices"];
+        $picNames = $_SESSION["pictureNamesTemp"];
+        $pictures = $_SESSION["pictureFilesTemp"];
+        $prices = $_SESSION["pricesTemp"];
+        
+        $name = $_SESSION["name"];
+        $email = $_SESSION["email"];
+        $address1 = $_SESSION["address1"];
+        $address2 = $_SESSION["address2"];
 
         $totalPrice = 0;
 
-            $size = sizeof($pictures);
-            echo "<h3 style = 'text-decoration: underline'>You have purchased</h3>
+        echo "<br/><h2 class = 'text-center'>Thank you for your purchase!</br>The following indicates the 
+            items purchased and the billing information given</h2><hr>
+        <div class='row row-eq-height'>
+            <div class='col-md-3'>
+            </div>
+            <div class='col-md-3 text-center'>
+                    <h2>Customer Info:</h2>
+                    $name</br>
+                    $email</br>
+                    $address1</br>
+                    $address2</br>
+            </div>
+            <div class='col-md-3'>
                 <table class = 'autoMargin'>
+                <tr><td colspan = '4'><h1 class = 'text-center'>Your Purchase</h1></td></tr>
              	<tr>
-                    <th>Item</th>
+                    <th class = 'text-center'>Item</th>
                     <th></th>
-                    <th>Price</th>
-                    <th></th>
+                    <th class = 'text-center'>Price</th>
              	</tr>\n";
             for ($i = 0; $i < sizeof($pictures); $i++)
             {
                 print "\t\t\t<tr>\n";
-             	print "\t\t\t\t<td>$picNames[$i]</td>\n";
+             	print "\t\t\t\t<td class = 'padded'>$picNames[$i]</td>\n";
              	print "\t\t\t\t<td><img src = 'animal_pics/" . $pictures[$i] . "' class = 'half-img-responsive'></td>\n";
-                print "\t\t\t\t<td>$$prices[$i]</td>\n";
-                print "\t\t\t\t<td><button type='button' class='btn btn-danger' onclick = 'removeItem($i)'>Remove</button></td>\n";
+                print "\t\t\t\t<td class = 'padded'>$$prices[$i]</td>\n";
                 print "\t\t\t</tr>\n";
 
                 $totalPrice += $prices[$i];
             }
 
-            print"\t\t </table>\n\t\t <h2>";
+            print"\t\t </table>\n\t\t <h3 class = 'smallTab'>";
             printf("Total Price: $%.2f", $totalPrice);
-            print "</h2>";
-
-            echo '<button type="button" class="btn btn-primary" onclick = "goToCheckout()">Continue to Checkout</button>';
+            print "</h3></div>";
+            print "<div class = 'col-md-3'></div></div>";
     ?>
+    <br/>
+    <button type="button" class="btn btn-primary center-block" onclick = "goToShoppingPage()">Continue Shopping</button>';
 </body>
 </html>

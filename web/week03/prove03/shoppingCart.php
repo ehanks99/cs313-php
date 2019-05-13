@@ -1,5 +1,6 @@
 <?php
     session_start(); 
+    //print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +22,45 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
     <script type = "text/javaScript">
-        $numInCart = <?php echo $_SESSION["inCart"]; ?>;
+        var numInCart = <?php echo $_SESSION["inCart"]; ?>;
+        var picNames = [<?php 
+            if ($_SESSION["pictureNames"] != null || $_SESSION["pictureNames"] != "")
+            {
+                for ($i = 0; $i < sizeof($_SESSION["pictureNames"]); $i++)
+                {
+                    echo '"' . $_SESSION["pictureNames"][$i] . '"';
+
+                    if ($i != sizeof($_SESSION["pictureNames"]) - 1)
+                        echo ", ";
+                }
+            }?>];
+        var pictures = [<?php 
+            if ($_SESSION["pictureFiles"] != null || $_SESSION["pictureFiles"] != "")
+            {
+                for ($i = 0; $i < sizeof($_SESSION["pictureFiles"]); $i++)
+                {
+                    echo '"' . $_SESSION["pictureFiles"][$i] . '"';
+
+                    if ($i != sizeof($_SESSION["pictureFiles"]) - 1)
+                        echo ", ";
+                }
+            }?>];
+        var prices = [<?php 
+            if ($_SESSION["prices"] != null || $_SESSION["prices"] != "")
+            {
+                for ($i = 0; $i < sizeof($_SESSION["prices"]); $i++)
+                {
+                    echo '"' . $_SESSION["prices"][$i] . '"';
+
+                    if ($i != sizeof($_SESSION["prices"]) - 1)
+                        echo ", ";
+                }
+            }?>];
+         
         
         function setInCartNumber()
         {
-            document.getElementById("inCart").innerHTML = "(" + $numInCart + ")";
+            document.getElementById("inCart").innerHTML = "(" + numInCart + ")";
         }
 
         function goToCheckout()
@@ -40,16 +75,19 @@
 
         function removeItem(index)
         {
-            $picNames.splice(index, 1);
-            $pictures.splice(index, 1);
-            $prices.splice(index, 1);
+            numInCart--;
+            setInCartNumber();
 
-            var url = "goToCart.php?inCart=" + $numInCart;
-            for (var i = 0; i < picsInCart.length; i++)
+            picNames.splice(index, 1);
+            pictures.splice(index, 1);
+            prices.splice(index, 1);
+
+            var url = "setCart.php?inCart=" + numInCart;
+            for (var i = 0; i < pictures.length; i++)
             {
-                url += "&pictureNames[]=" + $picNames[i] +
-                       "&pictureFiles[]=" + $pictures[i] + 
-                       "&prices[]=" + $prices[i];
+                url += "&pictureNames[]=" + picNames[i] +
+                       "&pictureFiles[]=" + pictures[i] + 
+                       "&prices[]=" + prices[i];
             }
             
             document.location.href = url;
@@ -60,40 +98,44 @@
     <?php
         include "navbar.php";
 
-        $picNames = $_SESSION["pictureNames"];
-        $pictures = $_SESSION["pictureFiles"];
-        $prices = $_SESSION["prices"];
-
         $totalPrice = 0;
 
-        if ($pictures != null && sizeof ($pictures) > 0)
+        if ($_SESSION["inCart"] != 0 && $_SESSION["inCart"] != null)//($pictures != null && sizeof ($pictures) > 0)
         {
+
+            $picNames = $_SESSION["pictureNames"];
+            $pictures = $_SESSION["pictureFiles"];
+            $prices = $_SESSION["prices"];
+
             $size = sizeof($pictures);
-            echo "<h3 style = 'text-decoration: underline'>Your cart</h3>
+            echo "<br/>
                 <table class = 'autoMargin'>
+                <tr><td colspan = '4'><h1 class = 'text-center'>Your Cart</h1></td></tr>
              	<tr>
-                    <th>Item</th>
+                    <th class = 'text-center'>Item</th>
                     <th></th>
-                    <th>Price</th>
+                    <th class = 'text-center'>Price</th>
                     <th></th>
              	</tr>\n";
             for ($i = 0; $i < sizeof($pictures); $i++)
             {
                 print "\t\t\t<tr>\n";
-             	print "\t\t\t\t<td>$picNames[$i]</td>\n";
+             	print "\t\t\t\t<td class = 'padded'>$picNames[$i]</td>\n";
              	print "\t\t\t\t<td><img src = 'animal_pics/" . $pictures[$i] . "' class = 'half-img-responsive'></td>\n";
-                print "\t\t\t\t<td>$$prices[$i]</td>\n";
-                print "\t\t\t\t<td><button type='button' class='btn btn-danger' onclick = 'removeItem($i)'>Remove</button></td>\n";
+                print "\t\t\t\t<td class = 'padded'>$$prices[$i]</td>\n";
+                print "\t\t\t\t<td class = 'padded'><button type='button' class='btn btn-danger' onclick = 'removeItem($i)'>Remove</button></td>\n";
                 print "\t\t\t</tr>\n";
 
                 $totalPrice += $prices[$i];
             }
 
-            print"\t\t </table>\n\t\t <h2>";
+            print"\t\t </table>\n\t\t <h3 class = 'tab'>";
             printf("Total Price: $%.2f", $totalPrice);
-            print "</h2>";
+            print "</h3>";
 
+            echo '<button type="button" class="btn btn-primary smallTab" onclick = "goToShoppingPage()">Return to Main Page</button>&nbsp;&nbsp;';
             echo '<button type="button" class="btn btn-primary" onclick = "goToCheckout()">Continue to Checkout</button>';
+            echo '<br/><br/>';
         }
         else
         {

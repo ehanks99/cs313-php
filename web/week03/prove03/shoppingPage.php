@@ -2,9 +2,11 @@
    if (!is_writable(session_save_path())) {
          echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
    }
-   //ini_get();
+   
    session_start();
-   $_SESSION["inCart"] = 0;
+   //session_unset();
+   //$_SESSION["inCart"] = 0;
+   
 ?>
 
 <!DOCTYPE html>
@@ -52,9 +54,7 @@
                    "&prices[]=" + pricesInCart[i];
          }
 
-         //alert(url);
          document.location.href = url;
-         //document.location.href = "shoppingCart.php";
       }
 
       function setInCartNumber()
@@ -119,7 +119,6 @@
             </div>';
       echo '</div>';
    ?>
-
    
    <br/><br/>
 </body>

@@ -22,10 +22,11 @@
 
 table, th, td 
 { 
-   margin: 25px;
+   margin: 250px;
    border: 1px solid #ddd; /* white/grey */
    padding: 8px;
    border-collapse: collapse;
+   text-align: center;
 }
          
 th 
@@ -35,9 +36,28 @@ th
    text-align: left;
    background-color: #00004d; /* dark blue */
    color: white;
+   text-align: center;
 }
-         
-tr:nth-child(even) { background-color: #f2f2f2; } /* light grey */
+
+.padded
+{
+   padding: 15px;
+}
+
+.tab 
+{ 
+   margin-left: 100px; 
+}
+
+.smallTab
+{
+   margin-left: 40px;
+}
+
+.bigTab 
+{ 
+   margin-left: 270px; 
+}
 
 ul 
 {
@@ -73,8 +93,6 @@ li
    object-fit: cover;
 }
 
-
-
 table, th, td 
 { 
    margin: 25px;
@@ -88,5 +106,5 @@ th
    padding-top: 12px;
    padding-bottom: 12px;
    text-align: left;
-   background-color: #cc6666;
+   background-color: black;
 }
