@@ -3,6 +3,7 @@ CREATE TABLE movie
     movie_id             INTEGER,
     movie_name           VARCHAR(256)        CONSTRAINT nn_movie_1 NOT NULL,
     movie_summary        VARCHAR(1000)       CONSTRAINT nn_movie_2 NOT NULL,
+    movie_rating         VARCHAR(6)          CONSTRAINT nn_movie_3 NOT NULL,
     CONSTRAINT pk_movie PRIMARY KEY(movie_id)
 );
 
