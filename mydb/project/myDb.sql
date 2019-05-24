@@ -1,7 +1,7 @@
 CREATE TABLE movie
 (
     movie_id                INTEGER,
-    movie_picture_filepath  VARCHAR(50),
+    picture_filepath        VARCHAR(50),
     movie_name              VARCHAR(256)        CONSTRAINT nn_movie_1 NOT NULL,
     movie_summary           VARCHAR(1000)       CONSTRAINT nn_movie_2 NOT NULL,
     movie_rating            VARCHAR(6)          CONSTRAINT nn_movie_3 NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE genre
 );
 
 CREATE SEQUENCE genre_s1 START WITH 1;
-CREATE UNIQUE INDEX ui_genre_1 ON genre(genre_name);
+CREATE UNIQUE INDEX ui_genre_1 ON genre(genre_type);
 
 ------------------------------------------
 
