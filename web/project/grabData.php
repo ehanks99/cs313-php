@@ -25,22 +25,16 @@
                 echo "<p>id = " . $movie_id . "</p>";
 
                 $directors = array("");
-                $actors = array("");
-                $genres = array("");
+                //$actors = array("");
+                //$genres = array("");
                 echo "<p>made it here5</P>";
                 
-                /*$stmt = $db->prepare(
-                    'SELECT director.director_name
-                     FROM movie_to_director
-                        INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
-                        INNER JOIN director ON movie_to_director.director_id = director.director_id
-                     WHERE movie_id =' . $movie_id . ';');*/
                 $stmt = $db->prepare(
                     'SELECT director.director_name
                      FROM movie_to_director
-                        INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
+                        INNER JOIN movie ON movie_to_director.movie_id = movie.movie_id
                         INNER JOIN director ON movie_to_director.director_id = director.director_id
-                     WHERE movie_id = :id');
+                     WHERE movie.movie_id = :id');
                 //echo "<p>made it here5p</P>";
                 $stmt->execute(array(':id' => $movie_id));
                 echo "<p>made it here5o</P>";
