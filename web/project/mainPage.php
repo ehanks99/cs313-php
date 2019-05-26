@@ -44,9 +44,10 @@
                         }
                     }
                     foreach($rows["actors"] as $data)
-                    { echo strtolower($data);
+                    {
                         if (strpos(strtolower($data), $word) == true)
                         {
+                            echo strtolower($data);
                             $movies2[$i] = $rows;
                         }
                     }
@@ -61,7 +62,7 @@
 
                 $i++;
             }
-            echo count($movies2);
+
             $movies = $movies2;
         }
     ?>
