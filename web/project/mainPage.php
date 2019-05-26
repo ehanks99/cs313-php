@@ -63,7 +63,7 @@
                         if (strpos(strtolower($data), $word) !== false)
                         {
                             $movies2[$i] = $rows;
-                            print_r($movies[$i]);
+                            print_r($data);
                         }
                     }
                 }
