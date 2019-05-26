@@ -72,13 +72,13 @@
             }
 
             $movies = $movies2;
-            foreach ($movies as $rows)
-                print_r($rows["movie_name"]);
         }
     ?>
 </head>
 <body>
     <?php
+            foreach ($movies as $rows)
+                print_r($rows["movie_name"]);
         include 'navbar.php';
 
         for ($i = 0; $i < count($movies); $i++)
