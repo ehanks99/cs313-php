@@ -118,7 +118,7 @@
                             echo '</h5><br/>
                             <button type="button" class="btn btn-secondary">View Details</button>
                         </div>
-                        <br/><hr>
+                        <hr>
                     </div>
                     <div class="col-md-2"><p></p></div>
                 </div>';
