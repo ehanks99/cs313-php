@@ -14,7 +14,7 @@
 <body>
     <?php
         include 'grabData.php';
-/*
+
         for ($i = 0; $i < count($movies); $i++)
         {
            echo '<div class="row row-eq-height">
@@ -24,8 +24,6 @@
                           <p>$' . '$prices[$i]' . '</p><br/>
                           <button type="button" class="btn btn-success">Add to Cart</button>
                        </div>
-  
-                       <img src = "movie_pictures/' . $movies[$i]['picture_filepath'] . '" class = "img-responsive">
                     </div>
                     <div class="col-md-4">
                        <div class = "pull-right">
@@ -33,8 +31,6 @@
                           <p>$' . '$prices[$i + 1]' . '</p><br/>
                           <button type="button" class="btn btn-success">Add to Cart</button>
                        </div>
-  
-                       <img src = "movie_pictures/' . $movies[$i + 1]['picture_filepath'] . '" class = "img-responsive">
                     </div>
                     <div class="col-md-4">
                        <div class = "pull-right">
@@ -42,15 +38,13 @@
                           <p>$' . '$prices[$i + 2]' . '</p><br/>
                           <button type="button" class="btn btn-success">Add to Cart</button>
                        </div>
-  
-                       <img src = "movie_pictures/' . $movies[$i + 2]['picture_filepath'] . '" class = "img-responsive">
                     </div>
                  </div>
                  <br/><hr><br/>';
               
               $i += 2;
         }
-        */
+        
     ?>
 </body>
 </html>

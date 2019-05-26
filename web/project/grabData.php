@@ -11,7 +11,7 @@
             $i = 0;
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
-                echo '<p>' . $row["movie_name"] . '</p>';
+                //echo '<p>' . $row["movie_name"] . '</p>';
                 $movies[$i]["movie_id"] = $row['movie_id'];
                 $movies[$i]["movie_name"] = $row['movie_name'];
                 $movies[$i]["movie_rating"] = $row['movie_rating'];
