@@ -25,6 +25,7 @@
             <h2 class = "center"><a href = "../week03/team-activity/home.php">Team Activity 03</a></h2>
             <h2 class = "center"><a href = "../week03/prove03/shoppingPage.php">Prove 03</a></h2>
             <h2 class = "center"><a href = "../week05/team-activity/retrieve.php">Team Activity 05</a></h2>
+            <h2 class = "center"><a href = "../project/mainPage.php">CS313 Big Project</a></h2>
         </div>
         
         <footer id = "bottom"> 
