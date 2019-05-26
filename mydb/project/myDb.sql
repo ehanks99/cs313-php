@@ -105,3 +105,4 @@ CREATE UNIQUE INDEX ui_movie_to_starring_actor_1 ON movie_to_starring_actor(movi
 --
 --    INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
 --    INNER JOIN director ON movie_to_director.director_id = director.director_id;
+
