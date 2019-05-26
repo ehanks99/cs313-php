@@ -45,6 +45,7 @@
                     }
                     foreach($rows["actors"] as $data)
                     {
+                        echo $rows["actors"];
                         if (strpos(strtolower($data), $word) == true)
                         {
                             echo strtolower($data);
