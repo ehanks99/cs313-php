@@ -63,7 +63,7 @@
                         if (strpos(strtolower($data), $word) !== false)
                         {
                             $movies2[$i] = $rows;
-                            print_r($movies2[$i]);
+                            //print_r($movies2[$i]);
                         }
                     }
                 }
@@ -72,6 +72,8 @@
             }
 
             $movies = $movies2;
+            foreach ($movies as $rows)
+                print_r($rows["picture_filepath"]);
         }
     ?>
 </head>
