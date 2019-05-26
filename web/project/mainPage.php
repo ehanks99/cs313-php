@@ -29,8 +29,7 @@
                        </div>
                     </div>
                  </div>
-                 <div class="col-md-2"><p></p></div>
-                 <br/><hr><br/>';
+                 <div class="col-md-2"><p></p></div>';
         }
         
     ?>
