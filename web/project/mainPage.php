@@ -15,7 +15,7 @@
 
     <?php
         include 'grabData.php';
-        
+
         $search = false;
         if(isset($_GET["search"]))
         {
@@ -27,6 +27,7 @@
         {
             foreach ($movies as $rows)
             {
+                echo $rows["movie_name"];
                 $i = 0;
                 if ((strpos($rows["movie_name"], $word) == true) || (strpos($rows["movie_summary"], $word) == true) ||
                     (strpos($rows["movie_rating"], $word) == true))
