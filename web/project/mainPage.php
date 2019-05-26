@@ -35,7 +35,7 @@
                                 if ($j != count($directors) - 1)
                                     echo ', ';
                             }
-                            echo '</h5><br/>
+                            echo '</h5>
                             <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Starring Actors: </b>';
                             $actors = $movies[$i]["actors"];
                             for ($j = 0; $j < count($actors); $j++)
@@ -44,7 +44,7 @@
                                 if ($j != count($actors) - 1)
                                     echo ', ';
                             }
-                            echo '</h5><br/>
+                            echo '</h5>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
                         <br/><hr><br/>
