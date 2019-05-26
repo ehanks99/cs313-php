@@ -17,7 +17,7 @@
                 $movies[$i]["movie_rating"] = $row['movie_rating'];
                 $movies[$i]["picture_filepath"] = $row['picture_filepath'];
             }
-            echo "<p>$movies[0]['movie_name']</p>";
+            echo "<p>" . $movies[0]['movie_name'] . "</p>";
 
             for ($j = 0; $j < count($movies); $j++)
             {
@@ -29,11 +29,11 @@
                 echo "<p>made it here5</P>";
                 
                 $stmt = $db->prepare(
-                    "SELECT director.director_name
+                    'SELECT director.director_name
                      FROM movie_to_director
                         INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
                         INNER JOIN director ON movie_to_director.director_id = director.director_id
-                     WHERE movie_id =" . $movie_id . ";");
+                     WHERE movie_id =' . $movie_id . ';');
                 echo "<p>made it here5p</P>";
                 $stmt->execute();
                 echo "<p>made it here5o</P>";
