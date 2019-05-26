@@ -44,7 +44,7 @@
                     array_push($directors, $row["director_name"]);
                 }
                 $movies[$j]["directors"] = $directors;
-                //echo "<p>made it here3</p>";
+                echo "<p>made it here3</p>";
 
                 $stmt = $db->prepare(
                     'SELECT starring_actor.actor_name
@@ -73,7 +73,6 @@
                 }
                 $movies[$j]["genres"] = $genres;
                 echo "<p>made it here0</p>";
-                
             }
         }
     ?>
