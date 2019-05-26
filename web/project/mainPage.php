@@ -20,7 +20,7 @@
         for ($i = 0; $i < count($movies); $i++)
         {
            echo '<div class="row">
-                    <div class="col-md-2"></div>
+                    <div class="col-md-2"><p></p></div>
                     <div class="col-md-6">
                        <div>
                           <p>' . $movies[$i]['movie_name'] . '</p><br/>
@@ -29,7 +29,7 @@
                        </div>
                     </div>
                  </div>
-                 <div class="col-md-2"></div>
+                 <div class="col-md-2"><p></p></div>
                  <br/><hr><br/>';
         }
         
