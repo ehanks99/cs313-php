@@ -22,6 +22,7 @@
             for ($j = 0; $j < count($movies); $j++)
             {
                 $movie_id = $movies[$j]["movie_id"];
+                echo "<p>id = " . $movie_id . "</p>";
 
                 $directors = array();
                 $actors = array();
