@@ -115,7 +115,7 @@
                                 if ($j != count($genres) - 1)
                                     echo ', ';
                             }
-                            echo '</h5><br/><br/>
+                            echo '</h5><br/>
                             <button type="button" class="btn btn-secondary">View Details</button>
                         </div>
                         <br/><hr>
