@@ -106,6 +106,15 @@
                                 if ($j != count($actors) - 1)
                                     echo ', ';
                             }
+                            echo '</h5>
+                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Genres: </b>';
+                            $genres = $rows["genres"];
+                            for ($j = 0; $j < count($genres); $j++)
+                            {
+                                echo $genres[$j];
+                                if ($j != count($genres) - 1)
+                                    echo ', ';
+                            }
                             echo '</h5><br/><br/>
                             <button type="button" class="btn btn-secondary">View Details</button>
                         </div>
