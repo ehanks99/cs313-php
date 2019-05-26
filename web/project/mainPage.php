@@ -26,8 +26,8 @@
                             <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
-                            <h3>' . $movies[$i]['movie_name'] . '</h3><br/>
-                            <h5>$' . '$prices[$i]' . '</h5><br/>
+                            <h4>' . $movies[$i]['movie_name'] . '</h4><br/>
+                            <h5><b>Director(s): ' . '$prices[$i]' . '</h5><br/>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
                         <br/><hr><br/>
