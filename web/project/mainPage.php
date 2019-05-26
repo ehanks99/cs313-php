@@ -24,6 +24,7 @@
                     <div class="col-md-6">
                         <div class = "pull-left">
                             <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
+                            <p></p>
                         </div>
                         <div>
                             <h4>' . $movies[$i]['movie_name'] . '</h4><br/>
