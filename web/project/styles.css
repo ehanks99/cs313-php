@@ -1,0 +1,110 @@
+.center
+{
+   text-align:center;
+}
+
+.heading
+{
+   margin: auto;
+   width: 75%;
+}
+
+.error
+{
+   color: red;
+   display: none;
+}
+
+.arial
+{
+   font-family: Arial;
+}
+
+table, th, td 
+{ 
+   margin: 250px;
+   border: 1px solid #ddd; /* white/grey */
+   padding: 8px;
+   border-collapse: collapse;
+   text-align: center;
+}
+         
+th 
+{
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #00004d; /* dark blue */
+   color: white;
+   text-align: center;
+}
+
+.padded
+{
+   padding: 15px;
+}
+
+.tab 
+{ 
+   margin-left: 100px; 
+}
+
+.smallTab
+{
+   margin-left: 40px;
+}
+
+.bigTab 
+{ 
+   margin-left: 270px; 
+}
+
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    overflow: hidden;
+    background-color: black;
+}
+
+li 
+{
+   padding: 10;
+   float: right;
+}
+
+.twoHundredHeight
+{
+   height: 200%;
+}
+
+.img-responsive 
+{
+   width: auto;
+   height: 100px;
+   object-fit: cover;
+}
+
+.half-img-responsive 
+{
+   width: auto;
+   height: 100px;
+   object-fit: cover;
+}
+
+table, th, td 
+{ 
+   margin: 25px;
+     border: 1px solid black;
+     padding: 8px;
+     border-collapse: collapse;
+}
+      
+th 
+{
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: black;
+}
