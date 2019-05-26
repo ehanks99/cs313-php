@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php
-        //include 'navbar.php';
+        include 'navbar.php';
         include 'grabData.php';
 
         for ($i = 0; $i < count($movies); $i++)

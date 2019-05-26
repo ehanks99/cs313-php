@@ -1,9 +1,3 @@
-<div class = "heading">
-        <div style = "float:left"><img src = "adoption_right.jpg" alt = "different animals" class = "twoHundredHeight"></div>
-        <div><h1 class = "center" style = "float:left"> Adopt A Friend Today! </h1></div>
-        <div><img src = "adoption.jpg" alt = "different animals" class = "twoHundredHeight"></div>  
-    </div>
-    <hr>
 
     <script type = "text/javaScript"> function goToShoppingPage() { document.location.href = "shoppingPage.php"; } </script>
     <header>
