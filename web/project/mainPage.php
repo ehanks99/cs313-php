@@ -13,6 +13,7 @@
 </head>
 <body>
     <?php
+        include 'navbar.php';
         include 'grabData.php';
         //echo count($movies);
 
