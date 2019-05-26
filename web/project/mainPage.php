@@ -13,11 +13,55 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <?php
+        include 'grabData.php';
+        
+        $search = false;
+        if(isset($_GET["search"]))
+        {
+            $word = $_GET["search"];
+            $search = true;
+        }
+
+        if($search)
+        {
+            foreach ($movies as $rows)
+            {
+                $i = 0;
+                if ((strpos($rows["movie_name"], $word) == true) || (strpos($rows["movie_summary"], $word) == true) ||
+                    (strpos($rows["movie_rating"], $word) == true))
+                {
+                    $movies2[$i] = $rows;
+                }
+                else
+                {
+                    foreach($rows["directors"] as $data)
+                    {
+                        if (strpos($data, $word) == true)
+                            $movies2[$i] = $rows;
+                    }
+                    foreach($rows["actors"] as $data)
+                    {
+                        if (strpos($data, $word) == true)
+                            $movies2[$i] = $rows;
+                    }
+                    foreach($rows["genres"] as $data)
+                    {
+                        if (strpos($data, $word) == true)
+                            $movies2[$i] = $rows;
+                    }
+                }
+
+                $i++;
+            }
+
+            $movies = $movies2;
+        }
+    ?>
 </head>
 <body>
     <?php
         include 'navbar.php';
-        include 'grabData.php';
 
         for ($i = 0; $i < count($movies); $i++)
         {
