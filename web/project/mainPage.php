@@ -23,8 +23,8 @@
             echo '<div class="row">
                 <div class="col-md-2"><p></p></div>
                     <div class="col-md-6">
-                        <div class = "float-left">
-                            <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 100px; width: auto">
+                        <div class = "pull-left">
+                            <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
                             <p>' . $movies[$i]['movie_name'] . '</p><br/>
