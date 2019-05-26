@@ -41,7 +41,7 @@
                         INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
                         INNER JOIN director ON movie_to_director.director_id = director.director_id
                      WHERE movie_id = :id;');
-                echo "<p>made it here5p</P>";
+                //echo "<p>made it here5p</P>";
                 $stmt->execute(array(':id' => $movie_id));
                 echo "<p>made it here5o</P>";
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
