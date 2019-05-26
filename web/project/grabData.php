@@ -24,9 +24,9 @@
                 $movie_id = $movies[$j]["movie_id"];
                 echo "<p>id = " . $movie_id . "</p>";
 
-                $directors = array();
-                $actors = array();
-                $genres = array();
+                $directors = array("");
+                $actors = array("");
+                $genres = array("");
                 echo "<p>made it here5</P>";
                 
                 /*$stmt = $db->prepare(
@@ -52,7 +52,7 @@
                 $movies[$j]["directors"] = $directors;
                 echo "<p>made it here3</p>";
 
-
+/*
                 $stmt = $db->prepare(
                     "SELECT starring_actor.actor_name
                      FROM movie_to_starring_actor
@@ -80,6 +80,7 @@
                 }
                 $movies[$j]["genres"] = $genres;
                 echo "<p>made it here0</p>";
+                */
             }
         }
     ?>
