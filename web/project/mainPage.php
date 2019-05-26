@@ -20,19 +20,19 @@
         for ($i = 0; $i < count($movies); $i++)
         {
             echo '<div class="row">
-                <div class="col-md-2"><p>|</p></div>
+                <div class="col-md-2"><p></p></div>
                     <div class="col-md-6">
                         <div class = "pull-left">
                             <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
-                            <p>' . $movies[$i]['movie_name'] . '</p><br/>
+                            <h2>' . $movies[$i]['movie_name'] . '</h2><br/>
                             <p>$' . '$prices[$i]' . '</p><br/>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
                         <br/><hr><br/>
                     </div>
-                    <div class="col-md-2"><p>|</p></div>
+                    <div class="col-md-2"><p></p></div>
                 </div>';
         }
         
