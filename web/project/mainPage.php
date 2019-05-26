@@ -26,7 +26,7 @@
                             <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
-                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;' . $movies[$i]['movie_name'] . '</h4><br/>
+                            <h4>&nbsp;&nbsp;&nbsp;' . $movies[$i]['movie_name'] . '</h4><br/>
                             <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Director(s): </b>';
                             $directors = $movies[$i]["directors"];
                             for ($j = 0; $j < count($directors); $j++)
