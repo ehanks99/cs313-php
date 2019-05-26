@@ -73,7 +73,7 @@
 
             $movies = $movies2;
             foreach ($movies as $rows)
-                print_r($rows["picture_filepath"]);
+                print_r($rows["movie_name"]);
         }
     ?>
 </head>
