@@ -20,7 +20,7 @@
                 $i++;
                 //echo '..' . $i;
             }
-            echo count($movies);
+            //echo count($movies);
 
             for ($j = 0; $j < count($movies); $j++)
             {
