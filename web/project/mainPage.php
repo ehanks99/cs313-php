@@ -16,12 +16,11 @@
     <?php
         //include 'navbar.php';
         include 'grabData.php';
-        //echo count($movies);
 
         for ($i = 0; $i < count($movies); $i++)
         {
             echo '<div class="row">
-                <div class="col-md-2"><p></p></div>
+                <div class="col-md-2"><p>|</p></div>
                     <div class="col-md-6">
                         <div class = "pull-left">
                             <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
@@ -33,7 +32,7 @@
                         </div>
                         <br/><hr><br/>
                     </div>
-                    <div class="col-md-2"><p></p></div>
+                    <div class="col-md-2"><p>|</p></div>
                 </div>';
         }
         
