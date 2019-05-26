@@ -13,14 +13,15 @@
 </head>
 <body>
     <?php
-        include 'navbar.php';
+        //include 'navbar.php';
         include 'grabData.php';
         //echo count($movies);
 
         for ($i = 0; $i < count($movies); $i++)
         {
            echo '<div class="row">
-                    <div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
                        <div>
                           <p>' . $movies[$i]['movie_name'] . '</p><br/>
                           <p>$' . '$prices[$i]' . '</p><br/>
@@ -28,6 +29,7 @@
                        </div>
                     </div>
                  </div>
+                 <div class="col-md-2"></div>
                  <br/><hr><br/>';
         }
         
