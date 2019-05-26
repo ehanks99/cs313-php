@@ -70,7 +70,7 @@
                 $i++;
             }
 
-            $movies = $movies2;
+            $movies = $movies2->getArrayCopy();
         }
     ?>
 </head>
