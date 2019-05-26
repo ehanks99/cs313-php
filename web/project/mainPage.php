@@ -27,7 +27,16 @@
                         </div>
                         <div>
                             <h4>' . $movies[$i]['movie_name'] . '</h4><br/>
-                            <h5><b>Director(s): ' . '$prices[$i]' . '</h5><br/>
+                            <h5><b>Director(s): ';
+                            $directors = $movies[$i]["directors"];
+                            for ($j = 0; $j < count($directors); $j++)
+                            {
+                                echo $directors[$j];
+                                if ($j != count($directors) - 1)
+                                    echo ', ';
+                            }
+                            echo '</h5><br/>
+                            <h5><b>Starring Actors: ' . '$prices[$i]' . '</h5><br/>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
                         <br/><hr><br/>
