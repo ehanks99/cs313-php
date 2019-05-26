@@ -55,7 +55,7 @@
 
                 $i++;
             }
-
+            echo count($movies2);
             $movies = $movies2;
         }
     ?>
