@@ -20,7 +20,7 @@
         {
            echo '<div class="row">
                     <div>
-                       <div class = "pull-left">
+                       <div>
                           <p>' . $movies[$i]['movie_name'] . '</p><br/>
                           <p>$' . '$prices[$i]' . '</p><br/>
                           <button type="button" class="btn btn-success">Add to Cart</button>
