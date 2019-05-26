@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Big Project</title>
 
-    <?php
-        include 'grabData.php';
-    ?>
 </head>
 <body>
+    <?php
+        echo "we are here";
+        include 'grabData.php';
+        echo "made it here";
+    ?>
         <?php echo $movies[0]['movie_name']; ?>
 </body>
 </html>
