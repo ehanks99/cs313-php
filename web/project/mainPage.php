@@ -27,7 +27,6 @@
         {
             foreach ($movies as $rows)
             {
-                echo $rows["movie_name"];
                 $i = 0;
                 if ((strpos(strtolower($rows["movie_name"]), $word) == true) || 
                     (strpos(strtolower($rows["movie_summary"]), $word) == true) ||
