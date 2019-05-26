@@ -14,7 +14,7 @@
 <body>
     <?php
         include 'grabData.php';
-
+/*
         for ($i = 0; $i < count($movies); $i++)
         {
            echo '<div class="row row-eq-height">
@@ -50,6 +50,7 @@
               
               $i += 2;
         }
+        */
     ?>
 </body>
 </html>
