@@ -18,7 +18,7 @@
 
         for ($i = 0; $i < count($movies); $i++)
         {
-           echo '<div class="row row-eq-height">
+           echo '<div class="row">
                     <div>
                        <div class = "pull-right">
                           <p>' . $movies[$i]['movie_name'] . '</p><br/>
@@ -29,7 +29,7 @@
                  </div>
                  <br/><hr><br/>';
               
-              $i += 2;
+              $i += 1;
         }
         
     ?>
