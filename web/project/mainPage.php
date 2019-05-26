@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <h4>' . $movies[$i]['movie_name'] . '</h4><br/>
-                            <h5><b>Director(s): ';
+                            <h5><b>Director(s): </b>';
                             $directors = $movies[$i]["directors"];
                             for ($j = 0; $j < count($directors); $j++)
                             {
@@ -36,7 +36,15 @@
                                     echo ', ';
                             }
                             echo '</h5><br/>
-                            <h5><b>Starring Actors: ' . '$prices[$i]' . '</h5><br/>
+                            <h5><b>Starring Actors: </b>';
+                            $actors = $movies[$i]["actors"];
+                            for ($j = 0; $j < count($actors); $j++)
+                            {
+                                echo $actors[$j];
+                                if ($j != count($actors) - 1)
+                                    echo ', ';
+                            }
+                            echo '</h5><br/>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
                         <br/><hr><br/>
