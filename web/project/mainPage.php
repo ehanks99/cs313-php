@@ -33,8 +33,8 @@
                         </div>
                         <br/><hr><br/>
                     </div>
-                </div>
-            <div class="col-md-2"><p></p></div>';
+                    <div class="col-md-2"><p></p></div>
+                </div>';
         }
         
     ?>
