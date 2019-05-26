@@ -82,7 +82,7 @@ li
 .img-responsive 
 {
    width: auto;
-   height: 100px;
+   height: 50px;
    object-fit: cover;
 }
 
