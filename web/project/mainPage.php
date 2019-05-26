@@ -44,7 +44,7 @@
                         }
                     }
                     foreach($rows["actors"] as $data)
-                    { echo $data;
+                    { echo strtolower($data);
                         if (strpos(strtolower($data), $word) == true)
                         {
                             $movies2[$i] = $rows;
