@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <h3>' . $movies[$i]['movie_name'] . '</h3><br/>
-                            <p>$' . '$prices[$i]' . '</p><br/>
+                            <h5>$' . '$prices[$i]' . '</h5><br/>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
                         <br/><hr><br/>
