@@ -39,17 +39,26 @@
                     foreach($rows["directors"] as $data)
                     {
                         if (strpos(strtolower($data), $word) == true)
+                        {
                             $movies2[$i] = $rows;
+                            $i++;
+                        }
                     }
                     foreach($rows["actors"] as $data)
                     {
                         if (strpos(strtolower($data), $word) == true)
+                        {
                             $movies2[$i] = $rows;
+                            $i++;
+                        }
                     }
                     foreach($rows["genres"] as $data)
                     {
                         if (strpos(strtolower($data), $word) == true)
+                        {
                             $movies2[$i] = $rows;
+                            $i++;
+                        }
                     }
                 }
 
@@ -92,7 +101,7 @@
                                     echo ', ';
                             }
                             echo '</h5><br/><br/>
-                            <button type="button" class="btn btn-success">Add to Cart</button>
+                            <button type="button" class="btn btn-secondary">View Details</button>
                         </div>
                         <br/><hr>
                     </div>
