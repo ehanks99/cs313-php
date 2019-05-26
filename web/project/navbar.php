@@ -1,10 +1,12 @@
 
-    <script type = "text/javaScript"> function goToShoppingPage() { document.location.href = "shoppingPage.php"; } </script>
-    <header>
-        <ul>
-            <!--<li><a href="#" class="btn btn-secondary btn-lg" style = "float: left" onclick = "goToShoppingPage()">Browse</a></li>-->
-            <li><a href="#" class="btn btn-default btn-lg" style = "float: right" onclick = "goToCart()">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart <span id = "inCart"> (0) </span>
-            </a></li>
-        </ul>
-    </header>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
