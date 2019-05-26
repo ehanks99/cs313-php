@@ -5,7 +5,7 @@
         if (isset($db))
         {
             $statement = $db->prepare(
-                'SELECT movie.movie_id, movie.movie_name, movie.movie_rating, movie.picture_filepath
+                'SELECT movie.movie_id, movie.movie_name, movie.movie_rating, movie.picture_filepath, movie.movie_summary
                  FROM movie;');
             $statement->execute();
             $i = 0;
@@ -14,6 +14,7 @@
                 $movies[$i]["movie_id"] = $row['movie_id'];
                 $movies[$i]["movie_name"] = $row['movie_name'];
                 $movies[$i]["movie_rating"] = $row['movie_rating'];
+                $movies[$i]["movie_summary"] = $row['movie_summary'];
                 $movies[$i]["picture_filepath"] = $row['picture_filepath'];
             }
 
