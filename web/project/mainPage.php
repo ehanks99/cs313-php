@@ -81,7 +81,7 @@
                 print_r($rows["movie_name"]);
         include 'navbar.php';
 
-        for ($i = 0; $i < count($movies); $i++)
+        /*for ($i = 0; $i < count($movies); $i++)
         {
             echo '<div class="row">
                 <div class="col-md-2"><p></p></div>
@@ -115,8 +115,42 @@
                     </div>
                     <div class="col-md-2"><p></p></div>
                 </div>';
+        }*/
+        foreach ($movies as $rows)
+        {
+            echo '<div class="row">
+                <div class="col-md-2"><p></p></div>
+                    <div class="col-md-6">
+                        <div class = "pull-left">
+                            <img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
+                        </div>
+                        <div>
+                            <h4>&nbsp;&nbsp;&nbsp;' . $rows['movie_name'] . '</h4><hr>
+                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Director(s): </b>';
+                            $directors = $rows["directors"];
+                            for ($j = 0; $j < count($directors); $j++)
+                            {
+                                echo $directors[$j];
+                                if ($j != count($directors) - 1)
+                                    echo ', ';
+                            }
+                            echo '</h5>
+                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Starring Actors: </b>';
+                            $actors = $rows["actors"];
+                            for ($j = 0; $j < count($actors); $j++)
+                            {
+                                echo $actors[$j];
+                                if ($j != count($actors) - 1)
+                                    echo ', ';
+                            }
+                            echo '</h5><br/><br/>
+                            <button type="button" class="btn btn-secondary">View Details</button>
+                        </div>
+                        <br/><hr>
+                    </div>
+                    <div class="col-md-2"><p></p></div>
+                </div>';
         }
-        
     ?>
 </body>
 </html>
