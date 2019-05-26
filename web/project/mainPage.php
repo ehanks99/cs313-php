@@ -19,7 +19,7 @@
         $search = false;
         if(isset($_GET["search"]))
         {
-            $word = $_GET["search"];
+            $word = strtolower($_GET["search"]);
             $search = true;
         }
 
@@ -29,8 +29,9 @@
             {
                 echo $rows["movie_name"];
                 $i = 0;
-                if ((strpos($rows["movie_name"], $word) == true) || (strpos($rows["movie_summary"], $word) == true) ||
-                    (strpos($rows["movie_rating"], $word) == true))
+                if ((strpos(strtolower($rows["movie_name"]), $word) == true) || 
+                    (strpos(strtolower($rows["movie_summary"]), $word) == true) ||
+                    (strpos(strtolower($rows["movie_rating"]), $word) == true))
                 {
                     $movies2[$i] = $rows;
                 }
@@ -38,17 +39,17 @@
                 {
                     foreach($rows["directors"] as $data)
                     {
-                        if (strpos($data, $word) == true)
+                        if (strpos(strtolower($data), $word) == true)
                             $movies2[$i] = $rows;
                     }
                     foreach($rows["actors"] as $data)
                     {
-                        if (strpos($data, $word) == true)
+                        if (strpos(strtolower($data), $word) == true)
                             $movies2[$i] = $rows;
                     }
                     foreach($rows["genres"] as $data)
                     {
-                        if (strpos($data, $word) == true)
+                        if (strpos(strtolower($data), $word) == true)
                             $movies2[$i] = $rows;
                     }
                 }
