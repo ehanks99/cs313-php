@@ -83,7 +83,7 @@
         {
             echo '<div class="row">
                 <div class="col-md-2"><p></p></div>
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class = "pull-left">
                             <img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
@@ -120,7 +120,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="col-md-2"><p></p></div>
+                    <div class="col-md-1"><p></p></div>
                 </div>';
         }
     ?>
