@@ -16,7 +16,6 @@
                 $movies[$i]["movie_rating"] = $row['movie_rating'];
                 $movies[$i]["picture_filepath"] = $row['picture_filepath'];
             }
-            echo "<p>" . $movies[0]['movie_name'] . "</p>";
 
             for ($j = 0; $j < count($movies); $j++)
             {
