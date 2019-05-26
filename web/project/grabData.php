@@ -18,6 +18,7 @@
                 $movies[$i]["movie_summary"] = $row['movie_summary'];
                 $movies[$i]["picture_filepath"] = $row['picture_filepath'];
                 $i++;
+                echo '..' . $i;
             }
 
             for ($j = 0; $j < count($movies); $j++)
