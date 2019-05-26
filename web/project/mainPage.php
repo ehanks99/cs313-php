@@ -49,7 +49,7 @@
                     }
                     foreach($rows["actors"] as $data)
                     {
-                        echo $data;
+                        //echo $data;
                         //if (strpos(strtolower($data), $word) == true)
                         if (strpos(strtolower($data), $word) !== false)
                         {
@@ -63,6 +63,7 @@
                         if (strpos(strtolower($data), $word) !== false)
                         {
                             $movies2[$i] = $rows;
+                            print_r($movies[$i]);
                         }
                     }
                 }
@@ -70,7 +71,7 @@
                 $i++;
             }
 
-            $movies = $movies2->getArrayCopy();
+            $movies = $movies2;
         }
     ?>
 </head>
