@@ -92,3 +92,16 @@ CREATE TABLE movie_to_starring_actor
 
 CREATE SEQUENCE movie_to_starring_actor_s1 START WITH 1;
 CREATE UNIQUE INDEX ui_movie_to_starring_actor_1 ON movie_to_starring_actor(movie_id, actor_id);
+
+-- to select all the data
+--SELECT movie.movie_name, movie.movie_summary, movie.movie_rating, movie.picture_filepath,
+--       genre.genre_type, director.director_name, starring_actor.actor_name
+--FROM movie
+--    INNER JOIN movie_to_genre ON movie_to_genre.movie_id = movie.movie_id
+--    INNER JOIN genre ON movie_to_genre.genre_id = genre.genre_id
+--
+--    INNER JOIN movie_to_starring_actor ON movie_to_starring_actor.movie_id = movie.movie_id
+--    INNER JOIN starring_actor ON movie_to_starring_actor.actor_id = starring_actor.actor_id
+--
+--    INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
+--    INNER JOIN director ON movie_to_director.director_id = director.director_id;
