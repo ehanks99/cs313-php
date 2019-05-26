@@ -4,6 +4,7 @@
 
         if (isset($db))
         {
+            echo "made it here1";
             $statement = $db->prepare(
                 'SELECT movie.movie_id, movie.movie_name, movie.movie_rating, movie.picture_filepath
                  FROM movie;');
@@ -16,6 +17,7 @@
                 $movies[$i]["movie_rating"] = $row['movie_rating'];
                 $movies[$i]["picture_filepath"] = $row['picture_filepath'];
             }
+            echo "made it here2";
 
             for ($j = 0; $j < count($movies); $j++)
             {
@@ -24,6 +26,7 @@
                 $directors = array();
                 $actors = array();
                 $genres = array();
+                echo "made it here5";
                 
                 $stmt = $db->prepare(
                     "SELECT director.director_name
@@ -37,6 +40,7 @@
                     array_push($directors, $row["director_name"]);
                 }
                 $movies[$j]["directors"] = $directors;
+                echo "made it here3";
 
 
                 $stmt = $db->prepare(
@@ -51,6 +55,7 @@
                     array_push($actors, $row["actor_name"]);
                 }
                 $movies[$j]["actors"] = $actors;
+                echo "made it here6";
 
                 $stmt = $db->prepare(
                     "SELECT genre.genre_type
@@ -64,6 +69,7 @@
                     array_push($genres, $row["genre_type"]);
                 }
                 $movies[$j]["genres"] = $genres;
+                echo "made it here0";
             }
         }
     ?>
