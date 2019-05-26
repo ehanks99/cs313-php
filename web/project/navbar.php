@@ -1,7 +1,7 @@
 
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>
+  <a class="active" href="#home">Home Page</a>
+  <a href="#about">Add a Movie</a>
   <a href="#contact">Contact</a>
   <div class="search-container">
     <form action="/action_page.php">
