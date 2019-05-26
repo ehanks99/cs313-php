@@ -44,10 +44,10 @@
                                 if ($j != count($actors) - 1)
                                     echo ', ';
                             }
-                            echo '</h5><br/>
+                            echo '</h5><br/><br/>
                             <button type="button" class="btn btn-success">Add to Cart</button>
                         </div>
-                        <br/><hr><br/>
+                        <br/><hr>
                     </div>
                     <div class="col-md-2"><p></p></div>
                 </div>';
