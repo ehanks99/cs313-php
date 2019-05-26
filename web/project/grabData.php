@@ -4,7 +4,7 @@
 
         if (isset($db))
         {
-            echo "made it here1";
+            echo "<p>made it here1</p>";
             $statement = $db->prepare(
                 'SELECT movie.movie_id, movie.movie_name, movie.movie_rating, movie.picture_filepath
                  FROM movie;');
@@ -17,7 +17,7 @@
                 $movies[$i]["movie_rating"] = $row['movie_rating'];
                 $movies[$i]["picture_filepath"] = $row['picture_filepath'];
             }
-            echo "made it here2";
+            echo "<p>made it here2</p>";
 
             for ($j = 0; $j < count($movies); $j++)
             {
@@ -26,7 +26,7 @@
                 $directors = array();
                 $actors = array();
                 $genres = array();
-                echo "made it here5";
+                echo "<p>made it here5</P>";
                 
                 $stmt = $db->prepare(
                     "SELECT director.director_name
@@ -34,13 +34,16 @@
                         INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
                         INNER JOIN director ON movie_to_director.director_id = director.director_id
                      WHERE movie_id = $movie_id;");
+                echo "<p>made it here5p</P>";
                 $stmt->execute();
+                echo "<p>made it here5o</P>";
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
                 {
+                    echo "<p>made it here5$i</P>";
                     array_push($directors, $row["director_name"]);
                 }
                 $movies[$j]["directors"] = $directors;
-                echo "made it here3";
+                echo "<p>made it here3</p>";
 
 
                 $stmt = $db->prepare(
@@ -55,7 +58,7 @@
                     array_push($actors, $row["actor_name"]);
                 }
                 $movies[$j]["actors"] = $actors;
-                echo "made it here6";
+                echo "<p>made it here6</p>";
 
                 $stmt = $db->prepare(
                     "SELECT genre.genre_type
@@ -69,7 +72,7 @@
                     array_push($genres, $row["genre_type"]);
                 }
                 $movies[$j]["genres"] = $genres;
-                echo "made it here0";
+                echo "<p>made it here0</p>";
             }
         }
     ?>

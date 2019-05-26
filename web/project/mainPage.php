@@ -9,9 +9,9 @@
 </head>
 <body>
     <?php
-        echo "we are here";
+        echo "<p>we are here</p>";
         include 'grabData.php';
-        echo "made it here";
+        echo "<p>made it here</p>";
     ?>
         <?php echo $movies[0]['movie_name']; ?>
 </body>
