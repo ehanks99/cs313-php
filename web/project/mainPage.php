@@ -7,8 +7,9 @@
     <title>Big Project</title>
 
     <link rel = "stylesheet" type = "text/css" href = "styles.css">
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 </head>
 <body>
@@ -19,18 +20,21 @@
 
         for ($i = 0; $i < count($movies); $i++)
         {
-           echo '<div class="row">
-                    <div class="col-md-2"><p></p></div>
+            echo '<div class="row">
+                <div class="col-md-2"><p></p></div>
                     <div class="col-md-6">
-                       <div>
-                          <p>' . $movies[$i]['movie_name'] . '</p><br/>
-                          <p>$' . '$prices[$i]' . '</p><br/>
-                          <button type="button" class="btn btn-success">Add to Cart</button>
-                       </div>
-                       <br/><hr><br/>
+                        <div class = "float-left">
+                            <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" class = "img-responsive">
+                        </div>
+                        <div>
+                            <p>' . $movies[$i]['movie_name'] . '</p><br/>
+                            <p>$' . '$prices[$i]' . '</p><br/>
+                            <button type="button" class="btn btn-success">Add to Cart</button>
+                        </div>
+                        <br/><hr><br/>
                     </div>
-                 </div>
-                 <div class="col-md-2"><p></p></div>';
+                </div>
+            <div class="col-md-2"><p></p></div>';
         }
         
     ?>
