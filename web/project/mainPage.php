@@ -24,11 +24,10 @@
                     <div class="col-md-6">
                         <div class = "pull-left">
                             <img src = "movie_pictures/' . $movies[$i]["picture_filepath"] . '" style = "height: 150px; width: auto">
-                            <p></p>
                         </div>
                         <div>
-                            <h4>' . $movies[$i]['movie_name'] . '</h4><br/>
-                            <h5><b>Director(s): </b>';
+                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;' . $movies[$i]['movie_name'] . '</h4><br/>
+                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Director(s): </b>';
                             $directors = $movies[$i]["directors"];
                             for ($j = 0; $j < count($directors); $j++)
                             {
@@ -37,7 +36,7 @@
                                     echo ', ';
                             }
                             echo '</h5><br/>
-                            <h5><b>Starring Actors: </b>';
+                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Starring Actors: </b>';
                             $actors = $movies[$i]["actors"];
                             for ($j = 0; $j < count($actors); $j++)
                             {
