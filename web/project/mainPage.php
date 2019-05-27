@@ -83,8 +83,8 @@
         {
             echo '<div class="row">
                 <div class="col-md-2"><p></p></div>
-                    <div class="col-md-8 margin-left-sm">
-                        <div class = "pull-left">
+                    <div class="col-md-8">
+                        <div class = "pull-left margin-left-sm">
                             <img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
