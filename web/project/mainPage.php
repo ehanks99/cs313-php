@@ -80,7 +80,7 @@
         include 'navbar.php';
     ?>
 
-    <h2 class = "text-center">Movie Selections</h2>
+    <h2 class = "text-center">Movie Selections</h2><br/><br/>
 
     <?php
         foreach ($movies as $rows)
