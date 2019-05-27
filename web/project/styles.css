@@ -65,3 +65,11 @@
      border: 1px solid #ccc;  
    }
  }
+
+ .picture
+ {
+    height: 150px; 
+    width: auto; 
+    margin-left: 20px; 
+    margin-right: 20px;
+ }

@@ -88,7 +88,7 @@
                 <div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
                         <div class = "pull-left">
-                            <img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto; margin-left: 20px; margin-right: 20px">
+                            <img src = "movie_pictures/' . $rows["picture_filepath"] . '" class = "picture">
                         </div>
                         <div>
                             <h4>' . $rows['movie_name'] . '</h4><hr>
@@ -120,7 +120,8 @@
                             }
                             echo '</h5><br/>
                             
-                            &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
                         </div>
                         <hr>
                     </div>
