@@ -36,12 +36,12 @@
 
         echo '<div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
-                    <h4 class = "text-center">&nbsp;&nbsp;&nbsp;' . $movies[$location]['movie_name'] . '</h4><hr>
+                    <h3 class = "text-center">&nbsp;&nbsp;&nbsp;' . $movies[$location]['movie_name'] . '</h3><hr>
                         <div class = "pull-left">
                             &nbsp;&nbsp;&nbsp;&nbsp;<img src = "movie_pictures/' . $movies[$location]["picture_filepath"] . '" style = "height: 300px; width: auto">
                         </div>
                         <div>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;' . $movies[$location]['movie_summary'] . '<br/>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;' . $movies[$location]['movie_summary'] . '</p><br/>
                             <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Director(s): </b>';
                             $directors = $movies[$location]["directors"];
                             for ($j = 0; $j < count($directors); $j++)
