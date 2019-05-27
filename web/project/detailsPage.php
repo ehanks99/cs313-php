@@ -27,10 +27,8 @@
         $location = 0;
         for ($i = 0; $i < count($movies); $i++)
         {
-            echo $_POST["movie_name"];
-            if (strcmp($movies[$i]["movie_name"], $_POST["movie_name"]))
+            if (strcmp($movies[$i]["movie_name"], $_GET["movie_name"]))
             {
-                echo 'match on movie name: ' . $movies[$i]["movie_name"];
                 $location = $i;
                 break;
             }
