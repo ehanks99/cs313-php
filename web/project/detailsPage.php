@@ -24,11 +24,13 @@
 
 
         // find the location of the movie name given to us inside the movie array
+        $movie = $_GET["movie_name"];
         $location = 0;
         for ($i = 0; $i < count($movies); $i++)
         {
-            echo $_GET["movie_name"];
-            if (strcmp($movies[$i]["movie_name"], $_GET["movie_name"]))
+            echo $movie;
+            //if (strcmp($movies[$i]["movie_name"], $movie))
+            if ($movies[$i]["movie_name"] == $movie)
             {
                 $location = $i;
                 break;
