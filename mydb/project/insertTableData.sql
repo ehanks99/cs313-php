@@ -355,23 +355,23 @@ INSERT INTO movie_to_starring_actor (movie_actor_id, movie_id, actor_id)
             (SELECT actor_id FROM starring_actor WHERE actor_name = 'John Hannah'));
 
 INSERT INTO movie_to_genre (movie_genre_id, movie_id, genre_id)
-    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'Rise Of the Guardians'),
+    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'The Mummy (1999)'),
             (SELECT genre_id FROM genre WHERE genre_type = 'Action'));
 
 INSERT INTO movie_to_genre (movie_genre_id, movie_id, genre_id)
-    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'Rise Of the Guardians'),
+    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'The Mummy (1999)'),
             (SELECT genre_id FROM genre WHERE genre_type = 'Adventure'));
 
 INSERT INTO movie_to_genre (movie_genre_id, movie_id, genre_id)
-    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'Rise Of the Guardians'),
+    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'The Mummy (1999)'),
             (SELECT genre_id FROM genre WHERE genre_type = 'Drama'));
 
 INSERT INTO movie_to_genre (movie_genre_id, movie_id, genre_id)
-    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'Rise Of the Guardians'),
+    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'The Mummy (1999)'),
             (SELECT genre_id FROM genre WHERE genre_type = 'Horror'));
 
 INSERT INTO movie_to_genre (movie_genre_id, movie_id, genre_id)
-    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'Rise Of the Guardians'),
+    VALUES (nextval('movie_to_genre_s1'), (SELECT movie_id FROM movie WHERE movie_name = 'The Mummy (1999)'),
             (SELECT genre_id FROM genre WHERE genre_type = 'Suspense'));
 
 ----------------------------------------
