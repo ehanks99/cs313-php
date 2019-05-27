@@ -29,6 +29,7 @@
         {
             if (strcmp($movies[$i]["movie_name"], $_POST["movie_name"]))
             {
+                echo 'match on movie name: ' . $movies[$i]["movie_name"];
                 $location = $i;
                 break;
             }
