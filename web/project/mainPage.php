@@ -167,7 +167,7 @@
                             }
                             echo '</h5><br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['move_name'] . '\')">View Details</button>
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
                         </div>
                         <hr>
                     </div>
