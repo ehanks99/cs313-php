@@ -127,6 +127,7 @@
     <h2 class = "text-center">Movie Selections</h2><br/><br/><hr>
 
     <?php
+        $p = 0;
         foreach ($movies as $rows)
         {
             echo '<div class="row">
@@ -165,12 +166,12 @@
                             }
                             echo '</h5><br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="button" class="btn btn-secondary" onclick="goToDetails("' . $rows['movie_name'] . 
-                                '", "' . $rows['movie_rating'] . '", "' . $rows['movie_summary'] . '")">View Details</button>
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails("' . $p . '")">View Details</button>
                         </div>
                         <hr>
                     </div>
                 </div>';
+            $p++;
         }
     ?>
 </body>
