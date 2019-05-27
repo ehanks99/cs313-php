@@ -120,7 +120,7 @@
                             }
                             echo '</h5><br/>
                             
-                            <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
                         </div>
                         <hr>
                     </div>
