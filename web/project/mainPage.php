@@ -78,7 +78,11 @@
 <body>
     <?php
         include 'navbar.php';
+    ?>
 
+    <h2 class = "text-center">Movie Selections</h2>
+
+    <?php
         foreach ($movies as $rows)
         {
             echo '<div class="row">
