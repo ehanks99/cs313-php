@@ -116,7 +116,7 @@
 
         function goToDetails(movie_name)
         {
-            window.location.href = "detailsPage.php?movie_name=" + movie_name;
+            window.location.href = ("detailsPage.php?movie_name=" + movie_name);
         }
     </script>
 </head>
