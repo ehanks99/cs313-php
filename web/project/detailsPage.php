@@ -43,7 +43,7 @@
                             <img src = "movie_pictures/' . $movies[$location]["picture_filepath"] . '" class = "main-picture">
                         </div>
                         <div>
-                            <h4>' . $movies[$location]['movie_summary'] . '</h4><br/>
+                            <p>' . $movies[$location]['movie_summary'] . '</p><br/>
                             <h5><b>Director(s): </b>';
                             $directors = $movies[$location]["directors"];
                             for ($j = 0; $j < count($directors); $j++)
