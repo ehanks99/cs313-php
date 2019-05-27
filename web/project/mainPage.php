@@ -74,6 +74,12 @@
             $movies = $movies2;
         }
     ?>
+    <script>
+        function goToDetails(row)
+        {
+            row.toString();
+        }
+    </script>
 </head>
 <body>
     <?php
@@ -121,7 +127,7 @@
                             }
                             echo '</h5><br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="button" class="btn btn-secondary" onclick="goToDetails(' . $rows . '">View Details</button>
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails(' . $rows . ')">View Details</button>
                         </div>
                         <hr>
                     </div>
