@@ -77,7 +77,8 @@
     <script>
         function goToDetails(row)
         {
-            alert(row["movie_name"]);
+            //alert(row["movie_name"]);
+            alert(print_r(row));
         }
     </script>
 </head>
@@ -128,7 +129,7 @@
                             echo '</h5><br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             var row = ' . $rows . ';
-                            <button type="button" class="btn btn-secondary" onclick="goToDetails(rows)">View Details</button>
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails(row)">View Details</button>
                         </div>
                         <hr>
                     </div>
