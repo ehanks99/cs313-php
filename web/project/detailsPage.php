@@ -28,7 +28,6 @@
         $location = 0;
         for ($i = 0; $i < count($movies); $i++)
         {
-            echo $movie;
             //if (strcmp($movies[$i]["movie_name"], $movie))
             if ($movies[$i]["movie_name"] == $movie)
             {
