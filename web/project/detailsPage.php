@@ -27,6 +27,7 @@
         $location = 0;
         for ($i = 0; $i < count($movies); $i++)
         {
+            echo $_GET["movie_name"];
             if (strcmp($movies[$i]["movie_name"], $_GET["movie_name"]))
             {
                 $location = $i;
