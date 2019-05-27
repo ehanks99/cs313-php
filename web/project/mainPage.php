@@ -28,9 +28,6 @@
             $i = 0;
             foreach ($movies as $rows)
             {
-                //if ((strpos(strtolower($rows["movie_name"]), $word) == true) || 
-                //    (strpos(strtolower($rows["movie_summary"]), $word) == true) ||
-                //    (strpos(strtolower($rows["movie_rating"]), $word) == true))
                 if ((strpos(strtolower($rows["movie_name"]), $word) !== false) || 
                     (strpos(strtolower($rows["movie_summary"]), $word) !== false) ||
                     (strpos(strtolower($rows["movie_rating"]), $word) !== false))
@@ -41,7 +38,6 @@
                 {
                     foreach($rows["directors"] as $data)
                     {
-                        //if (strpos(strtolower($data), $word) == true)
                         if (strpos(strtolower($data), $word) !== false)
                         {
                             $movies2[$i] = $rows;
@@ -49,8 +45,6 @@
                     }
                     foreach($rows["actors"] as $data)
                     {
-                        //echo $data;
-                        //if (strpos(strtolower($data), $word) == true)
                         if (strpos(strtolower($data), $word) !== false)
                         {
                             echo strtolower($data);
@@ -59,11 +53,9 @@
                     }
                     foreach($rows["genres"] as $data)
                     {
-                        //if (strpos(strtolower($data), $word) == true)
                         if (strpos(strtolower($data), $word) !== false)
                         {
                             $movies2[$i] = $rows;
-                            //print_r($movies2[$i]);
                         }
                     }
                 }
