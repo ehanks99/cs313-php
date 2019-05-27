@@ -38,7 +38,7 @@
                     <div class="col-md-8">
                     <h3 class = "text-center">' . $movies[$location]['movie_name'] . '</h3><hr>
                         <div class = "pull-left">
-                            <img src = "movie_pictures/' . $movies[$location]["picture_filepath"] . '" style = "height: 300px; width: auto; margin: 25px">
+                            <img src = "movie_pictures/' . $movies[$location]["picture_filepath"] . '" style = "height: 300px; width: auto; padding: 25px">
                         </div>
                         <div>
                             <p>' . $movies[$location]['movie_summary'] . '</p><br/>
