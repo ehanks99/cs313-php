@@ -77,7 +77,7 @@
     <script>
         function goToDetails(row)
         {
-            row.toString();
+            alert(row.toString());
         }
     </script>
 </head>
