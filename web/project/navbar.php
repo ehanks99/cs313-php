@@ -1,5 +1,5 @@
 
-<div class="topnav fixed-top">
+<div class="topnav">
   <a class="active" href="mainPage.php">Home Page</a>
   <a href="#about">Add a Movie</a>
   <a href="#contact">Contact</a>

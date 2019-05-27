@@ -85,7 +85,7 @@
                 <div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
                         <div class = "pull-left">
-                            <img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
+                            &nbsp;&nbsp;&nbsp;<img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
                             <h4>&nbsp;&nbsp;&nbsp;' . $rows['movie_name'] . '</h4><hr>
