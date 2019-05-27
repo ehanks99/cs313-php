@@ -85,7 +85,7 @@
                 <div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
                         <div class = "pull-left">
-                            &nbsp;&nbsp;&nbsp;<img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
                         </div>
                         <div>
                             <h4>&nbsp;&nbsp;&nbsp;' . $rows['movie_name'] . '</h4><hr>
@@ -116,7 +116,7 @@
                                     echo ', ';
                             }
                             echo '</h5><br/>
-                            <button type="button" class="btn btn-secondary">View Details</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary">View Details</button>
                         </div>
                         <hr>
                     </div>
