@@ -75,45 +75,6 @@
         }
     ?>
     <script>
-        <?php
-            echo '
-                var directors = new Array();
-                var actors = new Array();
-                var genres = new Array();';
-            foreach ($movies as $rows)
-            {
-                echo 'var babyDirectors = [';
-                for ($j = 0; $j < count($directors); $j++)
-                {
-                    echo '"' . $directors[$j] . '"';
-                    if ($j != count($directors) - 1)
-                        echo ', ';
-                }
-                echo '];
-                    var babyActors = [';
-                for ($j = 0; $j < count($actors); $j++)
-                {
-                    echo '"' . $actors[$j] . '"';
-                    if ($j != count($actors) - 1)
-                        echo ', ';
-                }
-                echo '];
-                    var babyGenres = [';
-                for ($j = 0; $j < count($genres); $j++)
-                {
-                    echo '"' . $genres[$j] . '"';
-                    if ($j != count($genres) - 1)
-                        echo ', ';
-                }
-                echo '];
-                    directors.push(babyDirectors);
-                    actors.push(babyActors);
-                    genres.push(babyGenres);
-                    ';
-            }
-        ?>
-
-
         function goToDetails(movie_name)
         {
             window.location.href = ("detailsPage.php?movie_name=" + movie_name);
