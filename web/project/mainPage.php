@@ -75,6 +75,43 @@
         }
     ?>
     <script>
+        <?php
+            echo 'var directors;
+                var actors;
+                var genres;';
+            foreach ($movies as $rows)
+            {
+                echo 'var babyDirectors = [';
+                for ($j = 0; $j < count($directors); $j++)
+                {
+                    echo '"' . $directors[$j] . '"';
+                    if ($j != count($directors) - 1)
+                        echo ', ';
+                }
+                echo '];
+                    var babyActors = [';
+                for ($j = 0; $j < count($actors); $j++)
+                {
+                    echo '"' . $actors[$j] . '"';
+                    if ($j != count($actors) - 1)
+                        echo ', ';
+                }
+                echo '];
+                    var babyGenres = [';
+                for ($j = 0; $j < count($genres); $j++)
+                {
+                    echo '"' . $genres[$j] . '"';
+                    if ($j != count($genres) - 1)
+                        echo ', ';
+                }
+                echo '];
+                    directors.push(babyDirectors);
+                    actors.push(babyActors);
+                    genres.push(babyGenres);';
+            }
+        ?>
+
+
         function goToDetails(row)
         {
             //alert(row["movie_name"]);
@@ -128,8 +165,8 @@
                             }
                             echo '</h5><br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            var row = ' . $rows . ';
-                            <button type="button" class="btn btn-secondary" onclick="goToDetails(row)">View Details</button>
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails("' . $rows['movie_name'] . 
+                                '", "' . $rows['movie_rating'] . '", "' . $rows['movie_summary'] . '")">View Details</button>
                         </div>
                         <hr>
                     </div>
