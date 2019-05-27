@@ -88,11 +88,11 @@
                 <div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
                         <div class = "pull-left">
-                            &nbsp;&nbsp;&nbsp;&nbsp;<img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto">
+                            <img src = "movie_pictures/' . $rows["picture_filepath"] . '" style = "height: 150px; width: auto; padding: 20px;">
                         </div>
                         <div>
-                            <h4>&nbsp;&nbsp;&nbsp;' . $rows['movie_name'] . '</h4><hr>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Director(s): </b>';
+                            <h4>' . $rows['movie_name'] . '</h4><hr>
+                            <h5><b>Director(s): </b>';
                             $directors = $rows["directors"];
                             for ($j = 0; $j < count($directors); $j++)
                             {
@@ -101,7 +101,7 @@
                                     echo ', ';
                             }
                             echo '</h5>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Starring Actors: </b>';
+                            <h5><b>Starring Actors: </b>';
                             $actors = $rows["actors"];
                             for ($j = 0; $j < count($actors); $j++)
                             {
@@ -110,7 +110,7 @@
                                     echo ', ';
                             }
                             echo '</h5>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Genres: </b>';
+                            <h5><b>Genres: </b>';
                             $genres = $rows["genres"];
                             for ($j = 0; $j < count($genres); $j++)
                             {
@@ -119,7 +119,7 @@
                                     echo ', ';
                             }
                             echo '</h5><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            
                             <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
                         </div>
                         <hr>
