@@ -80,7 +80,7 @@
         include 'navbar.php';
     ?>
 
-    <h2 class = "text-center">Movie Selections</h2><br/><br/>
+    <h2 class = "text-center">Movie Selections</h2><br/><br/><hr>
 
     <?php
         foreach ($movies as $rows)
@@ -120,7 +120,8 @@
                                     echo ', ';
                             }
                             echo '</h5><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary">View Details</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-secondary" onclick="goToDetails(' . $rows . '">View Details</button>
                         </div>
                         <hr>
                     </div>
