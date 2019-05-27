@@ -36,13 +36,13 @@
 
         echo '<div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
-                    <h3 class = "text-center">&nbsp;&nbsp;&nbsp;' . $movies[$location]['movie_name'] . '</h3><hr>
+                    <h3 class = "text-center">' . $movies[$location]['movie_name'] . '</h3><hr>
                         <div class = "pull-left">
-                            &nbsp;&nbsp;&nbsp;&nbsp;<img src = "movie_pictures/' . $movies[$location]["picture_filepath"] . '" style = "height: 300px; width: auto; padding: 20px">
+                            <img src = "movie_pictures/' . $movies[$location]["picture_filepath"] . '" style = "height: 300px; width: auto; padding: 20px">
                         </div>
                         <div>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;' . $movies[$location]['movie_summary'] . '</p><br/>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Director(s): </b>';
+                            <p>' . $movies[$location]['movie_summary'] . '</p><br/>
+                            <h5><b>Director(s): </b>';
                             $directors = $movies[$location]["directors"];
                             for ($j = 0; $j < count($directors); $j++)
                             {
@@ -51,7 +51,7 @@
                                     echo ', ';
                             }
                             echo '</h5>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Starring Actors: </b>';
+                            <h5><b>Starring Actors: </b>';
                             $actors = $movies[$location]["actors"];
                             for ($j = 0; $j < count($actors); $j++)
                             {
@@ -60,7 +60,7 @@
                                     echo ', ';
                             }
                             echo '</h5>
-                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;<b>Genres: </b>';
+                            <h5><b>Genres: </b>';
                             $genres = $movies[$location]["genres"];
                             for ($j = 0; $j < count($genres); $j++)
                             {
@@ -69,7 +69,7 @@
                                     echo ', ';
                             }
                             echo '</h5><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            
                         </div>
                         <hr>
                     </div>
