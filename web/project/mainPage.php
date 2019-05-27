@@ -76,9 +76,10 @@
     ?>
     <script>
         <?php
-            echo 'var directors;
-                var actors;
-                var genres;';
+            echo '
+                var directors = new Array();
+                var actors = new Array();
+                var genres = new Array();';
             foreach ($movies as $rows)
             {
                 echo 'var babyDirectors = [';
@@ -107,7 +108,8 @@
                 echo '];
                     directors.push(babyDirectors);
                     actors.push(babyActors);
-                    genres.push(babyGenres);';
+                    genres.push(babyGenres);
+                    ';
             }
         ?>
 
