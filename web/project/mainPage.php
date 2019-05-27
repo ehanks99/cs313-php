@@ -77,7 +77,7 @@
     <script>
         function goToDetails(row)
         {
-            alert(row.toString());
+            alert(row["movie_name"]);
         }
     </script>
 </head>
