@@ -29,7 +29,7 @@
                 
                 $statement = $db->prepare('SELECT topic_name
                                         FROM Topic t RIGHT JOIN Topic_to_Scriptures st
-                                            ON t.id = st.topic_id
+                                            ON t.topic_id = st.topic_id
                                         WHERE st.scriptures_id = :id;');
                 $statement->execute(array(':id' => $row['id']));
                 $topics = $statement->fetchAll(PDO::FETCH_ASSOC);
