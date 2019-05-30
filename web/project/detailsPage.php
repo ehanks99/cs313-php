@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +25,6 @@
 <body>
     <?php
         include 'navbar.php';
-
 
         // find the location of the movie name given to us inside the movie array
         $movie = $_GET["movie_name"];

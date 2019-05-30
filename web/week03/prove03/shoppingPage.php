@@ -6,7 +6,6 @@
    session_start();
    //session_unset();
    //$_SESSION["inCart"] = 0;
-   
 ?>
 
 <!DOCTYPE html>

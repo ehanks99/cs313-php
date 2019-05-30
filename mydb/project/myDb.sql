@@ -93,18 +93,25 @@ CREATE TABLE movie_to_starring_actor
 CREATE SEQUENCE movie_to_starring_actor_s1 START WITH 1;
 CREATE UNIQUE INDEX ui_movie_to_starring_actor_1 ON movie_to_starring_actor(movie_id, actor_id);
 
+------------------------------------------
 
+CREATE TABLE login_info
+(
+    login_info_id       INTEGER,
+    username            VARCHAR(70)         CONSTRAINT nn_login_info_1 NOT NULL,
+    pswrd               VARCHAR(100)        CONSTRAINT nn_login_info_2 NOT NULL,
+    email               VARCHAR(100)        CONSTRAINT nn_login_info_3 NOT NULL,
+    first_name          VARCHAR(100)        CONSTRAINT nn_login_info_4 NOT NULL,
+    last_name           VARCHAR(100)        CONSTRAINT nn_login_info_5 NOT NULL,
+    is_admin            VARCHAR(1)          CONSTRAINT nn_login_info_6 NOT NULL,
+    CONSTRAINT pk_login_info PRIMARY KEY(login_info_id)
+);
 
+CREATE SEQUENCE login_info_s1 START WITH 1;
+CREATE UNIQUE INDEX ui_login_info_1 ON login_info(username);
+--CREATE UNIQUE INDEX ui_login_info_2 ON login_info(email);
 
-
-
-
-
-
-
-
-
-
+------------------------------------------
 
 
 -- to select all the data
@@ -119,4 +126,3 @@ FROM movie
 
     INNER JOIN movie_to_director ON movie_to_director.movie_id = movie.movie_id
     INNER JOIN director ON movie_to_director.director_id = director.director_id;
-
