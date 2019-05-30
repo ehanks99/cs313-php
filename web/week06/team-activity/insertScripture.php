@@ -6,7 +6,7 @@
 
         if(isset($db))
         {
-            $statement = $db->prepare('SELECT topic FROM topics;');
+            $statement = $db->prepare('SELECT topic_name FROM Topic;');
             $statement->execute();
             $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
         }
@@ -35,8 +35,8 @@
                     foreach ($resultSet as $row)
                     {
                         echo '<label class="form-check-label ml-5">
-                                  <input type="checkbox" class="form-check-input" name="Topics[]" id="' . $row['topic']. '" value="' . $row['topic'] . '"> ' .
-                                  $row['topic'] .
+                                  <input type="checkbox" class="form-check-input" name="Topics[]" id="' . $row['topic_name']. '" value="' . $row['topic_name'] . '"> ' .
+                                  $row['topic_name'] .
                               '</label><br>';
                     }
                 }

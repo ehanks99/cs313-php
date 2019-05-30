@@ -6,7 +6,7 @@
 
         if (isset($db))
         {
-            $statement = $db->query('SELECT * FROM scriptures');
+            $statement = $db->query('SELECT * FROM Scriptures');
             $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
         }
     ?>
@@ -27,16 +27,16 @@
             {
                 echo '<div class="row"><a href="details.php?id=' . $row['id'] . '">' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</a>';
                 
-                $statement = $db->prepare('SELECT topic
-                                        FROM topics t RIGHT JOIN scripture_topics st
+                $statement = $db->prepare('SELECT topic_name
+                                        FROM Topic t RIGHT JOIN Topic_to_Scriptures st
                                             ON t.id = st.topic_id
-                                        WHERE st.scripture_id = :id;');
+                                        WHERE st.scriptures_id = :id;');
                 $statement->execute(array(':id' => $row['id']));
                 $topics = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($topics as $topic)
                 {
-                    echo "\t" . $topic['topic'];
+                    echo "\t" . $topic['topic_name'];
                 }
 
                 echo '</div>';

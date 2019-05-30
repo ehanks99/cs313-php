@@ -8,13 +8,13 @@
 
         if(isset($db))
         {
-            $statement  = $db->prepare("INSERT INTO scriptures VALUES (nextval('scriptures_s1'), :book, :chapter, :verse, :content);");
+            $statement  = $db->prepare("INSERT INTO Scriptures VALUES (nextval('scriptures_s1'), :book, :chapter, :verse, :content);");
             $statement->execute(array(':book' => $_POST["Book"], ':chapter' => $_POST["Chapter"], ':verse' => $_POST["Verse"], ':content' => $_POST["Content"]));
             $newID = $db->lastInsertId('scriptures_s1');
 
             if(isset($_POST['Topics']) && !empty($_POST['Topics']))
             {
-                $statementInsertScriptureTopic = $db->prepare("INSERT INTO scripture_topics VALUES (nextval('scripture_topics_s1'), :scripture_id, (SELECT id FROM topics WHERE topic = :topic))");
+                $statementInsertScriptureTopic = $db->prepare("INSERT INTO Topic_to_Scriptures VALUES (nextval('topic_to_scriptures_s1'), :scripture_id, (SELECT topic_id FROM Topic WHERE topic_name = :topic))");
                 foreach ($_POST['Topics'] as $topic)
                 {
                     $statementInsertScriptureTopic->execute(array(':scripture_id' => $newID, ':topic' => $topic));
