@@ -11,6 +11,7 @@
     <title>Log In</title>
 </head>
 <body>
-    
+    <img src = "<script>
+    document.location.replace('mainPage.php');</script>">
 </body>
 </html>
