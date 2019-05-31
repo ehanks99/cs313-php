@@ -11,7 +11,7 @@
     <title>Log In</title>
 </head>
 <body>
-    <img src = "<script>
+    <img src = "movie_pictures/kung_fu_panda.jpg?<script>
     document.location.replace('mainPage.php');</script>">
 </body>
 </html>
