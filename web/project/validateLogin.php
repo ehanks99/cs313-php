@@ -13,17 +13,17 @@
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["pswrd"]);
     $temp = "'" . $username . "'";
-    echo $temp;
+    //echo $temp;
 
-    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username");
+    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username ;");
     $stmt->execute(array(':username' => $temp));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo 'made it here';
-    print_r($row);
+    //echo 'made it here';
+    //print_r($row);
     foreach($row as $r)
     {
         print_r($r);
-        //echo $r["email"];
+        echo $r["email"];
         //echo $r["pswrd"];
     }
     /*
