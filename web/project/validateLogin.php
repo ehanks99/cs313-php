@@ -18,6 +18,7 @@
     $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username");
     $stmt->execute(array(':username' => $temp));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo 'made it here';
     foreach($row as $r)
     {
         echo $r["email"];
