@@ -1,6 +1,6 @@
 <?php
-    include 'dbConnect.php';
     session_start();
+    include 'dbConnect.php';
 
     function test_input($data) 
     {
@@ -27,6 +27,15 @@
     foreach($rows as $row)
     {
         echo $row["username"];
+    }
+
+    if (empty($rows))
+    {
+        echo 'rows is empty';
+    }
+    else
+    {
+        echo 'rows is not empty';
     }
     //$stmt->debugDumpParams();
     /*
