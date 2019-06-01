@@ -23,8 +23,7 @@
     echo $row["email"];
     foreach($row as $r)
     {
-        echo 'herio';
-        print_r($r);
+        echo 'herio';echo "<pre>".print_r($r, true)."</pre>";
         echo $r["email"];
         //echo $r["pswrd"];
     }
