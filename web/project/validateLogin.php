@@ -15,20 +15,20 @@
     $temp = "'" . $username . "'";
     //echo $temp;
 
-    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
-    $stmt->bindValue(':un', $temp, PDO::PARAM_STR);
-    $stmt->execute();
+    $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :uname');
+    $stmt->execute(array(':uname' => $temp));
+
+
+    //$stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
+    //$stmt->bindValue(':un', $temp, PDO::PARAM_STR);
+    //$stmt->execute();
     //$stmt->execute(array(':username' => $temp));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach($rows as $row)
+    {
+        echo $row["username"];
+    }
     //$stmt->debugDumpParams();
-    echo 'made it here';
-    print_r($rows[0]);
-    echo $rows[0]["email"];
-    echo $rows[0]["username"];
-    echo $rows[0]["pswrd"];
-    echo $rows[0]["first_name"];
-    echo $rows[0]['last_name'];
-    echo $rows[0]['is_admin'];
     /*
     if (empty($rows))
     {
