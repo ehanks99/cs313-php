@@ -11,9 +11,9 @@
     }
 
     $username = test_input($_POST["username"]);
+    $password = test_input($_POST["pswrd"]);
     echo $username;
     echo $password;
-    $password = test_input($_POST["pswrd"]);
 
     $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = ':username'");
     $stmt->execute(array(':username' => $username));
