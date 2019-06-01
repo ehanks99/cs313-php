@@ -20,11 +20,12 @@
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo 'made it here';
     print_r($row);
-    /*foreach($row as $r)
+    foreach($row as $r)
     {
-        echo $r["email"];
-        echo $r["pswrd"];
-    }*/
+        print_r($r);
+        //echo $r["email"];
+        //echo $r["pswrd"];
+    }
     /*
     if (empty($row))
     {
