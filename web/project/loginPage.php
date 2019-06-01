@@ -10,6 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Log In</title>
 
+    <link rel = "stylesheet" type = "text/css" href = "styles.css">
+
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,9 +32,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="password">Password:</label>
+                <label class="control-label col-sm-2" for="pswrd">Password:</label>
                 <div class="col-sm-10">          
-                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                    <input type="password" class="form-control" id="pswrd" placeholder="Enter password" name="pswrd" required>
                 </div>
             </div>
             <div class="form-group">        

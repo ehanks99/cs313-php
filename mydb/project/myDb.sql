@@ -111,6 +111,8 @@ CREATE SEQUENCE login_info_s1 START WITH 1;
 CREATE UNIQUE INDEX ui_login_info_1 ON login_info(username);
 --CREATE UNIQUE INDEX ui_login_info_2 ON login_info(email);
 
+INSERT INTO login_info (login_info_id, username, pswrd, email, first_name, last_name, is_admin)
+    VALUES (nextval('login_info_s1'), 'admin', 'admin', 'fake_email@gmail.com', 'John', 'Smith', 'T');
 ------------------------------------------
 
 
