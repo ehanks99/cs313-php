@@ -19,11 +19,12 @@
     $stmt->execute(array(':username' => $temp));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo 'made it here';
-    foreach($row as $r)
+    print_r($row);
+    /*foreach($row as $r)
     {
         echo $r["email"];
         echo $r["pswrd"];
-    }
+    }*/
     /*
     if (empty($row))
     {
