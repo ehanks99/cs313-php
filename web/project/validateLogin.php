@@ -19,7 +19,8 @@
     $stmt->execute(array(':username' => $temp));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo 'made it here';
-    //print_r($row);
+    print_r($row);
+    echo $row["email"];
     foreach($row as $r)
     {
         echo 'herio';
