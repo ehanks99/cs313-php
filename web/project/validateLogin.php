@@ -18,9 +18,9 @@
     $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username");
     $stmt->execute(array(':username' => $temp));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->debugDumpParams();
+    //$stmt->debugDumpParams();
     echo 'made it here';
-    //print_r($rows);
+    print_r($rows[0]);
     echo $rows[0]["email"];
     /*
     if (empty($rows))
