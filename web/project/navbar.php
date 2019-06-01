@@ -2,7 +2,7 @@
 <div class="topnav">
   <a class="active" href="mainPage.php">Home Page</a>
   <a href="">Add a Movie</a>
-  <a href="">Contact</a>
+  <a href="loginPage.php">Login</a>
   <div class="search-container">
     <form action="mainPage.php" method="get">
       <input type="text" placeholder="Search..." name="search">
