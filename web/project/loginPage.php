@@ -24,7 +24,7 @@
 
     <div class="container">
         <h2 class="text-center">Log In</h2><br/>
-        <form class="form-horizontal" action="/validateLogin.php" method="post">
+        <form class="form-horizontal" action="validateLogin.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="username">Username:</label>
                 <div class="col-sm-10">
