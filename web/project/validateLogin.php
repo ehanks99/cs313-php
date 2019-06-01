@@ -19,6 +19,7 @@
     $stmt->execute(array(':username' => $username));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo $row["pswrd"];
+    /*
     if (empty($row))
     {
         header("Location: loginPage.php?error=Username not found.");
@@ -37,4 +38,5 @@
     {
         header("Location: loginPage.php?error=Incorrect password.");
     }
+    */
 ?>
