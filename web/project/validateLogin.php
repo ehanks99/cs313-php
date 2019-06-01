@@ -15,20 +15,13 @@
     $temp = "'" . $username . "'";
     //echo $temp;
 
-    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username ;");
+    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username");
     $stmt->execute(array(':username' => $temp));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->debugDumpParams();
     echo 'made it here';
-    print_r($rows);
-    echo $rows["email"];
-    foreach($rows as $r)
-    {
-        echo 'herio';
-        print_r($r);
-        echo $r["email"];
-        //echo $r["pswrd"];
-    }
+    //print_r($rows);
+    echo $rows[0]["email"];
     /*
     if (empty($rows))
     {
