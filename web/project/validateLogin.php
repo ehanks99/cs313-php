@@ -15,8 +15,10 @@
     $temp = "'" . $username . "'";
     //echo $temp;
 
-    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username");
-    $stmt->execute(array(':username' => $temp));
+    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
+    $stmt->bindValue(':un', $temp, PDO::PARAM_STR);
+    $stmt->execute();
+    //$stmt->execute(array(':username' => $temp));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //$stmt->debugDumpParams();
     echo 'made it here';
