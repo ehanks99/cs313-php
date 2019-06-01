@@ -14,7 +14,7 @@
     $password = test_input($_POST["pswrd"]);
     $temp = "'" . $username . "'";
 
-    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = username;");
+    $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username;");
     $stmt->execute(array(':username' => $temp));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo $row["email"];
