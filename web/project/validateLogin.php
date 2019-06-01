@@ -17,28 +17,30 @@
 
     $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username ;");
     $stmt->execute(array(':username' => $temp));
-    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->debugDumpParams();
     echo 'made it here';
-    print_r($row);
-    echo $row["email"];
-    foreach($row as $r)
+    print_r($rows);
+    echo $rows["email"];
+    foreach($rows as $r)
     {
-        echo 'herio';echo "<pre>".print_r($r, true)."</pre>";
+        echo 'herio';
+        print_r($r);
         echo $r["email"];
         //echo $r["pswrd"];
     }
     /*
-    if (empty($row))
+    if (empty($rows))
     {
         header("Location: loginPage.php?error=Username not found.");
     }
-    else if (strcmp($password, $row["pswrd"]) == 0)
+    else if (strcmp($password, $rows["pswrd"]) == 0)
     {
         $_SESSION["loggedIn"] = true;
-        $_SESSION["firstName"] = $row["first_name"];
-        $_SESSION["lastName"] = $row["last_name"];
-        $_SESSION["isAdmin"] = $row["is_admin"];
-        $_SESSION["email"] = $row["email"];
+        $_SESSION["firstName"] = $rows["first_name"];
+        $_SESSION["lastName"] = $rows["last_name"];
+        $_SESSION["isAdmin"] = $rows["is_admin"];
+        $_SESSION["email"] = $rows["email"];
 
         header("Location: mainPage.php");
     }
