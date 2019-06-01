@@ -1,4 +1,5 @@
 <?php
+    include 'dbConnect.php';
     session_start();
 
     function test_input($data) 
