@@ -18,10 +18,11 @@
     $stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :username ;");
     $stmt->execute(array(':username' => $temp));
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //echo 'made it here';
+    echo 'made it here';
     //print_r($row);
     foreach($row as $r)
     {
+        echo 'herio';
         print_r($r);
         echo $r["email"];
         //echo $r["pswrd"];
