@@ -13,10 +13,11 @@
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["pswrd"]);
     $temp = "'" . $username . "'";
-    //echo $temp;
+    echo $temp;
 
     $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :uname');
     $stmt->execute(array(':uname' => $temp));
+    echo 'rows found ' . $stmt->rowCount();
 
 
     //$stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
