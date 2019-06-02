@@ -38,6 +38,10 @@
     }
     else
     {
+        $_SESSION["temp_firstName"] = $firstName;
+        $_SESSION["temp_lastName"] = $lastName;
+        $_SESSION["temp_email"] = $email;
+
         header("Location: signUpPage.php?error=Username already used.");
     }
     

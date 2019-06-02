@@ -24,6 +24,7 @@
 
 </head>
 <body>
+    <script>
     <?php
         include 'navbar.php';
 
@@ -32,9 +33,14 @@
             echo '
             <div class="alert alert-danger text-center">
               <strong>ERROR: </strong>' . $_GET["error"] . '
-            </div>';
+            </div>
+            
+            document.getElementById("firstName").innerHTML = ' . $_SESSION["temp_firstName"] . ';
+            document.getElementById("lastName").innerHTML = ' . $_SESSION["temp_lastName"] . ';
+            document.getElementById("email").innerHTML = ' . $_SESSION["temp_email"] . ';';
         }
     ?>
+    </script>
 
     <div class="container">
         <h2 class="text-center">Sign Up Form</h2><br/>
