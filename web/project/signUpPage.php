@@ -22,6 +22,14 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
+    <script>
+        function setVariables(first, last, email)
+        {
+            document.getElementById("firstName").innerHTML = first;
+            document.getElementById("lastName").innerHTML = last;
+            document.getElementById("email").innerHTML = email;
+        }
+    </script>
 </head>
 <body>
     <?php
@@ -34,9 +42,7 @@ echo $_GET["firstN"];
               <strong>ERROR: </strong>' . $_GET["error"] . '
             </div>
             
-            <script>document.getElementById("firstName").innerHTML = "' . $_GET["firstN"] . '";
-            document.getElementById("lastName").innerHTML = "' . $_GET["lastN"] . '";
-            document.getElementById("email").innerHTML = "' . $_GET["email"] . '";</script>';
+            setVariables(' . $_GET["firstN"] . ', ' . $_GET["lastN"] . ', ' . $_GET["email"] . ');';
         }
     ?> 
 
