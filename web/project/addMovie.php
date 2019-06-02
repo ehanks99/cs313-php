@@ -18,11 +18,28 @@
 
     <script>
         var id = 0;
+
+        function addElement(parentId, elementTag, elementId, html) 
+        {
+            // Adds an element to the document
+            var p = document.getElementById(parentId);
+            var newElement = document.createElement(elementTag);
+            newElement.setAttribute('id', elementId);
+            newElement.innerHTML = html;
+            p.appendChild(newElement);
+        }
         function addDirector()
         {
             id++;
             var html = "<input type='text' class='form-control' name='directors[]' id='director" + id + "'/> <a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
+        }
+
+        function removeElement(elementId) 
+        {
+            // Removes an element from the document
+            var element = document.getElementById(elementId);
+            element.parentNode.removeChild(element);
         }
     </script>
 
