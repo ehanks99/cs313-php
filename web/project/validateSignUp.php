@@ -35,6 +35,7 @@
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
         
         include 'logIn.php';
+        header("Location: mainPage.php");
     }
     else
     {
@@ -45,5 +46,5 @@
         header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName . "&email=" . $email);
     }
     
-    header("Location: mainPage.php");
+    
 ?>
