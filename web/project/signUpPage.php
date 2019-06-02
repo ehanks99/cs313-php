@@ -42,8 +42,8 @@
               <strong>ERROR: </strong>' . $_GET["error"] . '
             </div>';
         }
-    ?> 
-<button type="button" onclick="setvariables('emily', 'hanks', 'george')">hi</button>
+    ?>
+    
     <div class="container">
         <h2 class="text-center">Sign Up Form</h2><br/>
         <form class="form-horizontal" action="validateSignUp.php" method="post">
