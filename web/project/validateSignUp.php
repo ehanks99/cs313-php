@@ -51,5 +51,5 @@
         header("Location: signUpPage.php?error=Username already used.");
     }
     
-    header("Location: mainPage.php");
+    //header("Location: mainPage.php");
 ?>
