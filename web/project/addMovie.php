@@ -51,7 +51,7 @@
 
     <div class="container">
         <h2 class="text-center">Add a Movie to the List</h2><br/>
-        <form class="form-horizontal" action="validateSignUp.php" method="post">
+        <form class="form-horizontal" action="addMovieCode.php" method="get">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="movieName">Movie Name:</label>
                 <div class="col-sm-10">
@@ -64,7 +64,6 @@
                 <div class="col-sm-6" id="directors">
                     <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
                 </div>
-                
             </div>
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
