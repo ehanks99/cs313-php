@@ -25,9 +25,9 @@
     <script>
         function setVariables(first, last, email)
         {
-            document.getElementById("firstName").innerHTML = first;
-            document.getElementById("lastName").innerHTML = last;
-            document.getElementById("email").innerHTML = email;
+            document.getElementById("firstName").value = first;
+            document.getElementById("lastName").value = last;
+            document.getElementById("email").value = email;
         }
     </script>
 </head>
