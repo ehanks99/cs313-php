@@ -34,28 +34,8 @@
                                   VALUES (nextval('login_info_s1'), :user, :pswrd, :email, :firstN, :lastN, 'N')");
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
         */
-        $url = "validateLogin.php";
-        $data = array('username' => $username, 'pswrd' => $password);
-        $options = array(
-            'http' => array(
-                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-                'method'  => 'POST',
-                'content' => $data
-            )
-        );
-        $context = stream_context_create($options);
-        $fp = fopen('validateLogin.php', 'r', false, $context);
-        //fpassthru($fp);
-        //fclose($fp);
         
-        //$result = file_get_contents($url, false, $content);
-        //if ($result === FALSE) { echo 'error'; }
-
-        header("Location: validateLogin.php");
-        //var_dump($result);
-        
-        //$_POST["username"] = $username;
-        //$_POST["pswrd"] = $password;*/
+        include 'logIn.php';
     }
     else
     {
