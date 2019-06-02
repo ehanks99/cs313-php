@@ -31,18 +31,16 @@
         }
     </script>
 </head>
-<body>
+<body <?php if (isset($_GET["error"])) { echo 'onload=setVariables("' . $_GET["firstN"] . '", "' . $_GET["lastN"] . '", "' . $_GET["email"] . '");';?> }>
     <?php
         include 'navbar.php';
-echo $_GET["firstN"];
+        
         if (isset($_GET["error"]))
         {
             echo '
             <div class="alert alert-danger text-center">
               <strong>ERROR: </strong>' . $_GET["error"] . '
-            </div>
-            
-            <script>setVariables("' . $_GET["firstN"] . '", "' . $_GET["lastN"] . '", "' . $_GET["email"] . '");</script>';
+            </div>';
         }
     ?> 
 
