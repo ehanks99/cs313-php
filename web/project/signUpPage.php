@@ -33,13 +33,7 @@
             echo '
             <div class="alert alert-danger text-center">
               <strong>ERROR: </strong>' . $_GET["error"] . '
-            </div>
-            
-            <script>
-                document.getElementById("firstName").innerHTML = ' . $_GET["firstN"] . ';
-                document.getElementById("lastName").innerHTML = ' . $_GET["lastN"] . ';
-                document.getElementById("email").innerHTML = ' . $_GET["email"] . ';
-            </script>';
+            </div>';
         }
     ?>
 
