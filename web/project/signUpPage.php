@@ -26,7 +26,7 @@
 <body>
     <?php
         include 'navbar.php';
-
+echo $_GET["firstN"];
         if (isset($_GET["error"]))
         {
             echo '
