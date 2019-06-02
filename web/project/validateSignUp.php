@@ -35,7 +35,7 @@
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
         */
         $url = "validateLogin.php";
-        $data = array('username' => $username, 'pswrd' => $pswrd);
+        $data = array('username' => $username, 'pswrd' => $password);
         $options = array(
             'http' => array(
                 'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
