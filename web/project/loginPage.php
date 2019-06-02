@@ -21,7 +21,7 @@
     <?php
         include 'navbar.php';
 
-        if (isset($_POST["error"]))
+        if (isset($_GET["error"]))
         {
             echo '<div class="alert alert-secondary" role="alert">
                 ERROR: ' . $_POST["error"] . '
