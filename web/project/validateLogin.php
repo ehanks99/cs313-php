@@ -39,7 +39,7 @@
         echo 'rows is not empty';
     }
     //$stmt->debugDumpParams();
-    /*
+    
     if (empty($rows))
     {
         header("Location: loginPage.php?error=Username not found.");
@@ -58,5 +58,5 @@
     {
         header("Location: loginPage.php?error=Incorrect password.");
     }
-    */
+    
 ?>
