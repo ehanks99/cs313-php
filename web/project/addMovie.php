@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script>
+        id = 0;
+        function addDirector()
+        {
+            id++;
+            var html = "<input type='text' class='form-control' id='director" + id + "' <a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
+            addElement('directors', 'p', 'director' + id, html);
+        }
+    </script>
+
 </head>
 <body>
     <?php
@@ -32,9 +42,9 @@
                 </div>
             </div>
             <div class="form-group">
-            <button type="button">Add a Director</button>
+                <input type="button" value="Add a Director" onclick="addDirector()">
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
-                <div class="col-sm-6">
+                <div class="col-sm-6" id="directors">
                     <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
                 </div>
                 
