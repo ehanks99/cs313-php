@@ -15,8 +15,9 @@
     $firstName = test_input($_POST["firstName"]);
     $lastName = test_input($_POST["lastName"]);
     $email = test_input($_POST["email"]);
+    $temp = "'" . $username . "'";
 
-    $stmt = $db->prepare('SELECT username FROM login_info WHERE username = ' . $username);
+    $stmt = $db->prepare('SELECT username FROM login_info WHERE username = ' . $temp);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
