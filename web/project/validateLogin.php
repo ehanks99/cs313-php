@@ -20,8 +20,8 @@
     $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = ' . $temp);
     $stmt->execute();
 
-    echo $row[0]["username"];
-    echo $row[0]["email"];
+    echo $rows[0]["username"];
+    echo $rows[0]["email"];
     //$stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
     //$stmt->bindValue(':un', $temp, PDO::PARAM_STR);
     //$stmt->execute();
