@@ -37,17 +37,6 @@
             ;
         }
     ?> 
-    <script>
-        <?php
-            if (isset($_GET["error"]))
-            {
-                echo 'document.getElementById("firstName").innerHTML = ' . $_GET["firstN"] . ';
-                document.getElementById("lastName").innerHTML = ' . $_GET["lastN"] . ';
-                document.getElementById("email").innerHTML = ' . $_GET["email"] . ';
-                ';
-            }
-        ?>
-    </script>
 
     <div class="container">
         <h2 class="text-center">Sign Up Form</h2><br/>
