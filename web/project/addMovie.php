@@ -32,7 +32,7 @@
         {
             id++;
             var html = "<input type='text' class='form-control' name='directors[]' id='director" + id + "'/> <a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
-            addElement('directors', 'p', 'director' + id, html);
+            addElement('directors', 'div', 'director' + id, html);
         }
 
         function removeElement(elementId) 
