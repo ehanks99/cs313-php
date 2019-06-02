@@ -54,7 +54,7 @@
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Submit</button>
-                    <a href="signUpPage.php">Not a member? Sign up!</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="signUpPage.php">Not a member? Sign up!</a>
                 </div>
             </div>
         </form>
