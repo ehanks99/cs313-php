@@ -42,7 +42,7 @@ echo $_GET["firstN"];
               <strong>ERROR: </strong>' . $_GET["error"] . '
             </div>
             
-            setVariables(' . $_GET["firstN"] . ', ' . $_GET["lastN"] . ', ' . $_GET["email"] . ');';
+            <script>setVariables("' . $_GET["firstN"] . '", "' . $_GET["lastN"] . '", "' . $_GET["email"] . '");</script>';
         }
     ?> 
 
