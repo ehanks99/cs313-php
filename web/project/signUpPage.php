@@ -31,10 +31,10 @@
         }
     </script>
 </head>
-<body>
+<body <?php if (isset($_GET["error"])) { echo 'onload="setVariables(' . $_GET["firstN"] . ', ' . $_GET["lastN"] . ', ' . $_GET["email"] . ')"';}?>>
     <?php
         include 'navbar.php';
-        
+
         if (isset($_GET["error"]))
         {
             echo '
