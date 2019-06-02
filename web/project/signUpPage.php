@@ -35,9 +35,9 @@
               <strong>ERROR: </strong>' . $_GET["error"] . '
             </div>
             
-            document.getElementById("firstName").innerHTML = ' . $_SESSION["temp_firstName"] . ';
-            document.getElementById("lastName").innerHTML = ' . $_SESSION["temp_lastName"] . ';
-            document.getElementById("email").innerHTML = ' . $_SESSION["temp_email"] . ';';
+            document.getElementById("firstName").innerHTML = ' . $_GET["firstN"] . ';
+            document.getElementById("lastName").innerHTML = ' . $_GET["lastN"] . ';
+            document.getElementById("email").innerHTML = ' . $_GET["email"] . ';';
         }
     ?>
     </script>
