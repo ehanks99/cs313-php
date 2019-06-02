@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script>
-        id = 0;
+        var id = 0;
         function addDirector()
         {
             id++;
-            var html = "<input type='text' class='form-control' id='director" + id + "' <a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
+            var html = "<input type='text' class='form-control' name='directors[]' id='director" + id + "'/> <a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
         }
     </script>
