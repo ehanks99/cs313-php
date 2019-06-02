@@ -13,11 +13,12 @@
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["pswrd"]);
     $temp = "'" . $username . "'";
+    echo $temp . $password;
 
     $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = ' . $temp);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+    /*
     if (empty($rows))
     {
         header("Location: loginPage.php?error=Username not found.");
@@ -36,5 +37,5 @@
     {
         header("Location: loginPage.php?error=Incorrect password.");
     }
-    
+    */
 ?>
