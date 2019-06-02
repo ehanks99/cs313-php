@@ -58,12 +58,12 @@
                     <input type="text" class="form-control" id="movieName" placeholder="" name="movieName" required>
                 </div>
             </div>
-            <div class="form-group" id="directors">
+            <div class="form-group">
                 <input type="button" value="Add a Director" onclick="addDirector()">
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
-                
+                <div class="" id="directors">
                     <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
-                
+                </div>
             </div>
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
