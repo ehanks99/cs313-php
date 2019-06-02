@@ -28,21 +28,19 @@
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
         
         $url = "validateLogin.php";
-
-        $fields = array(
-            '__VIEWSTATE '      => $state,
-            '__EVENTVALIDATION' => $valid,
-            'btnSubmit'         => 'Submit');
-
-        $fields_string = http_build_query($fields);
-        $ch = curl_init();
-        curl_setopt($ch, CURLOP_URL, $url);
-        curl_setopt($ch, CURLOP_POST, true);
-        curl_setopt($ch, CURLOP_POSTFIELDS, $fields_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
-        echo $result;
-
+        $data = array('username' => $username, 'pswrd' => $pswrd);
+        $options = array(
+            'http' => array(
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'POST',
+                'content' => http_build_query($data)
+            )
+        );
+        $context = stream_context_create($options);
+        $result = file_get_contents($url, false, $content);
+        if ($result === FALSE) { echo 'error'; }
+        var_dump($result);
+        
         //$_POST["username"] = $username;
         //$_POST["pswrd"] = $password;
     }
