@@ -20,19 +20,19 @@
     $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = ' . $temp);
     $stmt->execute();
 
-    echo $rows[0]["username"];
-    echo $rows[0]["email"];
+    //echo $rows[0]["username"];
+    //echo $rows[0]["email"];
     //$stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
     //$stmt->bindValue(':un', $temp, PDO::PARAM_STR);
     //$stmt->execute();
     //$stmt->execute(array(':username' => $temp));
     //$stmt->rowCount();
     //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //foreach($rows as $row)
-    //{
-    //    echo $row["username"];
-    //}
-/*
+    foreach($rows as $row)
+    {
+        echo $row["email"];
+    }
+
     if (empty($rows))
     {
         echo 'rows is empty';
@@ -41,7 +41,7 @@
     {
         echo 'rows is not empty';
     }
-    */
+    
     //$stmt->debugDumpParams();
     
     /*if (empty($rows))
