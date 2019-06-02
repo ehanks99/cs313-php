@@ -22,7 +22,14 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
-
+    <script>
+        function setVariables(first, last, email)
+        {
+            document.getElementById("firstName").innerHTML = first;
+            document.getElementById("lastName").innerHTML = last;
+            document.getElementById("email").innerHTML = email;
+        }
+    </script>
 </head>
 <body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "', '" . $_GET["email"] . "')\"";}?>>
     <?php
@@ -36,14 +43,7 @@
             </div>';
         }
     ?> 
-    <script>
-        function setVariables(first, last, email)
-        {
-            document.getElementById("firstName").innerHTML = first;
-            document.getElementById("lastName").innerHTML = last;
-            document.getElementById("email").innerHTML = email;
-        }
-    </script>
+<button type="button" onclick="setvariables('emily', 'hanks', 'george')">
     <div class="container">
         <h2 class="text-center">Sign Up Form</h2><br/>
         <form class="form-horizontal" action="validateSignUp.php" method="post">
