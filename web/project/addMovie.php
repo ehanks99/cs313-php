@@ -22,7 +22,6 @@
         include 'navbar.php';
     ?>
 
-    
     <div class="container">
         <h2 class="text-center">Add a Movie to the List</h2><br/>
         <form class="form-horizontal" action="validateSignUp.php" method="post">
@@ -33,28 +32,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="lastName">Last Name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="lastName" placeholder="Smith" name="lastName" required>
+            <button type="button">Add a Director</button>
+                <label class="control-label col-sm-2" for="director">Director(s):</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="username">Username:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="pswrd">Password:</label>
-                <div class="col-sm-10">          
-                    <input type="password" class="form-control" id="pswrd" placeholder="Enter password" name="pswrd" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Email:</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com" name="email" required>
-                </div>
+                
             </div>
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
