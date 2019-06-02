@@ -20,6 +20,13 @@
 <body>
     <?php
         include 'navbar.php';
+
+        if (isset($_POST["error"]))
+        {
+            echo '<div class="alert alert-secondary" role="alert">
+                ERROR: ' . $_POST["error"] . '
+            </div>';
+        }
     ?>
 
     <div class="container">

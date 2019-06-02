@@ -13,22 +13,10 @@
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["pswrd"]);
     $temp = "'" . $username . "'";
-    echo $temp;
 
-    //$stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :uname');
-    //$stmt->execute(array(':uname' => $temp));
     $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = ' . $temp);
     $stmt->execute();
-    //$stmt = $db->prepare("SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = :un");
-    //$stmt->bindValue(':un', $temp, PDO::PARAM_STR);
-    //$stmt->execute();
-    //$stmt->execute(array(':username' => $temp));
-    $stmt->rowCount();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach($rows as $row)
-    {
-        echo $row["username"];
-    }
 
     if (empty($rows))
     {
@@ -38,7 +26,6 @@
     {
         echo 'rows is not empty';
     }
-    //$stmt->debugDumpParams();
     
     if (empty($rows))
     {
