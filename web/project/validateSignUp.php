@@ -24,12 +24,6 @@
     // if the statement returns something, that means the username is already in use
     if (empty($rows))
     {
-        /*echo empty($rows);
-        foreach($rows as $row)
-        {
-            echo $row["email"];
-        }*/
-
         $stmt = $db->prepare("INSERT INTO login_info (login_info_id, username, pswrd, email, first_name, last_name, is_admin)
                                   VALUES (nextval('login_info_s1'), :user, :pswrd, :email, :firstN, :lastN, 'N')");
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
@@ -39,10 +33,6 @@
     }
     else
     {
-        //$_SESSION["temp_firstName"] = $firstName;
-        //$_SESSION["temp_lastName"] = $lastName;
-        //$_SESSION["temp_email"] = $email;
-        
         header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName . "&email=" . $email);
     }
 ?>
