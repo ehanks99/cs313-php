@@ -23,13 +23,13 @@
     //$stmt->bindValue(':un', $temp, PDO::PARAM_STR);
     //$stmt->execute();
     //$stmt->execute(array(':username' => $temp));
-    $stmt->rowCount();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach($rows as $row)
-    {
-        echo $row["username"];
-    }
-
+    //$stmt->rowCount();
+    //$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    //foreach($rows as $row)
+    //{
+    //    echo $row["username"];
+    //}
+/*
     if (empty($rows))
     {
         echo 'rows is empty';
@@ -38,8 +38,9 @@
     {
         echo 'rows is not empty';
     }
+    */
     //$stmt->debugDumpParams();
-    /*
+    
     if (empty($rows))
     {
         header("Location: loginPage.php?error=Username not found.");
@@ -58,5 +59,5 @@
     {
         header("Location: loginPage.php?error=Incorrect password.");
     }
-    */
+    
 ?>
