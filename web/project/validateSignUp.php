@@ -35,16 +35,14 @@
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
         
         include 'logIn.php';
-        header("Location: mainPage.php");
+        //header("Location: mainPage.php");
     }
     else
     {
         //$_SESSION["temp_firstName"] = $firstName;
         //$_SESSION["temp_lastName"] = $lastName;
         //$_SESSION["temp_email"] = $email;
-
-        header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName . "&email=" . $email);
+        echo 'error username used';
+        //header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName . "&email=" . $email);
     }
-    
-    
 ?>
