@@ -61,7 +61,7 @@
             <div class="form-group">
                 <input type="button" value="Add a Director" onclick="addDirector()">
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
-                <div class="" id="directors">
+                <div class="col-sm-6" id="directors">
                     <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
                 </div>
             </div>
