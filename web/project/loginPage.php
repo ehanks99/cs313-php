@@ -30,8 +30,8 @@
         if (isset($_GET["error"]))
         {
             echo '
-            <div class="alert alert-danger">
-              <strong>ERROR:</strong>' . $_POST["error"] . '
+            <div class="alert alert-danger text-center">
+              <strong>ERROR:</strong>' . $_GET["error"] . '
             </div>';
         }
     ?>
