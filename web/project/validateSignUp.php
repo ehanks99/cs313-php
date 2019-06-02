@@ -21,10 +21,14 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // if the statement returns something, that means the username is already in use
-    if (empty($rows))
+    if (!empty($rows))
     {
         echo empty($rows);
-        $stmt = $db->prepare("INSERT INTO login_info (login_info_id, username, pswrd, email, first_name, last_name, is_admin)
+        foreach($rows as $row)
+        {
+            echo $row["email"];
+        }
+        /*$stmt = $db->prepare("INSERT INTO login_info (login_info_id, username, pswrd, email, first_name, last_name, is_admin)
                                   VALUES (nextval('login_info_s1'), :user, :pswrd, :email, :firstN, :lastN, 'N')");
         $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
         
@@ -44,7 +48,7 @@
         //var_dump($result);
         
         //$_POST["username"] = $username;
-        //$_POST["pswrd"] = $password;
+        //$_POST["pswrd"] = $password;*/
     }
     else
     {
