@@ -46,6 +46,7 @@
         $result = file_get_contents($url, false, $content);
         if ($result === FALSE) { echo 'error'; }
 
+        header("Location: loginPage.php");
         //var_dump($result);
         
         //$_POST["username"] = $username;
