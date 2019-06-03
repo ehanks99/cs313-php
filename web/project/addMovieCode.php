@@ -45,7 +45,6 @@
     // add the directors, if needed, to the director table
     foreach ($directors as $director)
     {
-        echo $director;
         $stmt = $db->prepare("SELECT director_name FROM director WHERE director_name = '" . $director . "'");
         $stmt->execute();
 
@@ -71,7 +70,6 @@
     // add the actors, if needed, to the actor table
     foreach ($actors as $actor)
     {
-        echo $actor;
         $stmt = $db->prepare("SELECT actor_name FROM starring_actor WHERE actor_name = '" . $actor . "'");
         $stmt->execute();
 
@@ -82,16 +80,15 @@
             if (strcmp($row["actor_name"], $actor) == 0)
             {
                 $found = true;
-                echo 'found ' . $actor;
                 break;
             }
+        }
 
-            if (!$found)
-            {
-                $stmt = $db->prepare("INSERT INTO starring_actor (actor_id, actor_name)
-                                        VALUES (nextval('starring_actor_s1'), '" . $actor . "');");
-                $stmt->execute();
-            }
+        if (!$found)
+        {
+            $stmt = $db->prepare("INSERT INTO starring_actor (actor_id, actor_name)
+                                    VALUES (nextval('starring_actor_s1'), '" . $actor . "');");
+            $stmt->execute();
         }
     }
 
