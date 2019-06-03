@@ -82,6 +82,7 @@
             if (strcmp($row["actor_name"], $actor) == 0)
             {
                 $found = true;
+                echo 'found ' . $actor;
                 break;
             }
 
