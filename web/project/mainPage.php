@@ -80,11 +80,24 @@
         {
             window.location.href = ("detailsPage.php?movie_name=" + movie_name);
         }
+
+        fuction remove(movie_name)
+        {
+            window.location.href = ("removeMovie.php?movie_name=" + movie_name);
+        }
     </script>
 </head>
 <body>
     <?php
         include 'navbar.php';
+        
+        if (isset($_GET["success"]))
+        {
+            echo '
+            <div class="alert alert-success text-center">
+              <strong>' . $_GET["success"] . '</strong>
+            </div>';
+        }
     ?>
 
     <h2 class = "text-center">Movie Selections</h2><br/><br/><hr>

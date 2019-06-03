@@ -22,14 +22,17 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
-    <?php
-        include 'grabData.php';
-    ?>
-
+    <script>
+        fuction remove(movie_name)
+        {
+            window.location.href = ("removeMovie.php?movie_name=" + movie_name);
+        }
+    </script>
 </head>
 <body>
     <?php
         include 'navbar.php';
+        include 'grabData.php';
 
         // find the location of the movie name given to us inside the movie array
         $movie = $_GET["movie_name"];
