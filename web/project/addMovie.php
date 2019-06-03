@@ -56,6 +56,7 @@
 <body>
     <?php
         include 'navbar.php';
+        include 'dbConnect.php';
     ?>
 
     <div class="container">
