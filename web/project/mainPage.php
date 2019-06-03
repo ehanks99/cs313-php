@@ -131,8 +131,12 @@
                             
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete</button>
-                        </div>
+                            ';
+                            if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true && $_SESSION["isAdmin"] == "T")
+                            {
+                                echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete</button>';
+                            }
+                        echo '</div>
                         <hr>
                     </div>
                 </div>';
