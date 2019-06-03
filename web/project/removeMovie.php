@@ -33,5 +33,6 @@
     $stmt = $db->prepare("DELETE FROM movie WHERE movie_id = '" . $rows[0]["movie_id"] . "';");
     $stmt->execute();
 
+    // change the page
     header("Location: mainPage.php?success='" . $movie . "' was removed successfully.");
 ?>
