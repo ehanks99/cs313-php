@@ -31,7 +31,7 @@
     $stmt->execute();
     $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    if (empty($resultSet))
+    if (!empty($resultSet))
     {
         //
         header("Location: addMovie?error=Movie exists in database already.");
