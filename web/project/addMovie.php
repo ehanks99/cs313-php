@@ -91,7 +91,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="rated">Rated:</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" placeholder="PG-13" name="rated" required>
+                    <input type="text" class="form-control" placeholder="PG-13" name="rated" maxlength="6" required>
                 </div>
             </div>
 
