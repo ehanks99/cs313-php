@@ -81,6 +81,8 @@
                     <input type="text" class="form-control" id="actor" placeholder="" name="actor[]" required>
                 </div>
             </div>
+            <hr>
+            <h3 class="text-center">Select the genres</h3>
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Submit</button>
