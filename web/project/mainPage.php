@@ -134,7 +134,7 @@
                             ';
                             if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true && $_SESSION["isAdmin"] == "T")
                             {
-                                echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete</button>';
+                                echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete Movie</button>';
                             }
                         echo '</div>
                         <hr>
