@@ -83,14 +83,18 @@
 
         fuction remove(movie_name)
         {
-            window.location.href = ("removeMovie.php?movie_name=" + movie_name);
+            var delete = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
+            if (delete)
+            {
+                window.location.href = ("removeMovie.php?movie_name=" + movie_name);
+            }
         }
     </script>
 </head>
 <body>
     <?php
         include 'navbar.php';
-        
+
         if (isset($_GET["success"]))
         {
             echo '
