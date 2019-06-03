@@ -77,7 +77,7 @@
             <div class="form-group">
                 <input type="button" value="Add a Starring Actor" onclick="addActor()">
                 <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
-                <div class="col-sm-6" id="actor">
+                <div class="col-sm-6" id="actors">
                     <input type="text" class="form-control" id="actor" placeholder="" name="actor[]" required>
                 </div>
             </div>
