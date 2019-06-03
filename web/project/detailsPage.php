@@ -23,7 +23,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
     <script>
-        fuction remove(movie_name)
+        function removeMovie(movie_name)
         {
             var delete = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
             if (delete)
@@ -91,7 +91,7 @@
                         <hr>';
                         if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true && $_SESSION["isAdmin"] == "T")
                         {
-                            echo '<button type="button" class="btn btn-info" onclick="remove(\'' . $movies[$location]['movie_name'] . '\')">Delete Movie</button>';
+                            echo '<button type="button" class="btn btn-info" onclick="removeMovie(\'' . $movies[$location]['movie_name'] . '\')">Delete Movie</button>';
                         }
                     echo '</div>
                 </div>';

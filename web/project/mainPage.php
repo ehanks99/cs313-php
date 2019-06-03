@@ -81,7 +81,7 @@
             window.location.href = ("detailsPage.php?movie_name=" + movie_name);
         }
 
-        fuction remove(movie_name)
+        function removeMovie(movie_name)
         {
             var delete = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
             if (delete)
@@ -108,6 +108,12 @@
 
     <?php
         $p = 0;
+        $admin = false;
+        if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true && $_SESSION["isAdmin"] == "T")
+        {
+            $admin = true;
+        }
+
         foreach ($movies as $rows)
         {
             echo '<div class="row">
@@ -149,9 +155,9 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
                             ';
-                            if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true && $_SESSION["isAdmin"] == "T")
+                            if ($admin)
                             {
-                                echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete Movie</button>';
+                                echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="removeMovie(\'' . $rows['movie_name'] . '\')">Delete Movie</button>';
                             }
                         echo '</div>
                         <hr>
