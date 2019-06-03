@@ -85,7 +85,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="summary">Movie Summary:</label>
                 <div class="col-sm-6">
-                    <input type="textarea" class="form-control" id="summary" name="summary" required>
+                    <textarea class="form-control" id="summary" name="summary" rows="5" required>
                 </div>
             </div>
             <hr>
