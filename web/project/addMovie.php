@@ -61,7 +61,7 @@
 
     <div class="container">
         <h2 class="text-center">Add a Movie to the List</h2><br/>
-        <form class="form-horizontal" action="addMovieCode.php" method="get">
+        <form class="form-horizontal" action="addMovieCode.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="movieName">Movie Name:</label>
                 <div class="col-sm-10">
@@ -80,6 +80,12 @@
                 <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
                 <div class="col-sm-6" id="actors">
                     <input type="text" class="form-control" id="actor" placeholder="" name="actor[]" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="summary">Movie Summary:</label>
+                <div class="col-sm-6">
+                    <input type="textarea" class="form-control" id="summary" name="summary" required>
                 </div>
             </div>
             <hr>
