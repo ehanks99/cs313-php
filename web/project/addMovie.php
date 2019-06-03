@@ -88,6 +88,13 @@
                     <textarea class="form-control" id="summary" name="summary" rows="5" required></textarea>
                 </div>
             </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="rated">Rated:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="rated" required>
+                </div>
+            </div>
+
             <hr>
             <h3 class="text-center">Select the genres</h3>
 

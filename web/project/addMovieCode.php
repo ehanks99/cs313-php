@@ -23,5 +23,8 @@
     }
 
     $movieName = test_input($_POST["movieName"]);
+    $summary = test_input(str_replace("'", "''", $_POST["summary"]));
     $genres = $_POST["genre"];
+
+
 ?>
