@@ -33,7 +33,7 @@
 
     if (!empty($resultSet))
     {
-        //header("Location: addMovie.php?error=Movie exists in database already.");
+        header("Location: addMovie.php?error=Movie exists in database already.");
     }
     else
     {
@@ -93,13 +93,13 @@
     }
 
     // connect the directors to the movie
-    /*foreach ($directors as $director)
+    foreach ($directors as $director)
     {
         $stmt = $db->prepare("INSERT INTO movie_to_director (movie_director_id, movie_id, director_id)
                                 VALUES (nextval('movie_to_director_s1'), (SELECT movie_id FROM movie WHERE movie_name = '" . $movieName . "'),
                                        (SELECT director_id FROM director WHERE director_name = '" . $director . "'));");
         $stmt->execute();
-    }*/
+    }
 
     // connect the actors to the movie
     foreach ($actors as $actor)
