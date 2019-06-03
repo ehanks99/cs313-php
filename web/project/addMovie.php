@@ -67,7 +67,7 @@
         if (isset($_GET["success"]))
         {
             echo '
-            <div class="alert alert-primary text-center" role="alert">
+            <div class="alert alert-success text-center">
               <strong>' . $_GET["success"] . '</strong>
             </div>';
         }
@@ -75,7 +75,7 @@
         if (isset($_GET["error"]))
         {
             echo '
-            <div class="alert alert-danger text-center" role="alert">
+            <div class="alert alert-danger text-center">
               <strong>ERROR: </strong>' . $_GET["error"] . '
             </div>';
         }
