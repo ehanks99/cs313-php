@@ -34,7 +34,7 @@
     if (!empty($resultSet))
     {
         //
-        header("Location: addMovie?error=Movie exists in database already.");
+        header("Location: addMovie.php?error=Movie exists in database already.");
     }
     else
     {
