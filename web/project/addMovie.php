@@ -87,17 +87,6 @@
             <div class="form-check">
                 <?php
                     $stmt = $db->prepare("SELECT genre_type FROM genre");
-                    $stmt->execute();
-
-                    $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($resultSet as $row)
-                    {
-                        echo '
-                        <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="genre[]" value="' . $row["genre_type"] . '">
-                        ' . $row["genre_type"] . '<br>
-                        ';
-                    }
                 ?>
             </div>
 
