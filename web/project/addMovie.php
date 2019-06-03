@@ -57,6 +57,14 @@
     <?php
         include 'navbar.php';
         include 'dbConnect.php';
+
+        if (isset($_GET["success"]))
+        {
+            echo '
+            <div class="alert alert-danger text-center">
+              <strong>ERROR: </strong>' . $_GET["success"] . '
+            </div>';
+        }
     ?>
 
     <div class="container">
@@ -97,7 +105,6 @@
 
             <hr>
             <h3 class="text-center">Select the genres</h3>
-
             <?php
                 echo '<div class="form-check">';
                 $stmt = $db->prepare("SELECT genre_type FROM genre");
