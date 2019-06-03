@@ -18,6 +18,7 @@
 
     <script>
         var id = 0;
+        var actorId = 0;
 
         function addElement(parentId, elementTag, elementId, html) 
         {
@@ -28,11 +29,19 @@
             newElement.innerHTML = html;
             p.appendChild(newElement);
         }
+
         function addDirector()
         {
             id++;
             var html = "<input type='text' class='form-control' name='director[]' id='director" + id + "'/><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
+        }
+        
+        function addActor()
+        {
+            actorId++;
+            var html = "<input type='text' class='form-control' name='actor[]' id='actor" + id + "'/><a href='' onclick='javascript:removeElement(\"actor" + id + "\"); return false;'>Remove</a>";
+            addElement('actors', 'p', 'actor' + id, html);
         }
 
         function removeElement(elementId) 
@@ -63,6 +72,13 @@
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
                 <div class="col-sm-6" id="directors">
                     <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Add a Starring Actor" onclick="addActor()">
+                <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
+                <div class="col-sm-6" id="actor">
+                    <input type="text" class="form-control" id="actor" placeholder="" name="actor[]" required>
                 </div>
             </div>
             <div class="form-group">        
