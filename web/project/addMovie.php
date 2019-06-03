@@ -84,13 +84,23 @@
             <hr>
             <h3 class="text-center">Select the genres</h3>
 
-            <div class="form-check">
-            <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="genre[]" value="me">
-                        no
-                
-            </div>
+            <?php
+                echo '<div class="form-check">';
+                $stmt = $db->prepare("SELECT genre_type FROM genre");
+                $stmt->execute();
 
+                $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($resultSet as $row)
+                {
+                    echo '
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="genre[]" value="' . $row["genre_type"] . '">
+                    ' . $row["genre_type"] . '<br>
+                    ';
+                }
+
+                echo '</div>';
+            ?>
 
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
