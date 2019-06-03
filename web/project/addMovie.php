@@ -94,7 +94,7 @@
                     {
                         echo '
                         <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="genre[]">
+                        <input type="checkbox" class="form-check-input" name="genre[]" value="' . $row["genre_type"] . '">
                         ' . $row["genre_type"] . '<br>
                         ';
                     }
