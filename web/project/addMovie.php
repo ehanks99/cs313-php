@@ -40,8 +40,8 @@
         function addActor()
         {
             actorId++;
-            var html = "<input type='text' class='form-control' name='actor[]' id='actor" + id + "'/><a href='' onclick='javascript:removeElement(\"actor" + id + "\"); return false;'>Remove</a>";
-            addElement('actors', 'p', 'actor' + id, html);
+            var html = "<input type='text' class='form-control' name='actor[]' id='actor" + actorId + "'/><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
+            addElement('actors', 'p', 'actor' + actorId, html);
         }
 
         function removeElement(elementId) 
