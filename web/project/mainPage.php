@@ -83,14 +83,12 @@
 
         function removeMovie(movie_name)
         {
-            var del;
-            del = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
+            var del = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
 
-            /*var delete = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
-            if (delete)
+            if (del)
             {
                 window.location.href = ("removeMovie.php?movie_name=" + movie_name);
-            }*/
+            }
         }
     </script>
 </head>
