@@ -85,9 +85,10 @@
             <h3 class="text-center">Select the genres</h3>
 
             <div class="form-check">
-                <?php
-                    $stmt = $db->prepare("SELECT genre_type FROM genre");
-                ?>
+            <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="genre[]" value="me">
+                        no
+                
             </div>
 
 
