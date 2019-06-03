@@ -131,7 +131,7 @@
                             
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <button type="button" class="btn btn-secondary" onclick="goToDetails(\'' . $rows['movie_name'] . '\')">View Details</button>
-                            <button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete</button>
+                            &nbsp;&nbsp;<button type="button" class="btn btn-info" onclick="remove(\'' . $rows['movie_name'] . '\')">Delete</button>
                         </div>
                         <hr>
                     </div>
