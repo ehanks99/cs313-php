@@ -27,13 +27,26 @@
     $rated = test_input($_POST["rated"]);
     $genres = $_POST["genre"];
 
+    $stmt = $db->prepare("SELECT movie_name FROM movie WHERE movie_name = '" . $movieName . "';");
+    $stmt->execute();
+    $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($resultSet))
+    {
+        //
+        header("Location: addMovie?error=Movie exists in database already.");
+    }
+    else
+    {
     $stmt = $db->prepare("INSERT INTO movie (movie_id, movie_name, movie_rating, picture_filepath, movie_summary)
                             VALUES (nextval('movie_s1'), '" . $movieName . "', '" . $rated . "', '', '" . $summary . "');");
     $stmt->execute();
+    }
 
     // add the directors, if needed, to the director table
     foreach ($directors as $director)
     {
+        echo $director;
         $stmt = $db->prepare("SELECT director_name FROM director WHERE director_name = '" . $director . "'");
         $stmt->execute();
 
@@ -59,6 +72,7 @@
     // add the actors, if needed, to the actor table
     foreach ($actors as $actor)
     {
+        echo $actor;
         $stmt = $db->prepare("SELECT actor_name FROM starring_actor WHERE actor_name = '" . $actor . "'");
         $stmt->execute();
 
@@ -82,13 +96,13 @@
     }
 
     // connect the directors to the movie
-    foreach ($directors as $director)
+    /*foreach ($directors as $director)
     {
         $stmt = $db->prepare("INSERT INTO movie_to_director (movie_director_id, movie_id, director_id)
                                 VALUES (nextval('movie_to_director_s1'), (SELECT movie_id FROM movie WHERE movie_name = '" . $movieName . "'),
                                        (SELECT director_id FROM director WHERE director_name = '" . $director . "'));");
         $stmt->execute();
-    }
+    }*/
 
     // connect the actors to the movie
     foreach ($actors as $actor)

@@ -65,6 +65,14 @@
               <strong>ERROR: </strong>' . $_GET["success"] . '
             </div>';
         }
+
+        if (isset($_GET["error"]))
+        {
+            echo '
+            <div class="alert alert-danger text-center">
+              <strong>ERROR: </strong>' . $_GET["error"] . '
+            </div>';
+        }
     ?>
 
     <div class="container">
