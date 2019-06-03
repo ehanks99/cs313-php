@@ -83,7 +83,7 @@
 
         function removeMovie(movie_name)
         {
-            confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
+            var delete = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
             /*var delete = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
             if (delete)
             {
