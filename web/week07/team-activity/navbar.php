@@ -10,6 +10,7 @@
     else
     {
       echo '<a href="loginPage.php">Login</a>';
+      //header("Location: loginPage.php");
     }
   ?>
 </div>

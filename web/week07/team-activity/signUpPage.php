@@ -32,7 +32,7 @@
 
         function checkPasswords(pswrd, vPswrd)
         {
-            if (strcmp(pswrd, vPswrd) == 0)
+            if (pswrd == vPswrd)
             {
                 document.getElementById("pswrdError1").value = "**Passwords do not match**";
                 document.getElementById("pswrdError2").value = "**Passwords do not match**";
