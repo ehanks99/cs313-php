@@ -1,5 +1,5 @@
     <?php
         $_SESSION["loggedIn"] = true;
 
-        header("Location: mainPage.php");
+        header("Location: welcomePage.php");
     ?>
