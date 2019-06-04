@@ -28,6 +28,10 @@
         include 'navbar.php';
     ?>
 
+    <?php
+        if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] != true)
+            header("Location: loginPage.php");
+    ?>
     <h1 class = "text-center">Welcome<?php if ($_SESSION["loggedIn"]) echo ', ' . $_SESSION["username"]; ?></h1>
 </body>
 </html>
