@@ -65,7 +65,7 @@
         }
     </script>
 </head>
-<body onsubmit = "return checkCharacters(document.getElementById('pswrd')); return checkPasswords(document.getElementById('pswrd'), document.getElementById('verifyPswrd')" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
+<body onsubmit = "return checkCharacters(document.getElementById('pswrd')); return checkPasswords(document.getElementById('pswrd'), document.getElementById('verifyPswrd'))" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
     <?php
         include 'navbar.php';
 
