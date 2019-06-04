@@ -23,12 +23,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
     <script>
-        function setVariables(first, last, email)
-        {
-            document.getElementById("firstName").value = first;
-            document.getElementById("lastName").value = last;
-        }
-
         function checkPasswords(pswrd, vPswrd)
         {
             if (pswrd != vPswrd)
@@ -73,7 +67,7 @@
         }
     </script>
 </head>
-<body onsubmit = "return validate()" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
+<body onsubmit = "return validate()">
     <?php
         include 'navbar.php';
 

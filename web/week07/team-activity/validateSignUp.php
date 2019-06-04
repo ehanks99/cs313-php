@@ -44,6 +44,6 @@
     }
     else
     {
-        header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName);
+        header("Location: signUpPage.php?error=Username already used.");
     }
 ?>
