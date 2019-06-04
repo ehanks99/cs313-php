@@ -12,10 +12,10 @@
 
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["pswrd"]);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $temp = "'" . $username . "'";
-    echo $temp . $password;
 
-    $stmt = $db->prepare('SELECT username, pswrd, email, first_name, last_name, is_admin FROM login_info WHERE username = ' . $temp);
+    $stmt = $db->prepare('SELECT username, pswrd FROM signUp WHERE username = ' . $temp);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
@@ -23,7 +23,7 @@
     {
         header("Location: loginPage.php?error=Username not found.");
     }
-    else if (strcmp($password, $rows[0]["pswrd"]) == 0)
+    else if (strcmp($hashedPassword, $rows[0]["pswrd"]) == 0)
     {
         include 'logIn.php';
     }

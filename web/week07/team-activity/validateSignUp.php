@@ -12,27 +12,37 @@
 
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["pswrd"]);
-    $firstName = test_input($_POST["firstName"]);
-    $lastName = test_input($_POST["lastName"]);
-    $email = test_input($_POST["email"]);
     $temp = "'" . $username . "'";
 
-    $stmt = $db->prepare('SELECT username FROM login_info WHERE username = ' . $temp);
+    $stmt = $db->prepare('SELECT username FROM signUp WHERE username = ' . $temp);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    /*CREATE TABLE signUp
+    (
+        signUp_id       INTEGER,
+        username            VARCHAR(70)         CONSTRAINT nn_signUp_1 NOT NULL,
+        pswrd               VARCHAR(100)        CONSTRAINT nn_signUp_2 NOT NULL,
+        CONSTRAINT pk_signUp PRIMARY KEY(signUp_id)
+    );
+    
+    CREATE SEQUENCE signUp_s1 START WITH 1;
+    CREATE UNIQUE INDEX ui_signUp_1 ON signUp(username);
+    */
 
     // if the statement returns something, that means the username is already in use
     if (empty($rows))
     {
-        $stmt = $db->prepare("INSERT INTO login_info (login_info_id, username, pswrd, email, first_name, last_name, is_admin)
-                                  VALUES (nextval('login_info_s1'), :user, :pswrd, :email, :firstN, :lastN, 'N')");
-        $stmt->execute(array(':user' => $username, ':pswrd' => $password, ':email' => $email, ':firstN' => $firstName, ':lastN' => $lastName));
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $stmt = $db->prepare("INSERT INTO signUp (signUp_id, username, pswrd)
+                                  VALUES (nextval('signUp_s1'), :user, :pswrd)");
+        $stmt->execute(array(':user' => $username, ':pswrd' => $hashedPassword));
         
         include 'logIn.php';
         header("Location: mainPage.php");
     }
     else
     {
-        header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName . "&email=" . $email);
+        header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName);
     }
 ?>
