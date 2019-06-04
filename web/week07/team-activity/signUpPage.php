@@ -86,7 +86,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="pswrd">Password:</label>
                 <div class="col-sm-10">          
-                    <input type="password" class="form-control" id="pswrd" onkeyup="checkCharacters(this.value)" placeholder="Enter password" name="pswrd" required>
+                    <input type="password" class="form-control" id="pswrd" onfocusout="checkCharacters(this.value)" placeholder="Enter password" name="pswrd" required>
                     <p><span style="color:red" id="pswrdError1"></span>
                 </div>
             </div>
