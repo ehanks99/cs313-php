@@ -45,7 +45,7 @@
         }
     </script>
 </head>
-<body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "', '" . $_GET["email"] . "')\"";}?>>
+<body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
     <?php
         include 'navbar.php';
 
