@@ -22,6 +22,7 @@
     if (empty($rows))
     {
         header("Location: loginPage.php?error=Username not found.");
+        die(); // we always include a die after redirects.
     }
     else if (strcmp($password, $rows[0]["pswrd"]) == 0)
     {
@@ -30,5 +31,6 @@
     else
     {
         header("Location: loginPage.php?error=Incorrect password.");
+        die(); // we always include a die after redirects.
     }
 ?>

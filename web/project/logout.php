@@ -3,4 +3,5 @@
     
     session_unset();
     header("Location: loginPage.php");
+    die(); // we always include a die after redirects.
 ?>

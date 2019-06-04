@@ -35,4 +35,5 @@
 
     // change the page
     header("Location: mainPage.php?success='" . $movie . "' was removed successfully.");
+    die(); // we always include a die after redirects.
 ?>

@@ -6,4 +6,5 @@
         $_SESSION["email"] = $rows[0]["email"];
 
         header("Location: mainPage.php");
+        die(); // we always include a die after redirects.
     ?>

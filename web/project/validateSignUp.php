@@ -30,9 +30,11 @@
         
         include 'logIn.php';
         header("Location: mainPage.php");
+        die(); // we always include a die after redirects.
     }
     else
     {
         header("Location: signUpPage.php?error=Username already used.&firstN=" . $firstName . "&lastN=" . $lastName . "&email=" . $email);
+        die(); // we always include a die after redirects.
     }
 ?>

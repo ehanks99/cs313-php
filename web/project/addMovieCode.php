@@ -34,6 +34,7 @@
     if (!empty($resultSet))
     {
         header("Location: addMovie.php?error=Movie exists in database already.");
+        die(); // we always include a die after redirects.
     }
     else
     {
@@ -120,4 +121,5 @@
     }
 
     header("Location: addMovie.php?success=Movie successfully added.");
+    die(); // we always include a die after redirects.
 ?>
