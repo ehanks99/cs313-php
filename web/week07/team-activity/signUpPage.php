@@ -27,12 +27,11 @@
         {
             document.getElementById("firstName").value = first;
             document.getElementById("lastName").value = last;
-            document.getElementById("email").value = email;
         }
 
         function checkPasswords(pswrd, vPswrd)
         {
-            if (pswrd == vPswrd)
+            if (pswrd != vPswrd)
             {
                 document.getElementById("pswrdError1").innerHTML = "**Passwords do not match**";
                 document.getElementById("pswrdError2").innerHTML = "**Passwords do not match**";
