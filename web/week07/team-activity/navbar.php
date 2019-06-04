@@ -8,6 +8,9 @@
       echo '<a href="logout.php">Logout</a>';
     }
     else
+    {
       echo '<a href="loginPage.php">Login</a>';
+      header("Location: loginPage.php");
+    }
   ?>
 </div>
