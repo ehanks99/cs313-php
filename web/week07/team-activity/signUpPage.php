@@ -34,13 +34,13 @@
         {
             if (pswrd == vPswrd)
             {
-                document.getElementById("pswrdError1").value = "**Passwords do not match**";
-                document.getElementById("pswrdError2").value = "**Passwords do not match**";
+                document.getElementById("pswrdError1").innerHTML = "**Passwords do not match**";
+                document.getElementById("pswrdError2").innerHTML = "**Passwords do not match**";
             }
             else
             {
-                document.getElementById("pswrdError1").value = "";
-                document.getElementById("pswrdError2").value = "";
+                document.getElementById("pswrdError1").innerHTML = "";
+                document.getElementById("pswrdError2").innerHTML = "";
             }
         }
     </script>
