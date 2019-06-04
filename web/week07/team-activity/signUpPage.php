@@ -63,9 +63,17 @@
                 return true;
             }
         }
+
+        function validate()
+        {
+            if (checkCharacters(document.getElementById('pswrd')) && checkPasswords(document.getElementById('pswrd'), document.getElementById('verifyPswrd')))
+                return true;
+            else
+                return false;
+        }
     </script>
 </head>
-<body onsubmit = "return checkCharacters(document.getElementById('pswrd')), return checkPasswords(document.getElementById('pswrd'), document.getElementById('verifyPswrd'))" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
+<body onsubmit = "return validate()" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
     <?php
         include 'navbar.php';
 
