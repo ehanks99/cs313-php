@@ -21,7 +21,6 @@
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    
     // if the statement returns something, that means the username is already in use
     if (empty($rows))
     {
