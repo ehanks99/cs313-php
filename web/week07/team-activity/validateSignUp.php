@@ -39,6 +39,7 @@
         $stmt->execute(array(':user' => $username, ':pswrd' => $hashedPassword));
         
         include 'logIn.php';
+        $_SESSION["username"] = $username;
         header("Location: mainPage.php");
     }
     else
