@@ -42,6 +42,23 @@
                 document.getElementById("pswrdError2").innerHTML = "";
             }
         }
+
+        function hasNumber(myString) 
+        {
+            return /\d/.test(myString);
+        }
+
+        function checkCharacters(pswrd)
+        {
+            if (!hasNumber(pswrd) && pswrd.length < 7)
+            {
+                document.getElementById("pswrdError1").innerHTML = "**Password must contain seven characters and a number**";
+            }
+            else
+            {
+                document.getElementById("pswrdError1").innerHTML = "";
+            }
+        }
     </script>
 </head>
 <body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
@@ -69,7 +86,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="pswrd">Password:</label>
                 <div class="col-sm-10">          
-                    <input type="password" class="form-control" id="pswrd" placeholder="Enter password" name="pswrd" required>
+                    <input type="password" class="form-control" id="pswrd" onkeyup="checkCharacters(this.value)" placeholder="Enter password" name="pswrd" required>
                     <p><span style="color:red" id="pswrdError1"></span>
                 </div>
             </div>
