@@ -41,9 +41,11 @@
         include 'logIn.php';
         $_SESSION["username"] = $username;
         header("Location: mainPage.php");
+        die(); // we always include a die after redirects.
     }
     else
     {
         header("Location: signUpPage.php?error=Username already used.");
+        die(); // we always include a die after redirects.
     }
 ?>
