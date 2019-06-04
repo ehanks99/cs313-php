@@ -33,12 +33,12 @@
         {
             if (pswrd != vPswrd)
             {
-                document.getElementById("pswrdError1").innerHTML = "**Passwords do not match**";
+                document.getElementById("pswrdError1.1").innerHTML = "**Passwords do not match**";
                 document.getElementById("pswrdError2").innerHTML = "**Passwords do not match**";
             }
             else
             {
-                document.getElementById("pswrdError1").innerHTML = "";
+                document.getElementById("pswrdError1.1").innerHTML = "";
                 document.getElementById("pswrdError2").innerHTML = "";
             }
         }
@@ -52,11 +52,11 @@
         {
             if (!hasNumber(pswrd) || pswrd.length < 7)
             {
-                document.getElementById("pswrdError1").innerHTML = "**Password must contain seven characters and a number**";
+                document.getElementById("pswrdError1.0").innerHTML = "**Password must contain seven characters and a number**";
             }
             else
             {
-                document.getElementById("pswrdError1").innerHTML = "";
+                document.getElementById("pswrdError1.0").innerHTML = "";
             }
         }
     </script>
@@ -87,7 +87,8 @@
                 <label class="control-label col-sm-2" for="pswrd">Password:</label>
                 <div class="col-sm-10">          
                     <input type="password" class="form-control" id="pswrd" onfocusout="checkCharacters(this.value)" placeholder="Enter password" name="pswrd" required>
-                    <p><span style="color:red" id="pswrdError1"></span>
+                    <p><span style="color:red" id="pswrdError1.0"></span>
+                    <p><span style="color:red" id="pswrdError1.1"></span>
                 </div>
             </div>
             <div class="form-group">
