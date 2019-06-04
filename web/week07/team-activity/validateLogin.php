@@ -25,6 +25,7 @@
     else if (password_verify($password, $rows[0]["pswrd"]))
     {
         include 'logIn.php';
+        $_SESSION["username"] = $username;
     }
     else
     {
