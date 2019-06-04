@@ -66,7 +66,7 @@
 
         function validate()
         {
-            if (checkCharacters(document.getElementById('pswrd')) && checkPasswords(document.getElementById('pswrd'), document.getElementById('verifyPswrd')))
+            if (checkCharacters(document.getElementById('pswrd').value) && checkPasswords(document.getElementById('pswrd').value, document.getElementById('verifyPswrd').value))
                 return true;
             else
                 return false;
