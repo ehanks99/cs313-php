@@ -26,6 +26,7 @@
     else if (strcmp($password, $rows[0]["pswrd"]) == 0)
     {
         include 'logIn.php';
+        $_SESSION["username"] = $username;
     }
     else
     {
