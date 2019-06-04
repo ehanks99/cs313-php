@@ -50,7 +50,7 @@
 
         function checkCharacters(pswrd)
         {
-            if (!hasNumber(pswrd) && pswrd.length < 7)
+            if (!hasNumber(pswrd) || pswrd.length < 7)
             {
                 document.getElementById("pswrdError1").innerHTML = "**Password must contain seven characters and a number**";
             }
