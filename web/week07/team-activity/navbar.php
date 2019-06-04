@@ -1,6 +1,6 @@
 
 <div class="topnav">
-  <a class="active" href="mainPage.php">Home Page</a>
+  <a class="active" href="welcomePage.php">Home Page</a>
   <?php
     if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true)
     {
