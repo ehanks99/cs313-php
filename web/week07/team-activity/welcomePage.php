@@ -24,9 +24,10 @@
 
 </head>
 <body>
-    <h1 class = "text-center"> Welcome </h1>
-</body>
     <?php 
         include 'navbar.php';
     ?>
+
+    <h1 class = "text-center">Welcome<?php if ($_SESSION["loggedIn"]) echo ', ' . $_SESSION["username"]; ?></h1>
+</body>
 </html>
