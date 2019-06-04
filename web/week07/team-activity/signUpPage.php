@@ -29,6 +29,20 @@
             document.getElementById("lastName").value = last;
             document.getElementById("email").value = email;
         }
+
+        function checkPasswords(pswrd, vPswrd)
+        {
+            if (strcmp(pswrd, vPswrd) == 0)
+            {
+                document.getElementById("pswrdError1").value = "**Passwords do not match**";
+                document.getElementById("pswrdError2").value = "**Passwords do not match**";
+            }
+            else
+            {
+                document.getElementById("pswrdError1").value = "";
+                document.getElementById("pswrdError2").value = "";
+            }
+        }
     </script>
 </head>
 <body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "', '" . $_GET["email"] . "')\"";}?>>
@@ -57,6 +71,14 @@
                 <label class="control-label col-sm-2" for="pswrd">Password:</label>
                 <div class="col-sm-10">          
                     <input type="password" class="form-control" id="pswrd" placeholder="Enter password" name="pswrd" required>
+                    <p><span style="color:red" id="pswrdError1"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="verifyPswrd">Verify Password:</label>
+                <div class="col-sm-10">          
+                    <input type="password" class="form-control" id="verifyPswrd" onkeyup="checkPasswords(document.getElementById('pswrd').value, this.value)" placeholder="Enter password" name="verifyPswrd" required>
+                    <p><span style="color:red" id="pswrdError2"></span>
                 </div>
             </div>
             <div class="form-group">        
