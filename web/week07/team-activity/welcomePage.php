@@ -26,4 +26,7 @@
 <body>
     <h1 class = "text-center"> Welcome </h1>
 </body>
+    <?php 
+        include 'navbar.php';
+    ?>
 </html>
