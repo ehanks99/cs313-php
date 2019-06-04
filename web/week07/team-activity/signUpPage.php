@@ -35,11 +35,13 @@
             {
                 document.getElementById("pswrdError1.1").innerHTML = "**Passwords do not match**";
                 document.getElementById("pswrdError2").innerHTML = "**Passwords do not match**";
+                return false;
             }
             else
             {
                 document.getElementById("pswrdError1.1").innerHTML = "";
                 document.getElementById("pswrdError2").innerHTML = "";
+                return true;
             }
         }
 
@@ -53,15 +55,17 @@
             if (!hasNumber(pswrd) || pswrd.length < 7)
             {
                 document.getElementById("pswrdError1.0").innerHTML = "**Password must contain seven characters and a number**";
+                return false;
             }
             else
             {
                 document.getElementById("pswrdError1.0").innerHTML = "";
+                return true;
             }
         }
     </script>
 </head>
-<body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
+<body onsubmit = "return checkCharacters(document.getElementById('pswrd')); return checkPasswords(document.getElementById('pswrd'), document.getElementById('verifyPswrd')" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "')\"";}?>>
     <?php
         include 'navbar.php';
 
