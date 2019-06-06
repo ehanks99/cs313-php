@@ -104,11 +104,17 @@
                     <div class="control-label col-sm-2"></div>
                     <div class="col-sm-8">
                         <select class="form-control" name="movie_name">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            ';
+
+                        $stmt = $db->prepare('SELECT movie_name FROM movie');
+                        $stmt->execute();
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+                        {
+                            echo '<option>' . $row["movie_name"] . '</option>
+                            ';
+                        }
+
+                            echo '
                         </select>
                     </div>
                     <div class="control-label col-sm-2"></div>
