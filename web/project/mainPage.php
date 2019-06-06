@@ -121,10 +121,10 @@
                 <div class="col-md-2"><p></p></div>
                     <div class="col-md-8">
                         <div class = "pull-left">
-                            <button class = "pull-right" style="font-size:20px"><i class="fa fa-edit"></i></button>
                             <img src = "movie_pictures/' . $rows["picture_filepath"] . '" class = "picture">
                         </div>
                         <div>
+                            <button class = "pull-right" style="font-size:20px"><i class="fa fa-edit"></i></button>
                             <h4>' . $rows['movie_name'] . '</h4><hr>
                             <h5><b>Director(s): </b>';
                             $directors = $rows["directors"];
