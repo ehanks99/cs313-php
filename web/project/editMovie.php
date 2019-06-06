@@ -100,17 +100,21 @@
         {
             echo '<h2 class="text-center">Select a movie to edit</h2>
             <form>
-                <div class="form-group col-sm-6 text-center">
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div><br/>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <div class="col-sm-6 text-center">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
                 </div>
             </form>';
         }
