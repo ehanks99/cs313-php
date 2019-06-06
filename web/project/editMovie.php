@@ -1,5 +1,29 @@
 <?php
     session_start();
+    include 'dbConnect.php';
+
+    function test_input($data) 
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    if (isset($_GET["movie_name"]))
+    {
+        $movie = test_input($_GET["movie_name"]);
+
+        $stmt = $db->prepare(
+            'SELECT director.director_name
+             FROM movie_to_director
+                INNER JOIN movie ON movie_to_director.movie_id = movie.movie_id
+                INNER JOIN director ON movie_to_director.director_id = director.director_id
+             WHERE movie.movie_name = :movie');
+        $stmt->execute(array(':movie' => $movie));
+        $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+    }
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +32,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add a Movie</title>
+    <title>Edit Movie</title>
 
     <link rel = "stylesheet" type = "text/css" href = "styles.css">
 
@@ -61,27 +85,10 @@
 <body>
     <?php
         include 'navbar.php';
-        include 'dbConnect.php';
-
-        if (isset($_GET["success"]))
-        {
-            echo '
-            <div class="alert alert-success text-center">
-              <strong>' . $_GET["success"] . '</strong>
-            </div>';
-        }
-
-        if (isset($_GET["error"]))
-        {
-            echo '
-            <div class="alert alert-danger text-center">
-              <strong>ERROR: </strong>' . $_GET["error"] . '
-            </div>';
-        }
     ?>
 
     <div class="container">
-        <h2 class="text-center">Add a Movie to the List</h2><br/>
+        <h2 class="text-center">Edit Movie</h2><br/>
         <form class="form-horizontal" action="addMovieCode.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="movieName">Movie Name:</label>
@@ -143,5 +150,6 @@
             </div>
         </form>
     </div>
+
 </body>
 </html>

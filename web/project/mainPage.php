@@ -93,7 +93,12 @@
 
         function editMovie(movie_name)
         {
-            confirm("Are you sure you want to edit the movie '" + movie_name + "'?");
+            var edit = confirm("Are you sure you want to edit the movie '" + movie_name + "'?");
+
+            if (edit)
+            {
+                window.location.href = ("editMovie.php?movie_name=" + movie_name);
+            }
         }
     </script>
 </head>
