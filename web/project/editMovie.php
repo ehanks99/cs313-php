@@ -100,14 +100,14 @@
                 <input type="button" value="Add a Director" onclick="addDirector()">
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
                 <div class="col-sm-6" id="directors">
-                    <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
+                    <input type="text" class="form-control" id="director0" placeholder="" name="director[]" required>
                 </div>
             </div>
             <div class="form-group">
                 <input type="button" value="Add an Actor" onclick="addActor()">
                 <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
                 <div class="col-sm-6" id="actors">
-                    <input type="text" class="form-control" id="actor" placeholder="" name="actor[]" required>
+                    <input type="text" class="form-control" id="actor0" placeholder="" name="actor[]" required>
                 </div>
             </div>
             <div class="form-group">
@@ -119,7 +119,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="rated">Rated:</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" placeholder="PG-13" name="rated" maxlength="6" required>
+                    <input type="text" class="form-control" id="rated" placeholder="PG-13" name="rated" maxlength="6" required>
                 </div>
             </div>
 

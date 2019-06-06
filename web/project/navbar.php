@@ -1,6 +1,7 @@
 
 <div class="topnav">
   <a class="active" href="mainPage.php">Home Page</a>
+  <a href="editMovie.php">Edit Movie</a>
   <?php
     if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true)
     {
