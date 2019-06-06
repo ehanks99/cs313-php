@@ -78,8 +78,10 @@
               <strong>ERROR: </strong>' . $_GET["error"] . '
             </div>';
         }
-    ?>
 
+        include 'movieInputOptions.php';
+    ?>
+<!--
     <div class="container">
         <h2 class="text-center">Add a Movie to the List</h2><br/>
         <form class="form-horizontal" action="addMovieCode.php" method="post">
@@ -93,14 +95,14 @@
                 <input type="button" value="Add a Director" onclick="addDirector()">
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
                 <div class="col-sm-6" id="directors">
-                    <input type="text" class="form-control" id="director" placeholder="" name="director[]" required>
+                    <input type="text" class="form-control" id="director0" placeholder="" name="director[]" required>
                 </div>
             </div>
             <div class="form-group">
                 <input type="button" value="Add an Actor" onclick="addActor()">
                 <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
                 <div class="col-sm-6" id="actors">
-                    <input type="text" class="form-control" id="actor" placeholder="" name="actor[]" required>
+                    <input type="text" class="form-control" id="actor1" placeholder="" name="actor[]" required>
                 </div>
             </div>
             <div class="form-group">
@@ -118,7 +120,8 @@
 
             <hr>
             <h3 class="text-center">Select the genres</h3>
-            <?php
+            
+            <?php/*
                 echo '<div class="form-check">';
                 $stmt = $db->prepare("SELECT genre_type FROM genre");
                 $stmt->execute();
@@ -134,7 +137,7 @@
                 }
 
                 echo '</div>';
-            ?>
+            */?>
 
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
@@ -143,5 +146,6 @@
             </div>
         </form>
     </div>
+    -->
 </body>
 </html>
