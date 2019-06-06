@@ -103,7 +103,7 @@
                 <div class="form-group">
                     <div class="control-label col-sm-2"></div>
                     <div class="col-sm-8">
-                        <select class="form-control" id="movie_name">
+                        <select class="form-control" name="movie_name">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
