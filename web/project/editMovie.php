@@ -114,6 +114,7 @@
                     <div class="control-label col-sm-2"></div>
                 </div>
                 <div class="form-group">
+                    <div class="control-label col-sm-2"></div>
                     <div class="col-sm-2">
                         <button type="submit" class="btn btn-default">Submit</button>
                     </div>
