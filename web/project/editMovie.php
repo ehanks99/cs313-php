@@ -98,7 +98,22 @@
         }
         else
         {
-            echo '<h2 class="text-center">Select a movie to edit</h2>';
+            echo '<h2 class="text-center">Select a movie to edit</h2>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>';
         }
     ?>
     
