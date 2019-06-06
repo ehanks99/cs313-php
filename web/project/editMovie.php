@@ -100,7 +100,7 @@
         {
             echo '<h2 class="text-center">Select a movie to edit</h2>
             <form>
-                <div class="form-group">
+                <div class="form-group col-sm-6">
                     <label for="exampleFormControlSelect1">Example select</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option>1</option>
