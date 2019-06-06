@@ -101,8 +101,8 @@
             echo '<h2 class="text-center">Select a movie to edit</h2>
             <form class="form-horizontal" action="editMovie.php" method="get">
                 <div class="form-group">
-                    <div class="control-label col-sm-2"></div>
-                    <div class="col-sm-8">
+                    <div class="control-label col-sm-3"></div>
+                    <div class="col-sm-6">
                         <select class="form-control" name="movie_name">
                             ';
 
@@ -117,10 +117,10 @@
                             echo '
                         </select>
                     </div>
-                    <div class="control-label col-sm-2"></div>
+                    <div class="control-label col-sm-3"></div>
                 </div>
                 <div class="form-group">
-                    <div class="control-label col-sm-2"></div>
+                    <div class="control-label col-sm-3"></div>
                     <div class="col-sm-2">
                         <button type="submit" class="btn btn-default">Submit</button>
                     </div>
