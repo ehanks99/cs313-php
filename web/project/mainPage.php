@@ -134,7 +134,7 @@
                                     echo ', ';
                             }
                             echo '
-                            <button style="font-size:24px">Button <i class="fa fa-edit"></i></button></h5>
+                            <button style="font-size:10px"><i class="fa fa-edit"></i></button></h5>
                             <h5><b>Starring Actors: </b>';
                             $actors = $rows["actors"];
                             for ($j = 0; $j < count($actors); $j++)
