@@ -29,9 +29,57 @@
             document.getElementById("lastName").value = last;
             document.getElementById("email").value = email;
         }
+
+        function checkPasswordsMatch()
+        {
+            var pswrd = document.getElementById('pswrd').value;
+            var vPswrd = document.getElementById("verifyPswrd").value;
+
+            if (pswrd != vPswrd)
+            {
+                document.getElementById("pswrdError1.1").innerHTML = "**Passwords do not match**";
+                document.getElementById("pswrdError2").innerHTML = "**Passwords do not match**";
+                return false;
+            }
+            else
+            {
+                document.getElementById("pswrdError1.1").innerHTML = "";
+                document.getElementById("pswrdError2").innerHTML = "";
+                return true;
+            }
+        }
+
+        function hasNumber(myString) 
+        {
+            return /\d/.test(myString);
+        }
+
+        function checkCharacters()
+        {
+            var pswrd = document.getElementById('pswrd').value;
+
+            if (!hasNumber(pswrd) || pswrd.length < 7)
+            {
+                document.getElementById("pswrdError1.0").innerHTML = "**Password must contain seven characters and a number**";
+                return false;
+            }
+            else
+            {
+                document.getElementById("pswrdError1.0").innerHTML = "";
+                return true;
+            }
+        }
+
+        function validate()
+        {
+            if (checkCharacters() && checkPasswordsMatch())
+                return true;
+            else
+                return false;
+        }
     </script>
 </head>
-<body <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "', '" . $_GET["email"] . "')\"";}?>>
+<body onsubmit = "return validate()" <?php if (isset($_GET["error"])) { echo "onload=\"setVariables('" . $_GET["firstN"] . "', '" . $_GET["lastN"] . "', '" . $_GET["email"] . "')\"";}?>>
     <?php
         include 'navbar.php';
 
@@ -68,7 +116,16 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="pswrd">Password:</label>
                 <div class="col-sm-10">          
-                    <input type="password" class="form-control" id="pswrd" placeholder="Enter password" name="pswrd" required>
+                    <input type="password" class="form-control" id="pswrd" onfocusout="checkCharacters()" placeholder="Enter password" name="pswrd" required>
+                    <p><span style="color:red" id="pswrdError1.0"></span>
+                    <p><span style="color:red" id="pswrdError1.1"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="verifyPswrd">Verify Password:</label>
+                <div class="col-sm-10">          
+                    <input type="password" class="form-control" id="verifyPswrd" onkeyup="checkPasswordsMatch()" placeholder="Enter password" name="verifyPswrd" required>
+                    <p><span style="color:red" id="pswrdError2"></span>
                 </div>
             </div>
             <div class="form-group">
