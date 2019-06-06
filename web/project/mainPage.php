@@ -122,6 +122,7 @@
                     <div class="col-md-8">
                         <div class = "pull-left">
                             <img src = "movie_pictures/' . $rows["picture_filepath"] . '" class = "picture">
+                            <button class = "pull-right" style="font-size:20px"><i class="fa fa-edit"></i></button>
                         </div>
                         <div>
                             <h4>' . $rows['movie_name'] . '</h4><hr>
@@ -133,8 +134,7 @@
                                 if ($j != count($directors) - 1)
                                     echo ', ';
                             }
-                            echo '
-                            <button style="font-size:15px"><i class="fa fa-edit"></i></button></h5>
+                            echo '</h5>
                             <h5><b>Starring Actors: </b>';
                             $actors = $rows["actors"];
                             for ($j = 0; $j < count($actors); $j++)
