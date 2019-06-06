@@ -90,6 +90,11 @@
                 window.location.href = ("removeMovie.php?movie_name=" + movie_name);
             }
         }
+
+        function editMovie(movie_name)
+        {
+            confirm("Are you sure you want to edit the movie '" + movie_name + "'?");
+        }
     </script>
 </head>
 <body>
@@ -124,7 +129,7 @@
                             <img src = "movie_pictures/' . $rows["picture_filepath"] . '" class = "picture">
                         </div>
                         <div>
-                            <button class = "pull-right" style="font-size:20px; margin-bottom:50px;"><i class="fa fa-edit"></i></button>
+                            <button class = "pull-right" style="font-size:20px; margin-bottom:50px;" onclick="editMovie(\'' . $rows['movie_name'] . '\')"><i class="fa fa-edit"></i></button>
                             <h4>' . $rows['movie_name'] . '</h4><hr>
                             <h5><b>Director(s): </b>';
                             $directors = $rows["directors"];
