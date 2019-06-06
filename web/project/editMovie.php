@@ -99,10 +99,10 @@
         else
         {
             echo '<h2 class="text-center">Select a movie to edit</h2>
-            <form>
+            <form class="form-horizontal" action="editMovie.php" method="get">
                 <div class="form-group">
                     <div class="col-sm-6 text-center">
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="movie_name">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
