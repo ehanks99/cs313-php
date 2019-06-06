@@ -1,4 +1,4 @@
-<div class="container">
+    <div class="container">
         <h2 class="text-center">Add a Movie to the List</h2><br/>
         <form class="form-horizontal" action="addMovieCode.php" method="post">
             <div class="form-group">

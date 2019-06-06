@@ -101,7 +101,8 @@
             echo '<h2 class="text-center">Select a movie to edit</h2>
             <form class="form-horizontal" action="editMovie.php" method="get">
                 <div class="form-group">
-                    <div class="col-sm-6 text-center">
+                    <label class="control-label col-sm-2" for="movieName">Movie Name:</label>
+                    <div class="col-sm-10">
                         <select class="form-control" id="movie_name">
                             <option>1</option>
                             <option>2</option>
