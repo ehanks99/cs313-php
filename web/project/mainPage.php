@@ -133,7 +133,8 @@
                                 if ($j != count($directors) - 1)
                                     echo ', ';
                             }
-                            echo '</h5>
+                            echo '
+                            <button style="font-size:24px">Button <i class="fa fa-edit"></i></button></h5>
                             <h5><b>Starring Actors: </b>';
                             $actors = $rows["actors"];
                             for ($j = 0; $j < count($actors); $j++)
