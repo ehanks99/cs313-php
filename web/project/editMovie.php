@@ -1,34 +1,6 @@
 <?php
     session_start();
     include 'dbConnect.php';
-
-    function test_input($data) 
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    function fillTextFields()
-    {
-
-    }
-
-    if (isset($_GET["movie_name"]))
-    {
-        $movie = test_input($_GET["movie_name"]);
-
-        $stmt = $db->prepare(
-            'SELECT director.director_name
-             FROM movie_to_director
-                INNER JOIN movie ON movie_to_director.movie_id = movie.movie_id
-                INNER JOIN director ON movie_to_director.director_id = director.director_id
-             WHERE movie.movie_name = :movie');
-        $stmt->execute(array(':movie' => $movie));
-        $resultSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-    }
 ?>
 
 <!DOCTYPE html>
@@ -94,7 +66,73 @@
         if (isset($_GET["movie_name"]))
         {
             include 'movieInputOptions.php';
-            fillTextFields();
+
+            $movie = $_GET["movie_name"];
+
+            $stmt = $db->prepare(
+                'SELECT movie.movie_rating, movie.movie_summary
+                    FROM movie WHERE movie.movie_name = :movie;');
+            $stmt->execute(array(':movie' => $movie));
+            $movieInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmt = $db->prepare(
+                'SELECT director.director_name
+                 FROM movie_to_director
+                    INNER JOIN movie ON movie_to_director.movie_id = movie.movie_id
+                    INNER JOIN director ON movie_to_director.director_id = director.director_id
+                 WHERE movie.movie_name = :movie');
+            $stmt->execute(array(':movie' => $movie));
+            $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmt = $db->prepare(
+                'SELECT starring_actor.actor_name
+                 FROM movie_to_starring_actor
+                    INNER JOIN movie ON movie_to_starring_actor.movie_id = movie.movie_id
+                    INNER JOIN starring_actor ON movie_to_starring_actor.actor_id = starring_actor.actor_id
+                 WHERE movie.movie_name = :movie');
+            $stmt->execute(array(':movie' => $movie));
+            $actors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmt = $db->prepare(
+                'SELECT genre.genre_type
+                 FROM movie_to_genre
+                    INNER JOIN movie ON movie_to_genre.movie_id = movie.movie_id
+                    INNER JOIN genre ON movie_to_genre.genre_id = genre.genre_id
+                 WHERE movie.movie_name = :movie');
+            $stmt->execute(array(':movie' => $movie));
+            $genres = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            //fillTextFields();
+            echo 'document.getElementById("movieName").value = ' . $movie . ';';
+            echo 'document.getElementById("rated").value = ' . $movieInfo["movie_rating"] . ';';
+            echo 'document.getElementById("summary").value = ' . $movieInfo["movie_summary"] . ';';
+
+            $i = 0;
+            foreach ($directors as $director)
+            {
+                if ($i < sizeof($directors))
+                    echo 'addDirector();';
+
+                echo 'document.getElementById("director' . $i . '").value = ' . $director["director_name"] . ';';
+                $i++;
+            }
+            
+            $i = 0;
+            foreach ($actors as $actor)
+            {
+                if ($i < sizeof($actors))
+                    echo 'addActor();';
+
+                echo 'document.getElementById("actor' . $i . '").value = ' . $actor["actor_name"] . ';';
+                $i++;
+            }
+            
+            $i = 0;
+            foreach ($genres as $genre)
+            {
+                echo 'document.getElementById("' . $genre["genre_type"] . '").checked = true;';
+                $i++;
+            }
         }
         else
         {

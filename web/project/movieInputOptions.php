@@ -30,7 +30,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="rated">Rated:</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" placeholder="PG-13" name="rated" maxlength="6" required>
+                    <input type="text" class="form-control" id="rated" placeholder="PG-13" name="rated" maxlength="6" required>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                 {
                     echo '
                     <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="genre[]" value="' . $row["genre_type"] . '">
+                    <input type="checkbox" class="form-check-input" name="genre[]" value="' . $row["genre_type"] . '" id="' . $row["genre_type"] . '">
                     ' . $row["genre_type"] . '<br>
                     ';
                 }
