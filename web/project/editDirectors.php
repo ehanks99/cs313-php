@@ -2,13 +2,7 @@
     session_start();
     include 'dbConnect.php';
 
-    
-    $stmt = $db->prepare(
-        'SELECT director.director_name, director.director_id
-         FROM director');
-    $stmt->execute();
-    $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+    // check if there's a change to be made
     if (isset($_GET["id"]) && isset($_GET["name"]))
     {
         $stmt = $db->prepare(
@@ -17,6 +11,12 @@
              WHERE director_id = :id');
         $stmt->execute(array(':dName' => $_GET["name"], ':id' => $_GET["id"]));
     }
+    
+    $stmt = $db->prepare(
+        'SELECT director.director_name, director.director_id
+         FROM director');
+    $stmt->execute();
+    $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
