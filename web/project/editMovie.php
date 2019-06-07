@@ -57,6 +57,13 @@
             var html = "<input type='text' class='form-control' name='actor[]' id='actor" + actorId + "'/><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('actors', 'p', 'actor' + actorId, html);
         }
+        
+        function addSpecificActor(name)
+        {
+            actorId++;
+            var html = "<input type='text' class='form-control' name='actor[]' id='actor" + actorId + "' value='" + name + "'/><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
+            addElement('actors', 'p', 'actor' + actorId, html);
+        }
 
         function removeElement(elementId) 
         {
@@ -125,13 +132,11 @@
             }
             
             $i = 0;
-            foreach ($actors as $actor)
+            echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
+            while($i != sizeof($actors))
             {
-                echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
+                echo "\taddActor('" . $actors[$i]["actor_name"] . "');\n";
                 $i++;
-
-                if ($i != sizeof($actors))
-                    echo "\taddActor();\n";
             }
             
             $i = 0;
