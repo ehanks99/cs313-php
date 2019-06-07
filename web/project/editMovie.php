@@ -70,7 +70,7 @@
             $movie = $_GET["movie_name"];
 
             $stmt = $db->prepare(
-                'SELECT movie.movie_rating, movie.movie_summary
+                'SELECT movie_rating, movie_summary
                     FROM movie WHERE movie.movie_name = :movie;');
             $stmt->execute(array(':movie' => $movie));
             $movieInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -105,8 +105,8 @@
             //fillTextFields();
             echo "\n<script>\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
-            echo "\tdocument.getElementById('rated').value = '" . $movieInfo["movie.movie_rating"] . "';\n";
-            echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie.movie_summary"] . "';\n";
+            echo "\tdocument.getElementById('rated').value = '" . $movieInfo["movie_rating"] . "';\n";
+            echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie_summary"] . "';\n";
 
             $i = 0;
             foreach ($directors as $director)
