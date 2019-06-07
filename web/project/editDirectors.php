@@ -38,14 +38,16 @@
         echo '
         <div class="container">
             <h2 id="heading" class="text-center">Edit Director Names</h2><br/>
-            <div class="form-group">
-                ';
+            <div class="form-group">';
                 $i = 0;
                 while ($i < sizeof($directors))
                 {
-                    echo '<div class="col-sm-10">
+                    echo '
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
                     <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" disabled>
-                    </div>';
+                    </div>
+                    <div class="col-sm-3"></div>';
                     $i++;
                 }
 
