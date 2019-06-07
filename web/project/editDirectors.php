@@ -73,14 +73,21 @@
                 $i = 0;
                 while ($i < sizeof($directors))
                 {
+                    if($i % 3 == 0)
+                        echo '<div class="row">';
                     echo '
                     <div>
-                    <div class="col-sm-2">
+                    <div class="col">
                         <button class="float-right" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
                         <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" onkeydown="return false;">
                         </div>
 
                     </div>';
+
+                    
+                    if($i % 3 == 0)
+                        echo '</div>';
+
                     $i++;
                 }
                 // onclick="editMovie(\'' . $rows['movie_name'] . '\')"
