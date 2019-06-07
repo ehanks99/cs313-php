@@ -62,7 +62,7 @@
         {
             echo '
             <div class="alert alert-success text-center">
-              <strong>Successfully changed director name.</strong>
+              <strong>Successfully changed actor name.</strong>
             </div>';
         }
 
