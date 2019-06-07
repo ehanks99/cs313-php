@@ -85,7 +85,7 @@
 
             $stmt = $db->prepare(
                 'SELECT movie.movie_rating, movie.movie_summary
-                    FROM movie WHERE movie.movie_name = :movie;');
+                 FROM movie WHERE movie.movie_name = :movie');
             $stmt->execute(array(':movie' => $movie));
             $movieInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
