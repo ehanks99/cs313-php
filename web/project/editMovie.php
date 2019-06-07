@@ -123,7 +123,7 @@
             echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie_summary"] . "';\n";
 
             $i = 1;
-            echo "\tdocument.getElementById('director" . $i . "').value = '" . $directors[0]["director_name"] . "';\n";
+            echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
             while($i != sizeof($directors))
             {
                 echo "\taddSpecificDirector('" . $directors[$i]["director_name"] . "');\n";
@@ -132,7 +132,7 @@
             }
             
             $i = 0;
-            echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
+            echo "\tdocument.getElementById('actor0').value = '" . $actors[0]["actor_name"] . "';\n";
             while($i != sizeof($actors))
             {
                 echo "\taddSpecificActor('" . $actors[$i]["actor_name"] . "');\n";
