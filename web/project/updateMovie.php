@@ -22,6 +22,7 @@
         $act = test_input($act);
     }
 
+    $movieId = $_POST["movieId"];
     $movieName = test_input($_POST["movieName"]);
     $summary = test_input(str_replace("'", "''", $_POST["summary"]));
     $rated = test_input($_POST["rated"]);
@@ -35,7 +36,7 @@
     $stmt->execute(array(':movieName' => $movieName, ':movieSummary' => $summary, ':movieRating' => $rated, ':id' => $movie_id));
     */
 
-    
+
     /*
 UPDATE Customers
 SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
