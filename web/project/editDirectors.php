@@ -71,7 +71,7 @@
             <h2 id="heading" class="text-center">Edit Director Names</h2><br/>
             ';
                 $i = 0;
-                while ($i < sizeof($actors))
+                while ($i < sizeof($directors))
                 {
                     echo '
                     <div>
