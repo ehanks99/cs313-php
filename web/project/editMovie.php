@@ -120,7 +120,7 @@
             echo "\n<script>\n";
             echo "\tdocument.getElementById(\"movieForm\").action = \"updateMovie.php\";\n";
             echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';\n";
-            echo "\tdocument.getElementById('movieId').value = " . $movieInfo[0]["movie_id"] . "';\n";
+            echo "\tdocument.getElementById('movieId').value = '" . $movieInfo[0]["movie_id"] . "';\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
             echo "\tdocument.getElementById('rated').value = '" . $movieInfo[0]["movie_rating"] . "';\n";
             echo "\tdocument.getElementById('summary').value = \"" . $movieInfo[0]["movie_summary"] . "\";\n";
