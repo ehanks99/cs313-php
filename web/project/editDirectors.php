@@ -75,10 +75,10 @@
                 {
                     echo '
                     <div>
-                    <div class="col-sm-1">
+                    <div class="col-sm-2">
                         <button class="float-right" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
                     </div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-4">
                         <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" onkeydown="return false;">
                         </div>
 
