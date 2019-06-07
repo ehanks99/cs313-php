@@ -5,9 +5,7 @@
     
     $stmt = $db->prepare(
         'SELECT director.director_name
-         FROM movie_to_director
-            INNER JOIN movie ON movie_to_director.movie_id = movie.movie_id
-            INNER JOIN director ON movie_to_director.director_id = director.director_id');
+         FROM director');
     $stmt->execute();
     $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -44,10 +42,9 @@
                 {
                     echo '
                     <div>
-                        <div class="col-sm-2"></div>
+                        <button class = "pull-right" style="font-size:20px; margin-bottom:50px;"><i class="fa fa-edit"></i></button>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" disabled>
-                            <button class = "pull-right" style="font-size:20px; margin-bottom:50px;"><i class="fa fa-edit"></i></button>
                         </div>
                         <div class="col-sm-2"></div>
                     </div>';
