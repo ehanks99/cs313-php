@@ -43,6 +43,13 @@
             var html = "<input type='text' class='form-control' name='director[]' id='director" + id + "'/><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
         }
+
+        function addSpecificDirector(name)
+        {
+            id++;
+            var html = "<input type='text' class='form-control' name='director[]' id='director" + id + "' value='" + name + "'/><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
+            addElement('directors', 'p', 'director' + id, html);
+        }
         
         function addActor()
         {
@@ -108,14 +115,13 @@
             echo "\tdocument.getElementById('rated').value = '" . $movieInfo["movie_rating"] . "';\n";
             echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie_summary"] . "';\n";
 
-            $i = 0;
-            foreach ($directors as $director)
+            $i = 1;
+            echo "\tdocument.getElementById('director" . $i . "').value = '" . $directors[0]["director_name"] . "';\n";
+            while($i != sizeof($directors))
             {
-                echo "\tdocument.getElementById('director" . $i . "').value = '" . $director["director_name"] . "';\n";
+                echo "\taddSpecificDirector('" . $directors[$i]["director_name"] . "');\n";
+                
                 $i++;
-
-                if ($i != sizeof($directors))
-                    echo "\taddDirector();\n";
             }
             
             $i = 0;
