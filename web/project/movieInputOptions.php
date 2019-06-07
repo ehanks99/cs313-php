@@ -53,6 +53,7 @@
 
                 echo '</div>';
             ?>
+            <input type='text' style='visibility:hidden' id='movieId' name='movieId'>;
 
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
