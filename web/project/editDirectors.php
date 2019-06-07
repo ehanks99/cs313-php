@@ -19,6 +19,30 @@
          FROM director');
     $stmt->execute();
     $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    
+    $search = false;
+    if(isset($_GET["search"]))
+    {
+        $word = strtolower($_GET["search"]);
+        $search = true;
+    }
+
+    if($search)
+    {
+        $i = 0;
+        foreach ($directors as $rows)
+        {
+            if ((strpos(strtolower($rows["director_name"]), $word) !== false))
+            {
+                $directors2[$i] = $rows;
+            }
+
+            $i++;
+        }
+
+        $directors = $directors2;
+    }
 ?>
 
 <!DOCTYPE html>
