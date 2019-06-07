@@ -71,32 +71,22 @@
             <h2 id="heading" class="text-center">Edit Director Names</h2><br/>
             ';
                 $i = 0;
-                echo '<div class="row">';
-                while ($i < sizeof($directors))
+                while ($i < sizeof($actors))
                 {
-                    
-                    //if($i % 3 == 2)
-                    //    echo '</div>';
                     echo '
-                    <div class="col">
                     <div>
-                        <button class="float-right" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
-                    </div>
-                    <div>
-                        <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" onkeydown="return false;">
-                    </div>
-                    </div>';
-
-
-                    if($i % 3 == 2)
-                        echo '
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" onkeydown="return false;">
                         </div>
-                        <div class="row">';
+                        <div class="col-sm-3">
+                            <button class="pull-left" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
+                        </div>
+                    </div>';
                     $i++;
                 }
                 // onclick="editMovie(\'' . $rows['movie_name'] . '\')"
-                if($i % 3 == 2)
-                        echo '</div>';
+
 
                 //<div class="col-sm-10">
                 //    <input type="text" class="form-control" id="movieName" placeholder="" name="movieName" required>

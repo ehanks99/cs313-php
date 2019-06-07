@@ -77,10 +77,10 @@
                     <div>
                         <div class="col-sm-3"></div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="director' . $i . '" value="' . $actors[$i]["actor_name"] . '" onkeydown="return false;">
+                            <input type="text" class="form-control" id="actor' . $i . '" value="' . $actors[$i]["actor_name"] . '" onkeydown="return false;">
                         </div>
                         <div class="col-sm-3">
-                            <button class="pull-left" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $actors[$i]["actor_id"] . '\')"><i class="fa fa-edit"></i></button>
+                            <button class="pull-left" style="font-size:20px; margin-bottom:50px;" onclick="editActor(\'' . $actors[$i]["actor_id"] . '\')"><i class="fa fa-edit"></i></button>
                         </div>
                     </div>';
                     $i++;
