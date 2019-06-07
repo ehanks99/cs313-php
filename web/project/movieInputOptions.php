@@ -18,7 +18,7 @@
                 <input type="button" value="Add an Actor" onclick="addActor()">
                 <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
                 <div class="col-sm-6" id="actors">
-                    <input type="text" class="form-control" id="actor1" placeholder="" name="actor[]" required>
+                    <input type="text" class="form-control" id="actor0" placeholder="" name="actor[]" required>
                 </div>
             </div>
             <div class="form-group">

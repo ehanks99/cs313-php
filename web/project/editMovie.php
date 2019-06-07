@@ -121,7 +121,7 @@
             $i = 0;
             foreach ($actors as $actor)
             {
-                if ($i < sizeof($actors))
+                if (($i + 1) < sizeof($actors))
                     echo "\taddActor();\n";
 
                 echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
