@@ -122,7 +122,7 @@
             echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
             echo "\tdocument.getElementById('rated').value = '" . $movieInfo[0]["movie_rating"] . "';\n";
-            echo "\tdocument.getElementById('summary').value = '" . $movieInfo[0]["movie_summary"] . "';\n";
+            echo "\tdocument.getElementById('summary').value = \"" . $movieInfo[0]["movie_summary"] . "\";\n";
 
             $i = 1;
             echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
