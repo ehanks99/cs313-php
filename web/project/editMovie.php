@@ -118,7 +118,8 @@
 
             //fillTextFields();
             echo "\n<script>\n";
-            echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';";
+            echo "\tdocument.getElementById('movieForm').action = 'updateMovie.php';\n";
+            echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
             echo "\tdocument.getElementById('rated').value = '" . $movieInfo["movie_rating"] . "';\n";
             echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie_summary"] . "';\n";

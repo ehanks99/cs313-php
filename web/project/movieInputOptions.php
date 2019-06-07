@@ -1,6 +1,6 @@
     <div class="container">
         <h2 id="heading" class="text-center">Add a Movie to the List</h2><br/>
-        <form class="form-horizontal" action="addMovieCode.php" method="post">
+        <form id="movieForm" class="form-horizontal" action="addMovieCode.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="movieName">Movie Name:</label>
                 <div class="col-sm-10">
