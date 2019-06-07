@@ -105,8 +105,8 @@
             //fillTextFields();
             echo "\n<script>\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
-            echo "\tdocument.getElementById('rated').value = '" . $movieInfo["movie_rating"] . "';\n";
-            echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie_summary"] . "';\n";
+            echo "\tdocument.getElementById('rated').value = '" . $movieInfo["movie.movie_rating"] . "';\n";
+            echo "\tdocument.getElementById('summary').value = '" . $movieInfo["movie.movie_summary"] . "';\n";
 
             $i = 0;
             foreach ($directors as $director)
