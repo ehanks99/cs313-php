@@ -45,11 +45,14 @@
         function editDirector(directorId)
         {
             var name = prompt("Enter the name that you would like to change it to.");
-            var update = confirm("Are you sure you want to change the director's name to '" + name + "?");
-
-            if (update)
+            if (name != null)
             {
-                window.location.href = "editDirectors.php?id=" + directorId + "&name=" + name;
+                var update = confirm("Are you sure you want to change the director's name to '" + name + "?");
+
+                if (update)
+                {
+                    window.location.href = "editDirectors.php?id=" + directorId + "&name=" + name;
+                }
             }
         }
     </script>

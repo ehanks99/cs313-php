@@ -45,11 +45,14 @@
         function editActor(actorId)
         {
             var name = prompt("Enter the name that you would like to change it to.");
-            var update = confirm("Are you sure you want to change the actor's name to '" + name + "?");
+            if (name != null)
+            
+                var update = confirm("Are you sure you want to change the actor's name to '" + name + "?");
 
-            if (update)
-            {
-                window.location.href = "editActors.php?id=" + actorId + "&name=" + name;
+                if (update)
+                {
+                    window.location.href = "editActors.php?id=" + actorId + "&name=" + name;
+                }
             }
         }
     </script>
