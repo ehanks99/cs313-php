@@ -103,18 +103,18 @@
             $genres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             //fillTextFields();
-            echo "<script>\n";
-            echo 'document.getElementById("movieName").value = ' . $movie . ';';
-            echo 'document.getElementById("rated").value = ' . $movieInfo["movie_rating"] . ';';
-            echo 'document.getElementById("summary").value = ' . $movieInfo["movie_summary"] . ';';
+            echo "\n<script>\n";
+            echo "document.getElementById('movieName').value = " . $movie . ";\n";
+            echo "document.getElementById('rated').value = " . $movieInfo["movie_rating"] . ";\n";
+            echo "document.getElementById('summary').value = " . $movieInfo["movie_summary"] . ";\n";
 
             $i = 0;
             foreach ($directors as $director)
             {
                 if ($i < sizeof($directors))
-                    echo 'addDirector();';
+                    echo "addDirector();\n";
 
-                echo 'document.getElementById("director' . $i . '").value = ' . $director["director_name"] . ';';
+                echo "document.getElementById('director" . $i . "').value = " . $director["director_name"] . ";\n";
                 $i++;
             }
             
@@ -122,19 +122,19 @@
             foreach ($actors as $actor)
             {
                 if ($i < sizeof($actors))
-                    echo 'addActor();';
+                    echo "addActor();\n";
 
-                echo 'document.getElementById("actor' . $i . '").value = ' . $actor["actor_name"] . ';';
+                echo "document.getElementById('actor" . $i . "').value = " . $actor["actor_name"] . ";\n";
                 $i++;
             }
             
             $i = 0;
             foreach ($genres as $genre)
             {
-                echo 'document.getElementById("' . $genre["genre_type"] . '").checked = true;';
+                echo "document.getElementById('" . $genre["genre_type"] . "').checked = true;\n";
                 $i++;
             }
-            echo '</script>';
+            echo "</script>\n";
         }
         else
         {
