@@ -75,8 +75,8 @@
                 while ($i < sizeof($directors))
                 {
                     
-                    if($i % 3 == 2)
-                        echo '</div>';
+                    //if($i % 3 == 2)
+                    //    echo '</div>';
                     echo '
                     <div class="col">
                         <button class="float-right" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
@@ -85,7 +85,9 @@
 
 
                     if($i % 3 == 2)
-                        echo '<div class="row">';
+                        echo '
+                        </div>
+                        <div class="row">';
                     $i++;
                 }
                 // onclick="editMovie(\'' . $rows['movie_name'] . '\')"
