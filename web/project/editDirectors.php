@@ -75,8 +75,8 @@
                 {
                     echo '
                     <div class="col-sm-6">
-                    <div>
-                        <button class="pull-right" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
+                    <div class="float-right">
+                        <button style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\')"><i class="fa fa-edit"></i></button>
                     </div>
                         <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" onkeydown="return false;">
 
