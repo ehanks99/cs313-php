@@ -10,6 +10,8 @@
              SET actor_name = :aName
              WHERE actor_id = :id');
         $stmt->execute(array(':aName' => $_GET["name"], ':id' => $_GET["id"]));
+        header("Location: editActors.php?success=true");
+        die();
     }
     
     $stmt = $db->prepare(
@@ -56,6 +58,14 @@
     <?php
         include 'navbar.php';
         
+        if (isset($_GET["success"]))
+        {
+            echo '
+            <div class="alert alert-success text-center">
+              <strong>Successfully changed director name.</strong>
+            </div>';
+        }
+
         echo '
         <div class="container">
             <h2 id="heading" class="text-center">Edit Actor Names</h2><br/>
