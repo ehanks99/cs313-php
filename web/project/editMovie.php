@@ -117,6 +117,7 @@
             $genres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             //fillTextFields();
+            print_r($movieInfo);
             echo "\n<script>\n";
             echo "\tdocument.getElementById('movieForm').action = 'updateMovie.php';\n";
             echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';\n";
