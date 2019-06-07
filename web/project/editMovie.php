@@ -84,7 +84,7 @@
             $movie = $_GET["movie_name"];
 
             $stmt = $db->prepare(
-                'SELECT movie.movie_rating, movie.movie_summary
+                'SELECT movie.movie_id, movie.movie_rating, movie.movie_summary
                  FROM movie WHERE movie.movie_name = :movie');
             $stmt->execute(array(':movie' => $movie));
             $movieInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -117,6 +117,7 @@
             $genres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             //fillTextFields();
+            echo "<input type='text' style='visibility:hidden' id='director0' name='movieId' value='" . $movieInfo[0]["movie_id"] . "'>";
             echo "\n<script>\n";
             echo "\tdocument.getElementById(\"movieForm\").action = \"updateMovie.php\";\n";
             echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';\n";
