@@ -2,6 +2,18 @@
     session_start();
     include 'dbConnect.php';
 
+    // check if there's a change to be made
+    if (isset($_GET["id"]) && isset($_GET["name"]))
+    {
+        $stmt = $db->prepare(
+            'UPDATE director
+             SET director_name = :dName
+             WHERE director_id = :id');
+        $stmt->execute(array(':dName' => $_GET["name"], ':id' => $_GET["id"]));
+        header("Location: editDirectors.php?success=true");
+        die();
+    }
+    
     $stmt = $db->prepare(
         'SELECT director.director_name, director.director_id
          FROM director');
@@ -37,7 +49,7 @@
 
             if (update)
             {
-                window.location.href = "edit.php?director=true&id=" + directorId + "&name=" + name;
+                window.location.href = "editDirectors.php?id=" + directorId + "&name=" + name;
             }
         }
     </script>
@@ -50,7 +62,7 @@
         {
             echo '
             <div class="alert alert-success text-center">
-              <strong>' . $_GET["success"] . '</strong>
+              <strong>Successfully changed director name.</strong>
             </div>';
         }
 
