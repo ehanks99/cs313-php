@@ -71,10 +71,12 @@
             <h2 id="heading" class="text-center">Edit Director Names</h2><br/>
             ';
                 $i = 0;
+                echo '<div class="row">';
                 while ($i < sizeof($directors))
                 {
-                    if($i % 3 == 0)
-                        echo '<div class="row">';
+                    
+                    if($i % 3 == 2)
+                        echo '</div>';
                     echo '
                     <div>
                     <div class="col">
@@ -84,14 +86,14 @@
 
                     </div>';
 
-                    
-                    if($i % 3 == 0)
-                        echo '</div>';
 
+                    if($i % 3 == 2)
+                        echo '<div class="row">';
                     $i++;
                 }
                 // onclick="editMovie(\'' . $rows['movie_name'] . '\')"
-
+                if($i % 3 == 2)
+                        echo '</div>';
 
                 //<div class="col-sm-10">
                 //    <input type="text" class="form-control" id="movieName" placeholder="" name="movieName" required>
