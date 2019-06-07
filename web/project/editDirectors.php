@@ -4,7 +4,7 @@
 
     
     $stmt = $db->prepare(
-        'SELECT director.director_name
+        'SELECT director.director_name, director.director_id
          FROM director');
     $stmt->execute();
     $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -55,7 +55,7 @@
                             <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" onkeydown="return false;">
                         </div>
                         <div class="col-sm-3">
-                            <button class="pull-left" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $i . '\'><i class="fa fa-edit"></i></button>
+                            <button class="pull-left" style="font-size:20px; margin-bottom:50px;" onclick="editDirector(\'' . $directors[$i]["director_id"] . '\'"><i class="fa fa-edit"></i></button>
                         </div>
                     </div>';
                     $i++;
