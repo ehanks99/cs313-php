@@ -103,6 +103,7 @@
             $genres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             //fillTextFields();
+            echo '<script>';
             echo 'document.getElementById("movieName").value = ' . $movie . ';';
             echo 'document.getElementById("rated").value = ' . $movieInfo["movie_rating"] . ';';
             echo 'document.getElementById("summary").value = ' . $movieInfo["movie_summary"] . ';';
@@ -133,6 +134,7 @@
                 echo 'document.getElementById("' . $genre["genre_type"] . '").checked = true;';
                 $i++;
             }
+            echo '</script>';
         }
         else
         {
