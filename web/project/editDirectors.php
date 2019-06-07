@@ -13,8 +13,8 @@
     {
         $stmt = $db->prepare(
             'UPDATE director
-             SET director.director_name = :dName
-             WHERE director.director_id = :id');
+             SET director_name = :dName
+             WHERE director_id = :id');
         $stmt->execute(array(':dName' => $_GET["name"], ':id' => $_GET["id"]));
     }
 ?>
