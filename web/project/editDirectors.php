@@ -45,7 +45,7 @@
                         <div class="col-sm-3"></div>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" disabled>
-                            <button style="font-size:20px; margin-bottom:50px;"><i class="fa fa-edit"></i></button>
+                            <button class="pull-right" style="font-size:20px; margin-bottom:50px;"><i class="fa fa-edit"></i></button>
                         </div>
                     </div>';
                     $i++;
