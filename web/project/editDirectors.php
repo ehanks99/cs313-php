@@ -44,6 +44,7 @@
                 {
                     echo '
                     <div>
+                        <div class="col-sm-2"></div>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" id="director' . $i . '" value="' . $directors[$i]["director_name"] . '" disabled>
                         </div>
