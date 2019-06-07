@@ -10,6 +10,6 @@
                  WHERE director_id = :id');
             $stmt->execute(array(':dName' => $_GET["name"], ':id' => $_GET["id"]));
         }
-        echo $stmt->fetch(PDO::FETCH_ASSOC);
+        print_r($db->errorInfo());
     }
 ?>
