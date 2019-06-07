@@ -104,17 +104,17 @@
 
             //fillTextFields();
             echo "\n<script>\n";
-            echo "document.getElementById('movieName').value = " . $movie . ";\n";
-            echo "document.getElementById('rated').value = " . $movieInfo["movie_rating"] . ";\n";
-            echo "document.getElementById('summary').value = " . $movieInfo["movie_summary"] . ";\n";
+            echo "\tdocument.getElementById('movieName').value = " . $movie . ";\n";
+            echo "\tdocument.getElementById('rated').value = " . $movieInfo["movie_rating"] . ";\n";
+            echo "\tdocument.getElementById('summary').value = " . $movieInfo["movie_summary"] . ";\n";
 
             $i = 0;
             foreach ($directors as $director)
             {
                 if ($i < sizeof($directors))
-                    echo "addDirector();\n";
+                    echo "\taddDirector();\n";
 
-                echo "document.getElementById('director" . $i . "').value = " . $director["director_name"] . ";\n";
+                echo "\tdocument.getElementById('director" . $i . "').value = " . $director["director_name"] . ";\n";
                 $i++;
             }
             
@@ -122,16 +122,16 @@
             foreach ($actors as $actor)
             {
                 if ($i < sizeof($actors))
-                    echo "addActor();\n";
+                    echo "\taddActor();\n";
 
-                echo "document.getElementById('actor" . $i . "').value = " . $actor["actor_name"] . ";\n";
+                echo "\tdocument.getElementById('actor" . $i . "').value = " . $actor["actor_name"] . ";\n";
                 $i++;
             }
             
             $i = 0;
             foreach ($genres as $genre)
             {
-                echo "document.getElementById('" . $genre["genre_type"] . "').checked = true;\n";
+                echo "\tdocument.getElementById('" . $genre["genre_type"] . "').checked = true;\n";
                 $i++;
             }
             echo "</script>\n";
