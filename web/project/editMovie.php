@@ -103,7 +103,7 @@
             $genres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             //fillTextFields();
-            echo '<script>\n';
+            echo "<script>\n";
             echo 'document.getElementById("movieName").value = ' . $movie . ';';
             echo 'document.getElementById("rated").value = ' . $movieInfo["movie_rating"] . ';';
             echo 'document.getElementById("summary").value = ' . $movieInfo["movie_summary"] . ';';
