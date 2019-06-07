@@ -7,9 +7,8 @@
         'SELECT director.director_name
          FROM movie_to_director
             INNER JOIN movie ON movie_to_director.movie_id = movie.movie_id
-            INNER JOIN director ON movie_to_director.director_id = director.director_id
-         WHERE movie.movie_id = :id');
-    $stmt->execute(array(':id' => $movie_id));
+            INNER JOIN director ON movie_to_director.director_id = director.director_id');
+    $stmt->execute();
     $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
