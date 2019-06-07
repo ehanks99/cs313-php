@@ -53,6 +53,10 @@
 
                 echo '</div>';
             ?>
+
+            <!-- add a hidden textfield for the movie id to be placed -->
+            <input type='text' style='visibility:hidden' id='movieId' name='movieId'>
+
             <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Submit</button>
