@@ -131,7 +131,7 @@
                 $i++;
             }
             
-            $i = 0;
+            $i = 1;
             echo "\tdocument.getElementById('actor0').value = '" . $actors[0]["actor_name"] . "';\n";
             while($i != sizeof($actors))
             {
