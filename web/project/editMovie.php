@@ -135,7 +135,7 @@
             echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
             while($i != sizeof($actors))
             {
-                echo "\taddActor('" . $actors[$i]["actor_name"] . "');\n";
+                echo "\taddSpecificActor('" . $actors[$i]["actor_name"] . "');\n";
                 $i++;
             }
             
