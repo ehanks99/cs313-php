@@ -70,7 +70,7 @@
             $movie = $_GET["movie_name"];
 
             $stmt = $db->prepare(
-                'SELECT movie_rating, movie_summary
+                'SELECT movie.movie_rating, movie.movie_summary
                     FROM movie WHERE movie.movie_name = :movie;');
             $stmt->execute(array(':movie' => $movie));
             $movieInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -111,7 +111,7 @@
             $i = 0;
             foreach ($directors as $director)
             {
-                if ($i < sizeof($directors))
+                if ($i != sizeof($directors))
                     echo "\taddDirector();\n";
 
                 echo "\tdocument.getElementById('director" . $i . "').value = '" . $director["director_name"] . "';\n";
@@ -121,7 +121,7 @@
             $i = 0;
             foreach ($actors as $actor)
             {
-                if (($i + 1) < sizeof($actors))
+                if ($i != sizeof($actors))
                     echo "\taddActor();\n";
 
                 echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
