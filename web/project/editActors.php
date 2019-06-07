@@ -54,6 +54,8 @@
 </head>
 <body>
     <?php
+        include 'navbar.php';
+        
         echo '
         <div class="container">
             <h2 id="heading" class="text-center">Edit Actor Names</h2><br/>
