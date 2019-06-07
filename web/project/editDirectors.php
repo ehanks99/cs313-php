@@ -8,6 +8,15 @@
          FROM director');
     $stmt->execute();
     $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (isset($_GET["id"]) && isset($_GET["name"]))
+    {
+        $stmt = $db->prepare(
+            'UPDATE director
+             SET director.director_name = :dName
+             WHERE director.director_id = :id');
+        $stmt->execute(array(':dName' => $_GET["name"], ':id' => $_GET["id"]));
+    }
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +45,10 @@
             var name = prompt("Enter the name that you would like to change it to.");
             var update = confirm("Are you sure you want to change the director's name to '" + name + "?");
 
+            if (update)
+            {
+                window.location.href = "editDirectors.php?id=" + directorId + "&name=" + name;
+            }
         }
     </script>
 </head>
