@@ -111,21 +111,21 @@
             $i = 0;
             foreach ($directors as $director)
             {
-                if ($i != sizeof($directors))
-                    echo "\taddDirector();\n";
-
                 echo "\tdocument.getElementById('director" . $i . "').value = '" . $director["director_name"] . "';\n";
                 $i++;
+
+                if ($i != sizeof($directors))
+                    echo "\taddDirector();\n";
             }
             
             $i = 0;
             foreach ($actors as $actor)
             {
-                if ($i != sizeof($actors))
-                    echo "\taddActor();\n";
-
                 echo "\tdocument.getElementById('actor" . $i . "').value = '" . $actor["actor_name"] . "';\n";
                 $i++;
+
+                if ($i != sizeof($actors))
+                    echo "\taddActor();\n";
             }
             
             $i = 0;
