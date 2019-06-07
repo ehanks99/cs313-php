@@ -14,6 +14,14 @@
     else
       echo '<a href="loginPage.php">Login</a>';
   ?>
+  <button class="dropbtn">Edit 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="editDirectors.php">Edit Director Names</a>
+    <a href="editActors.php">Edit Actor Names</a>
+    <a href="#">Link 3</a>
+  </div>
   <div class="search-container">
     <form action="mainPage.php" method="get">
       <input type="text" placeholder="Search..." name="search">
