@@ -2,8 +2,6 @@
     session_start();
     include 'dbConnect.php';
 
-    echo '<script>document.getElementById("navbarSearch").action = "editDirectors.php";</script>';
-
     // check if there's a change to be made
     if (isset($_GET["id"]) && isset($_GET["name"]))
     {
@@ -86,6 +84,7 @@
 <body>
     <?php
         include 'navbar.php';
+        echo '<script>document.getElementById("navbarSearch").action = "editDirectors.php";</script>';
         
         if (isset($_GET["success"]))
         {
