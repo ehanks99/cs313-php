@@ -79,6 +79,14 @@
                 }
             }
         }
+
+        function addActor()
+        {
+            var name = prompt("Enter the name for the new actor.");
+            //alert(name);
+            
+            window.location.href = ("addCode/addActor.php?name=" + name);
+        }
     </script>
 </head>
 <body>
@@ -94,9 +102,18 @@
             </div>';
         }
 
+        if (isset($_GET["addedSuccess"]))
+        {
+            echo '
+            <div class="alert alert-success text-center">
+              <strong>Successfully added an actor name.</strong>
+            </div>';
+        }
+
         echo '
         <div class="container">
-            <h2 id="heading" class="text-center">Edit Actor Names</h2><br/>
+            <h2 id="heading" class="text-center">Edit Actor Names</h2>
+            <button type="button" class="btn btn-primary center-block" onclick="addActor()">Add a new actor</button><br/>
             ';
                 $i = 0;
                 while ($i < sizeof($actors))

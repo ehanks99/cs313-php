@@ -83,7 +83,9 @@
         function addDirector()
         {
             var name = prompt("Enter the name for the new director.");
-            alert(name);
+            //alert(name);
+            
+            window.location.href = ("addCode/addDirector.php?name=" + name);
         }
     </script>
 </head>
@@ -97,6 +99,14 @@
             echo '
             <div class="alert alert-success text-center">
               <strong>Successfully changed director name.</strong>
+            </div>';
+        }
+
+        if (isset($_GET["addedSuccess"]))
+        {
+            echo '
+            <div class="alert alert-success text-center">
+              <strong>Successfully added a director name.</strong>
             </div>';
         }
 
