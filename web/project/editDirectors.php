@@ -82,7 +82,7 @@
 
         function addDirector()
         {
-            var name = promprt("Enter the name for the new director.");
+            var name = prompt("Enter the name for the new director.");
             alert(name);
         }
     </script>
