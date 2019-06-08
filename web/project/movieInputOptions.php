@@ -36,7 +36,7 @@
                 <div class="col-sm-6" id="directors">
                     <!--<input type="text" class="form-control" id="director0" placeholder="" name="director[]" required>-->
                     
-                    <select class="form-control" name="director[]" required>
+                    <select class="form-control" id="director0" name="director[]" required>
                         <?php
                             foreach($directors as $director)
                             {
@@ -53,7 +53,7 @@
                 <div class="col-sm-6" id="actors">
                     <!--<input type="text" class="form-control" id="actor0" placeholder="" name="actor[]" required>-->
                     
-                    <select class="form-control" name="actor[]" required>
+                    <select class="form-control" id="actor0" name="actor[]" required>
                         <?php
                             foreach($actors as $actor)
                             {
