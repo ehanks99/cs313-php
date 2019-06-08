@@ -193,7 +193,7 @@
             echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
             while($i != sizeof($directors))
             {
-                echo "\taddSpecificDirector('" . $directors[$i]["director_name"] . "');\n";
+                echo "\taddSpecificDirector(\"" . $directors[$i]["director_name"] . "\");\n";
                 
                 $i++;
             }
@@ -202,7 +202,7 @@
             echo "\tdocument.getElementById('actor0').value = '" . $actors[0]["actor_name"] . "';\n";
             while($i != sizeof($actors))
             {
-                echo "\taddSpecificActor('" . $actors[$i]["actor_name"] . "');\n";
+                echo "\taddSpecificActor(\"" . $actors[$i]["actor_name"] . "\");\n";
                 $i++;
             }
             
