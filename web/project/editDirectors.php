@@ -113,12 +113,7 @@
                     </div>';
                     $i++;
                 }
-                // onclick="editMovie(\'' . $rows['movie_name'] . '\')"
-
-
-                //<div class="col-sm-10">
-                //    <input type="text" class="form-control" id="movieName" placeholder="" name="movieName" required>
-                //</div>
+                
             echo '
         </div>';
     ?>
