@@ -79,6 +79,12 @@
                 }
             }
         }
+
+        function addDirector()
+        {
+            var name = promprt("Enter the name for the new director.");
+            alert(name);
+        }
     </script>
 </head>
 <body>
@@ -97,7 +103,7 @@
         echo '
         <div class="container">
             <h2 id="heading" class="text-center">Edit Director Names</h2>
-            <button type="button" class="btn btn-primary center-block">Add a new director</button><br/>
+            <button type="button" class="btn btn-primary center-block" onclick="addDirector()">Add a new director</button><br/>
             ';
                 $i = 0;
                 while ($i < sizeof($directors))
