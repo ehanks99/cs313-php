@@ -1,24 +1,5 @@
 <?php
     session_start();
-    include 'dbConnect.php';
-    
-    $stmt = $db->prepare(
-        'SELECT director.director_name, director.director_id
-         FROM director');
-    $stmt->execute();
-    $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    $stmt = $db->prepare(
-        'SELECT starring_actor.actor_name, starring_actor.actor_id
-         FROM starring_actor');
-    $stmt->execute();
-    $actors = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    $stmt = $db->prepare(
-        'SELECT rating.rating_name, rating.rating_id
-         FROM rating');
-    $stmt->execute();
-    $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
