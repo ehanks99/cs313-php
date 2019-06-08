@@ -128,6 +128,8 @@
             alert(document.getElementById(tmp).value);
             document.getElementById(tmp).value = name;
             alert(document.getElementById(tmp).value);
+            document.getElementById(tmp).value = "Rafe Spall";
+            alert(document.getElementById(tmp).value);
         }
         function removeElement(elementId) 
         {
@@ -214,7 +216,6 @@
                 $i++;
             }
 
-            echo "for(var t = 0; t < actorId; t++) document.getElementById('actor' + t).value = 'Rafe Spall';";
             echo "</script>\n";
         }
         else
