@@ -47,6 +47,23 @@ INSERT INTO genre (genre_id, genre_type)
 
 ----------------------------------------
 
+INSERT INTO rating (rating_id, rating_name)
+    VALUES (nextval('rating_s1'), 'PG');
+
+INSERT INTO rating (rating_id, rating_name)
+    VALUES (nextval('rating_s1'), 'PG-13');
+
+INSERT INTO rating (rating_id, rating_name)
+    VALUES (nextval('rating_s1'), 'G');
+
+INSERT INTO rating (rating_id, rating_name)
+    VALUES (nextval('rating_s1'), 'TV-MA');
+    
+INSERT INTO rating (rating_id, rating_name)
+    VALUES (nextval('rating_s1'), 'NC-17');
+
+----------------------------------------
+
 INSERT INTO movie (movie_id, movie_name, movie_rating, picture_filepath, movie_summary)
     VALUES (nextval('movie_s1'), 'Jurassic World: Fallen Kingdom', 'PG-13', 'jurassic_world_2.jpg',
             'Three years after the destruction of the Jurassic World theme park, Owen Grady and Claire Dearing return to the island of Isla Nublar to save the remaining dinosaurs from a volcano that''s about to erupt. They soon encounter terrifying new breeds of gigantic dinosaurs, while uncovering a conspiracy that threatens the entire planet.');

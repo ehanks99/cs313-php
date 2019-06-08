@@ -1,3 +1,26 @@
+<?php
+    include 'dbConnect.php';
+    
+    $stmt = $db->prepare(
+        'SELECT director.director_name, director.director_id
+         FROM director');
+    $stmt->execute();
+    $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt = $db->prepare(
+        'SELECT starring_actor.actor_name, starring_actor.actor_id
+         FROM starring_actor');
+    $stmt->execute();
+    $actors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt = $db->prepare(
+        'SELECT rating.rating_name, rating.rating_id
+         FROM rating');
+    $stmt->execute();
+    $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
     <div class="container">
         <h2 id="heading" class="text-center">Add a Movie to the List</h2><br/>
         <form id="movieForm" class="form-horizontal" action="addMovieCode.php" method="post">
@@ -11,7 +34,17 @@
                 <input type="button" value="Add a Director" onclick="addDirector()">
                 <label class="control-label col-sm-2" for="director">Director(s):</label>
                 <div class="col-sm-6" id="directors">
-                    <input type="text" class="form-control" id="director0" placeholder="" name="director[]" required>
+                    <!--<input type="text" class="form-control" id="director0" placeholder="" name="director[]" required>-->
+                    
+                    <select class="form-control" name="director[]" required>
+                        <?php
+                            foreach($directors as $director)
+                            {
+                                echo "\n<option>" . $director["director_name"] . "</option>";
+                            }
+                        ?>
+                    </select>
+
                 </div>
             </div>
             <div class="form-group">
