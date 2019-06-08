@@ -96,7 +96,7 @@
 
         echo '
         <div class="container">
-        <button type="button" class="btn btn-primary text-center">Add a new director</button>
+        <button type="button" class="btn btn-primary center-block">Add a new director</button>
             <h2 id="heading" class="text-center">Edit Director Names</h2><br/>
             ';
                 $i = 0;
