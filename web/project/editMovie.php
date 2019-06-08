@@ -87,8 +87,7 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
-            var tmp = "director" + id;
-            document.getElementById(tmp).value = name;
+            document.getElementById("director" + id.toString()).value = name;
         }
         
         function addActor()
@@ -123,12 +122,9 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('actors', 'p', 'actor' + actorId, html);
-
-            var tmp = "actor" + actorId.toString();
-            alert(tmp);
-            document.getElementById(tmp).value = name;
-            alert(document.getElementById(tmp).value);
+            document.getElementById("actor" + actorId.toString()).value = name;
         }
+
         function removeElement(elementId) 
         {
             // Removes an element from the document
@@ -182,8 +178,7 @@
 
             //fillTextFields();
             echo "\n<script>\n";
-            echo "\tdocument.getElementById(\"movieForm\").action = \"updateMovie.php\";
-            document.getElementById(\"movieForm\").method = \"get\"\n";
+            echo "\tdocument.getElementById(\"movieForm\").action = \"updateMovie.php\";\n";
             echo "\tdocument.getElementById('heading').innerHTML = 'Edit the Movie Details';\n";
             echo "\tdocument.getElementById('movieId').value = '" . $movieInfo[0]["movie_id"] . "';\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
@@ -194,8 +189,7 @@
             echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
             while($i != sizeof($directors))
             {
-                //echo "\taddSpecificDirector(\"" . $directors[$i]["director_name"] . "\");\n";
-                echo "\taddDirector();\n";
+                echo "\taddSpecificDirector(\"" . $directors[$i]["director_name"] . "\");\n";
                 $i++;
             }
             
@@ -203,8 +197,7 @@
             echo "\tdocument.getElementById('actor0').value = '" . $actors[0]["actor_name"] . "';\n";
             while($i != sizeof($actors))
             {
-                //echo "\taddSpecificActor(\"" . $actors[$i]["actor_name"] . "\");\n";
-                echo "\taddActor();\n";
+                echo "\taddSpecificActor(\"" . $actors[$i]["actor_name"] . "\");\n";
                 $i++;
             }
             
@@ -213,16 +206,6 @@
             {
                 echo "\tdocument.getElementById('" . $genre["genre_type"] . "').checked = true;\n";
                 $i++;
-            }
-
-            for ($j = 1; $j < sizeof($directors); $j++)
-            {
-                echo "\tdocument.getElementById('director" . $j . "').value = \"" . $directors[$j]["director_name"] . "\";\n";
-            }
-
-            for ($j = 1; $j < sizeof($actors); $j++)
-            {
-                echo "\tdocument.getElementById('actor" . $j . "').value = \"" . $actors[$j]["actor_name"] . "\";\n";
             }
 
             echo "</script>\n";
