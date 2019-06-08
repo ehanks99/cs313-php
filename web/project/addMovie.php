@@ -58,7 +58,7 @@
         function addDirector()
         {
             id++;
-            var html = "<input type='text' class='form-control' name='director[]' id='director" + id + "'/><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
+            //var html = "<input type='text' class='form-control' name='director[]' id='director" + id + "'/><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             var html = "<select class='form-control' name='director[]' id='director" + id + "'/>" + 
                         <?php
                             echo "\"";
