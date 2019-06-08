@@ -125,6 +125,7 @@
             addElement('actors', 'p', 'actor' + actorId, html);
             var tmp = "actor" + actorId;
             document.getElementById(tmp).value = name;
+            alert(document.getElementById(tmp));
         }
 
         function removeElement(elementId) 
