@@ -38,7 +38,7 @@
                     
                     <select class="form-control" id="director0" name="director[]" required>
                         <?php
-                            foreach($directors as $director)
+                            foreach($directorsHere as $director)
                             {
                                 echo "\n<option>" . $director["director_name"] . "</option>";
                             }
@@ -55,7 +55,7 @@
                     
                     <select class="form-control" id="actor0" name="actor[]" required>
                         <?php
-                            foreach($actors as $actor)
+                            foreach($actorsHere as $actor)
                             {
                                 echo "\n<option>" . $actor["actor_name"] . "</option>";
                             }
@@ -77,7 +77,7 @@
                     
                     <select class="form-control" name="rated" id="rated" required>
                         <?php
-                            foreach($ratings as $rating)
+                            foreach($ratingsHere as $rating)
                             {
                                 echo "\n<option>" . $rating["rating_name"] . "</option>";
                             }

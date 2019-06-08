@@ -6,19 +6,19 @@
         'SELECT director.director_name, director.director_id
          FROM director');
     $stmt->execute();
-    $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $directorsHere = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $stmt = $db->prepare(
         'SELECT starring_actor.actor_name, starring_actor.actor_id
          FROM starring_actor');
     $stmt->execute();
-    $actors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $actorsHere = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $stmt = $db->prepare(
         'SELECT rating.rating_name, rating.rating_id
          FROM rating');
     $stmt->execute();
-    $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $ratingsHere = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +62,7 @@
             var html = "<select class='form-control' name='director[]' id='director" + id + "'/>" + 
                         <?php
                             echo "\"";
-                            foreach($directors as $director)
+                            foreach($directorsHere as $director)
                             {
                                 echo "<option>" . $director["director_name"] . "</option>";
                             }
@@ -79,7 +79,7 @@
             var html = "<select class='form-control' name='actor[]' id='actor" + actorId + "'/>" + 
                         <?php
                             echo "\"";
-                            foreach($actors as $actor)
+                            foreach($actorsHere as $actor)
                             {
                                 echo "<option>" . $actor["actor_name"] . "</option>";
                             }
