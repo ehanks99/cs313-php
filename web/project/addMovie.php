@@ -47,6 +47,15 @@
         {
             actorId++;
             var html = "<input type='text' class='form-control' name='actor[]' id='actor" + actorId + "'/><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
+            var html = "<select class='form-control' name='actor[]' id='actor" + actorId + "'/>" +
+                        <?php
+                            foreach($actors as $actor)
+                            {
+                                echo "\"<option>" . $actor["actor_name"] . "</option>\"";
+                            }
+                        ?>
+                    + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
+
             addElement('actors', 'p', 'actor' + actorId, html);
         }
 
