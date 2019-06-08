@@ -59,13 +59,23 @@
         {
             id++;
             var html = "<input type='text' class='form-control' name='director[]' id='director" + id + "'/><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
+            var html = "<select class='form-control' name='director[]' id='director" + id + "'/>" + 
+                        <?php
+                            echo "\"";
+                            foreach($directors as $director)
+                            {
+                                echo "<option>" . $director["director_name"] . "</option>";
+                            }
+                            echo "\"";
+                        ?>
+                    + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
         }
         
         function addActor()
         {
             actorId++;
-            var html = "<input type='text' class='form-control' name='actor[]' id='actor" + actorId + "'/><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
+            //var html = "<input type='text' class='form-control' name='actor[]' id='actor" + actorId + "'/><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             var html = "<select class='form-control' name='actor[]' id='actor" + actorId + "'/>" + 
                         <?php
                             echo "\"";
