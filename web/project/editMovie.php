@@ -189,6 +189,8 @@
             echo "\tdocument.getElementById('rated').value = '" . $movieInfo[0]["movie_rating"] . "';\n";
             echo "\tdocument.getElementById('summary').value = \"" . $movieInfo[0]["movie_summary"] . "\";\n";
 
+            echo "for(var t = 0; t < actorId; t++) document.getElementById('actor' + t).value = 'Rafe Spall';";
+
             $i = 1;
             echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
             while($i != sizeof($directors))
