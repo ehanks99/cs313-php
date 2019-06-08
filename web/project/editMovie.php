@@ -194,8 +194,8 @@
             echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
             while($i != sizeof($directors))
             {
-                echo "\taddSpecificDirector(\"" . $directors[$i]["director_name"] . "\");\n";
-                
+                //echo "\taddSpecificDirector(\"" . $directors[$i]["director_name"] . "\");\n";
+                echo "\taddDirector();\n";
                 $i++;
             }
             
@@ -203,7 +203,8 @@
             echo "\tdocument.getElementById('actor0').value = '" . $actors[0]["actor_name"] . "';\n";
             while($i != sizeof($actors))
             {
-                echo "\taddSpecificActor(\"" . $actors[$i]["actor_name"] . "\");\n";
+                //echo "\taddSpecificActor(\"" . $actors[$i]["actor_name"] . "\");\n";
+                echo "\taddActor();\n";
                 $i++;
             }
             
@@ -212,6 +213,16 @@
             {
                 echo "\tdocument.getElementById('" . $genre["genre_type"] . "').checked = true;\n";
                 $i++;
+            }
+
+            for ($j = 1; $j < sizeof($directors); $j++)
+            {
+                echo "\tdocument.getElementById('director" . $j . "').value = '" . $directors[$j]["director_name"] . "';\n";
+            }
+
+            for ($j = 1; $j < sizeof($actors); $j++)
+            {
+                echo "\tdocument.getElementById('actor" . $j . "').value = '" . $actors[$j]["actor_name"] . "';\n";
             }
 
             echo "</script>\n";
