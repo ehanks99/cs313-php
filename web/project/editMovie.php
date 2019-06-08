@@ -124,7 +124,8 @@
                     + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('actors', 'p', 'actor' + actorId, html);
 
-            var tmp = "\"actor" + actorId + "\"";
+            var tmp = "actor" + actorId;
+            alert(tmp);
             document.getElementById(tmp).value = name;
             alert(document.getElementById(tmp).value);
         }
