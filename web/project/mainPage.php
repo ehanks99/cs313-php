@@ -22,32 +22,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
-    <script>
-        function goToDetails(movie_name)
-        {
-            window.location.href = ("detailsPage.php?movie_name=" + movie_name);
-        }
-
-        function removeMovie(movie_name)
-        {
-            var del = confirm("Are you sure you want to delete the movie '" + movie_name + "'??");
-
-            if (del)
-            {
-                window.location.href = ("removeMovie.php?movie_name=" + movie_name);
-            }
-        }
-
-        function editMovie(movie_name)
-        {
-            var edit = confirm("Are you sure you want to edit the movie '" + movie_name + "'?");
-
-            if (edit)
-            {
-                window.location.href = ("editMovie.php?movie_name=" + movie_name);
-            }
-        }
-    </script>
 </head>
 <body>
     <?php
@@ -61,8 +35,6 @@
             </div>';
         }
     ?>
-
-    <h2 class = "text-center">Movie Selections</h2><br/><br/><hr>
 
 </body>
 </html>
