@@ -87,7 +87,8 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
-            document.getElementById('director' + id).value = name;
+            var tmp = "director" + id;
+            document.getElementById(tmp).value = name;
         }
         
         function addActor()
@@ -122,7 +123,8 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('actors', 'p', 'actor' + actorId, html);
-            document.getElementById('actor' + actorId).value = name;
+            var tmp = "actor" + actorId;
+            document.getElementById(tmp).value = name;
         }
 
         function removeElement(elementId) 
