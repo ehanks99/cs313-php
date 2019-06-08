@@ -25,17 +25,6 @@
     else
       echo '<a href="loginPage.php">Login</a>';
   ?>
-  <div class="myDropdown">
-            <button class="myDropbtn">Edit 
-              <i class="fa fa-caret-down"></i>
-            </button>
-          <div class="myDropdown-content">
-            <a href="editMovieNames.php">Movie Names</a>
-            <a href="editDirectors.php">Directors</a>
-            <a href="editActors.php">Actors</a>
-            <a href="editGenres.php">Genres</a>
-          </div>
-        </div>
 
   <div class="search-container">
     <form id="navbarSearch" action="mainPage.php" method="get">
