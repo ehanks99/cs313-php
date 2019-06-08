@@ -22,59 +22,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
-    <?php
-        include 'grabData.php';
-
-        $search = false;
-        if(isset($_GET["search"]))
-        {
-            $word = strtolower($_GET["search"]);
-            $search = true;
-        }
-
-        if($search)
-        {
-            $i = 0;
-            foreach ($movies as $rows)
-            {
-                if ((strpos(strtolower($rows["movie_name"]), $word) !== false) || 
-                    (strpos(strtolower($rows["movie_summary"]), $word) !== false) ||
-                    (strpos(strtolower($rows["movie_rating"]), $word) !== false))
-                {
-                    $movies2[$i] = $rows;
-                }
-                else
-                {
-                    foreach($rows["directors"] as $data)
-                    {
-                        if (strpos(strtolower($data), $word) !== false)
-                        {
-                            $movies2[$i] = $rows;
-                        }
-                    }
-                    foreach($rows["actors"] as $data)
-                    {
-                        if (strpos(strtolower($data), $word) !== false)
-                        {
-                            echo strtolower($data);
-                            $movies2[$i] = $rows;
-                        }
-                    }
-                    foreach($rows["genres"] as $data)
-                    {
-                        if (strpos(strtolower($data), $word) !== false)
-                        {
-                            $movies2[$i] = $rows;
-                        }
-                    }
-                }
-
-                $i++;
-            }
-
-            $movies = $movies2;
-        }
-    ?>
     <script>
         function goToDetails(movie_name)
         {
