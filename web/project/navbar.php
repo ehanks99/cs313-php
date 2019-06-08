@@ -6,7 +6,8 @@
       if ($_SESSION["isAdmin"] == "T")
       {
         echo '
-        <a href="addMovie.php">Add Movie</a>     
+        <a href="addMovie.php">Add Movie</a>  
+        <a href="editMovie.php">Edit Movie</a>   
         <div class="myDropdown">
           <button class="myDropbtn">Edit 
             <i class="fa fa-caret-down"></i>
@@ -17,8 +18,7 @@
             <a href="editActors.php">Actors</a>
             <a href="editGenres.php">Genres</a>
           </div>
-        </div>
-        <a href="editMovie.php">Edit Movie</a>';
+        </div>';
       }
 
       //echo '<a href="loginPage.php">Hello, ' . $_SESSION["firstName"] . '</a>';
