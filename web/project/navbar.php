@@ -32,9 +32,10 @@
             <a href="editMovieNames.php">Movie Names</a>
             <a href="editDirectors.php">Directors</a>
             <a href="editActors.php">Actors</a>
+            <a href="editGenres.php">Actors</a>
           </div>
         </div>
-        
+
   <div class="search-container">
     <form id="navbarSearch" action="mainPage.php" method="get">
       <input type="text" placeholder="Search..." name="search">
