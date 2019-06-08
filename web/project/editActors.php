@@ -36,9 +36,9 @@
             if ((strpos(strtolower($rows["actor_name"]), $word) !== false))
             {
                 $actors2[$i] = $rows;
-            }
 
-            $i++;
+                $i++;
+            }
         }
 
         $actors = $actors2;

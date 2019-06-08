@@ -36,9 +36,9 @@
             if ((strpos(strtolower($rows["director_name"]), $word) !== false))
             {
                 $directors2[$i] = $rows;
-            }
 
-            $i++;
+                $i++;
+            }
         }
 
         $directors = $directors2;
