@@ -187,8 +187,7 @@
             echo "\tdocument.getElementById('movieId').value = '" . $movieInfo[0]["movie_id"] . "';\n";
             echo "\tdocument.getElementById('movieName').value = '" . $movie . "';\n";
             echo "\tdocument.getElementById('rated').value = '" . $movieInfo[0]["movie_rating"] . "';\n";
-
-            echo "for(var t = 0; t < actorId; t++) document.getElementById('actor' + t).value = 'Rafe Spall';";
+            echo "\tdocument.getElementById('summary').value = \"" . $movieInfo[0]["movie_summary"] . "\";\n";
 
             $i = 1;
             echo "\tdocument.getElementById('director0').value = '" . $directors[0]["director_name"] . "';\n";
@@ -213,7 +212,8 @@
                 echo "\tdocument.getElementById('" . $genre["genre_type"] . "').checked = true;\n";
                 $i++;
             }
-            echo "\tdocument.getElementById('summary').value = \"" . $movieInfo[0]["movie_summary"] . "\";\n";
+
+            echo "for(var t = 0; t < actorId; t++) document.getElementById('actor' + t).value = 'Rafe Spall';";
             echo "</script>\n";
         }
         else
