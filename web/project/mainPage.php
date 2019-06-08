@@ -115,7 +115,7 @@
         }
     ?>
 
-    <h2 class = "text-center">Movie Selections</h2><br/><br/><hr>
+    <br/><h2 class = "text-center">Movie Selections</h2><br/><br/><hr>
 
     <?php
         $p = 0;
