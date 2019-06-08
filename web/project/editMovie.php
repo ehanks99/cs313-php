@@ -126,9 +126,7 @@
 
             var tmp = "actor" + actorId;
             alert(document.getElementById(tmp).value);
-            document.getElementById(tmp).value = name;
-            alert(document.getElementById(tmp).value);
-            document.getElementById(tmp).value = "Rafe Spall";
+            document.getElementById("actor0").value = name;
             alert(document.getElementById(tmp).value);
         }
         function removeElement(elementId) 
