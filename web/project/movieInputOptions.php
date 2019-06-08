@@ -75,7 +75,7 @@
                 <div class="col-sm-2">
                     <!--<input type="text" class="form-control" id="rated" placeholder="PG-13" name="rated" maxlength="6" required>-->
                     
-                    <select class="form-control" name="rated" required>
+                    <select class="form-control" name="rated" id="rated" required>
                         <?php
                             foreach($ratings as $rating)
                             {
