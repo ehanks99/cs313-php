@@ -84,12 +84,12 @@
 
 
  
-.navbar {
+.myNavbar {
   overflow: hidden;
   background-color: #333;
 }
 
-.navbar a {
+.myNavbar a {
   float: left;
   font-size: 16px;
   color: white;
@@ -98,12 +98,12 @@
   text-decoration: none;
 }
 
-.dropdown {
+.myDropdown {
   float: left;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.myDropdown .myDropbtn {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -114,11 +114,11 @@
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.myNavbar a:hover, .myDropdown:hover .myDropbtn {
   background-color: red;
 }
 
-.dropdown-content {
+.myDropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -127,7 +127,7 @@
   z-index: 1;
 }
 
-.dropdown-content a {
+.myDropdown-content a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -136,26 +136,26 @@
   text-align: left;
 }
 
-.dropdown-content a:hover {
+.myDropdown-content a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.myDropdown:hover .myDropdown-content {
   display: block;
 }
 
-.navbar .search-container {
+.myNavbar .search-container {
   float: right;
 }
 
-.navbar input[type=text] {
+.myNavbar input[type=text] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
 }
 
-.navbar .search-container button {
+.myNavbar .search-container button {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
