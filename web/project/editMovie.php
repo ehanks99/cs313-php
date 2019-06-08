@@ -87,7 +87,7 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"director" + id + "\"); return false;'>Remove</a>";
             addElement('directors', 'p', 'director' + id, html);
-            document.getElementById('director').value = name;
+            document.getElementById('director' + id).value = name;
         }
         
         function addActor()
