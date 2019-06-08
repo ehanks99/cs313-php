@@ -96,7 +96,8 @@
 
         echo '
         <div class="container">
-            <h2 id="heading" class="text-center">Edit Director Names</h2><br/>
+            <h2 id="heading" class="text-center">Edit Director Names</h2>
+            <button type="button" class="btn btn-secondary">Secondary</button><br/>
             ';
                 $i = 0;
                 while ($i < sizeof($directors))
