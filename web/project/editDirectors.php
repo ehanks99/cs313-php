@@ -134,6 +134,21 @@
             echo '
         </div>';
     ?>
-
+<label for="something">
+    Input "Something": 
+    <input id="something" list="somethingelse">
+    <datalist id="somethingelse">
+        <option value="Something"></option>
+        <option value="Something Else"></option>
+        <option value="Another One"></option>
+        <option value="Alpha"></option>
+        <option value="Bravo"></option>
+        <option value="Charlie"></option>
+        <option value="Delta"></option>
+        <option value="Echo"></option>
+        <option value="Foxtrot"></option>
+        <option value="Gamma"></option>
+    </datalist>
+</label>
 </body>
 </html>

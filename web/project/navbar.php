@@ -14,6 +14,7 @@
             <a href="editMovieNames.php">Movie Names</a>
             <a href="editDirectors.php">Directors</a>
             <a href="editActors.php">Actors</a>
+            <a href="editGenres.php">Genres</a>
           </div>
         </div>';
       }
