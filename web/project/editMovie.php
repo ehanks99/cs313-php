@@ -122,7 +122,7 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('actors', 'p', 'actor' + actorId, html);
-            document.getElementById('actor').value = name;
+            document.getElementById('actor' + actorId).value = name;
         }
 
         function removeElement(elementId) 
