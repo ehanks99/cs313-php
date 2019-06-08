@@ -51,7 +51,17 @@
                 <input type="button" value="Add an Actor" onclick="addActor()">
                 <label class="control-label col-sm-2" for="actor">Starring Actor(s):</label>
                 <div class="col-sm-6" id="actors">
-                    <input type="text" class="form-control" id="actor0" placeholder="" name="actor[]" required>
+                    <!--<input type="text" class="form-control" id="actor0" placeholder="" name="actor[]" required>-->
+                    
+                    <select class="form-control" name="actor[]" required>
+                        <?php
+                            foreach($actors as $actor)
+                            {
+                                echo "\n<option>" . $actor["actor_name"] . "</option>";
+                            }
+                        ?>
+                    </select>
+
                 </div>
             </div>
             <div class="form-group">
@@ -63,7 +73,17 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="rated">Rated:</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control" id="rated" placeholder="PG-13" name="rated" maxlength="6" required>
+                    <!--<input type="text" class="form-control" id="rated" placeholder="PG-13" name="rated" maxlength="6" required>-->
+                    
+                    <select class="form-control" name="rated" required>
+                        <?php
+                            foreach($ratings as $rating)
+                            {
+                                echo "\n<option>" . $rating["rating_name"] . "</option>";
+                            }
+                        ?>
+                    </select>
+
                 </div>
             </div>
 
