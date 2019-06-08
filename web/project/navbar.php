@@ -5,18 +5,20 @@
     {
       if ($_SESSION["isAdmin"] == "T")
       {
-        echo '<a href="addMovie.php">Add Movie</a>     
-          <div class="myDropdown">
-            <button class="myDropbtn">Edit 
-              <i class="fa fa-caret-down"></i>
-            </button>
+        echo '
+        <a href="addMovie.php">Add Movie</a>     
+        <div class="myDropdown">
+          <button class="myDropbtn">Edit 
+            <i class="fa fa-caret-down"></i>
+          </button>
           <div class="myDropdown-content">
             <a href="editMovieNames.php">Movie Names</a>
             <a href="editDirectors.php">Directors</a>
             <a href="editActors.php">Actors</a>
             <a href="editGenres.php">Genres</a>
           </div>
-        </div>';
+        </div>
+        <a href="editMovie.php">Edit Movie</a>';
       }
 
       //echo '<a href="loginPage.php">Hello, ' . $_SESSION["firstName"] . '</a>';
