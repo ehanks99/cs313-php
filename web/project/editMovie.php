@@ -123,9 +123,15 @@
                         ?>
                     + "</select><a href='' onclick='javascript:removeElement(\"actor" + actorId + "\"); return false;'>Remove</a>";
             addElement('actors', 'p', 'actor' + actorId, html);
+
             var tmp = "actor" + actorId;
+            //document.getElementById(tmp).value = name;
+            changeValue(name, tmp);
+        }
+
+        function changeValue(name, tmp)
+        {
             document.getElementById(tmp).value = name;
-            alert(tmp);
         }
 
         function removeElement(elementId) 
