@@ -217,12 +217,12 @@
 
             for ($j = 1; $j < sizeof($directors); $j++)
             {
-                echo "\tdocument.getElementById('director" . $j . "').value = '" . $directors[$j]["director_name"] . "';\n";
+                echo "\tdocument.getElementById('director" . $j . "').value = \"" . $directors[$j]["director_name"] . "\";\n";
             }
 
             for ($j = 1; $j < sizeof($actors); $j++)
             {
-                echo "\tdocument.getElementById('actor" . $j . "').value = '" . $actors[$j]["actor_name"] . "';\n";
+                echo "\tdocument.getElementById('actor" . $j . "').value = \"" . $actors[$j]["actor_name"] . "\";\n";
             }
 
             echo "</script>\n";
