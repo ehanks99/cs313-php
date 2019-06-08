@@ -17,7 +17,7 @@
   <div class="search-container">
     <!--<form action="mainPage.php" method="get">-->
     <form action="mainPage.php" method="get">
-      <script>alert(window.location.pathname;);</script>
+      <script>alert(window.location.pathname);</script>
       <input type="text" placeholder="Search..." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
