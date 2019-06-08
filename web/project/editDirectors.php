@@ -20,7 +20,7 @@
     $stmt->execute();
     $directors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    
+    // get the search bar working right
     $search = false;
     if(isset($_GET["search"]))
     {

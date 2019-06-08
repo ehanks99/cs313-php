@@ -19,6 +19,30 @@
          FROM starring_actor');
     $stmt->execute();
     $actors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // get the search bar working right
+    $search = false;
+    if(isset($_GET["search"]))
+    {
+        $word = strtolower($_GET["search"]);
+        $search = true;
+    }
+
+    if($search)
+    {
+        $i = 0;
+        foreach ($actors as $rows)
+        {
+            if ((strpos(strtolower($rows["actor_name"]), $word) !== false))
+            {
+                $actors2[$i] = $rows;
+            }
+
+            $i++;
+        }
+
+        $actors = $actors2;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +84,7 @@
 <body>
     <?php
         include 'navbar.php';
+        echo '<script>document.getElementById("navbarSearch").action = "editActors.php";</script>';
         
         if (isset($_GET["success"]))
         {
