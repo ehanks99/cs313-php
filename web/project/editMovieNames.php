@@ -9,7 +9,7 @@
             'UPDATE movie
              SET movie_name = :dName
              WHERE movie_id = :id');
-        $stmt->execute(array(':mName' => $_GET["name"], ':id' => $_GET["id"]));
+        $stmt->execute(array(':dName' => $_GET["name"], ':id' => $_GET["id"]));
         header("Location: editMovieNames.php?success=true");
         die();
     }
@@ -113,7 +113,7 @@
                     </div>';
                     $i++;
                 }
-                
+
             echo '
         </div>';
     ?>
