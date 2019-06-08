@@ -127,7 +127,7 @@
             var tmp = "actor" + actorId.toString();
             alert(tmp);
             document.getElementById(tmp).value = name;
-            alert(document.getElementById(tmp.toString).value);
+            alert(document.getElementById(tmp).value);
         }
         function removeElement(elementId) 
         {
