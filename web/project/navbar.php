@@ -1,15 +1,23 @@
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div> 
+<div class="topnav">
+  <a class="active" href="mainPage.php">Home Page</a>
+  <a href="editMovie.php">Edit Movie</a>
+  <?php
+    if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true)
+    {
+      if ($_SESSION["isAdmin"] == "T")
+        echo '<a href="addMovie.php">Add Movie</a>';
+
+      //echo '<a href="loginPage.php">Hello, ' . $_SESSION["firstName"] . '</a>';
+      echo '<a href="logout.php">Logout</a>';
+    }
+    else
+      echo '<a href="loginPage.php">Login</a>';
+  ?>
+  <div class="search-container">
+    <form id="navbarSearch" action="mainPage.php" method="get">
+      <input type="text" placeholder="Search..." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
 </div>
