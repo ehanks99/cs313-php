@@ -6,7 +6,7 @@ CREATE TABLE movie
     movie_summary           VARCHAR(1000)       CONSTRAINT nn_movie_2 NOT NULL,
     movie_rating            VARCHAR(6)          CONSTRAINT nn_movie_3 NOT NULL,
     CONSTRAINT pk_movie PRIMARY KEY(movie_id),
-    CONSTRAINT fk_movie_1 FOREIGN KEY(movie_rating) REFERENCES genre(genre_id)
+    CONSTRAINT fk_movie_1 FOREIGN KEY(movie_rating) REFERENCES rating(rating_name)
 );
 
 CREATE SEQUENCE movie_s1 START WITH 1;

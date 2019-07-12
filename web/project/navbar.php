@@ -9,7 +9,7 @@
         <a href="addMovie.php">Add Movie</a>  
         <a href="editMovie.php">Edit Movie</a>   
         <div class="myDropdown">
-          <button class="myDropbtn">Edit 
+          <button class="myDropbtn">Edit/Add 
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="myDropdown-content">
