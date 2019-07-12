@@ -56,7 +56,7 @@
                     {
                         if (strpos(strtolower($data), $word) !== false)
                         {
-                            echo strtolower($data);
+                            //echo strtolower($data);
                             $movies2[$i] = $rows;
                         }
                     }
