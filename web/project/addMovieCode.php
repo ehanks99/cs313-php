@@ -38,9 +38,9 @@
     }
     else
     {
-    $stmt = $db->prepare("INSERT INTO movie (movie_id, movie_name, movie_rating, picture_filepath, movie_summary)
-                            VALUES (nextval('movie_s1'), '" . $movieName . "', '" . $rated . "', '', '" . $summary . "');");
-    $stmt->execute();
+        $stmt = $db->prepare("INSERT INTO movie (movie_id, movie_name, movie_rating, picture_filepath, movie_summary)
+                                VALUES (nextval('movie_s1'), '" . $movieName . "', '" . $rated . "', '', '" . $summary . "');");
+        $stmt->execute();
     }
 
     // add the directors, if needed, to the director table

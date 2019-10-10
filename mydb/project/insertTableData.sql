@@ -1,5 +1,4 @@
 
-
 INSERT INTO genre (genre_id, genre_type)
     VALUES (nextval('genre_s1'), 'Drama');
 

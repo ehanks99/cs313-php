@@ -1,3 +1,14 @@
+CREATE TABLE rating
+(
+    rating_id                 INTEGER,
+    rating_name               VARCHAR(6)        CONSTRAINT nn_rating_1 NOT NULL,
+    CONSTRAINT pk_rating PRIMARY KEY(rating_id)
+);
+
+CREATE SEQUENCE rating_s1 START WITH 1;
+CREATE UNIQUE INDEX ui_rating_1 ON rating(rating_name);
+
+------------------------------------------
 CREATE TABLE movie
 (
     movie_id                INTEGER,
@@ -12,18 +23,6 @@ CREATE TABLE movie
 CREATE SEQUENCE movie_s1 START WITH 1;
 -- to create a unique index    ---    CREATE UNIQUE INDEX index_name ON table_name(column_names);
 CREATE UNIQUE INDEX ui_movie_1 ON movie(movie_name);
-
-------------------------------------------
-
-CREATE TABLE rating
-(
-    rating_id                 INTEGER,
-    rating_name               VARCHAR(6)        CONSTRAINT nn_rating_1 NOT NULL,
-    CONSTRAINT pk_rating PRIMARY KEY(rating_id)
-);
-
-CREATE SEQUENCE rating_s1 START WITH 1;
-CREATE UNIQUE INDEX ui_rating_1 ON rating(rating_name);
 
 ------------------------------------------
 
